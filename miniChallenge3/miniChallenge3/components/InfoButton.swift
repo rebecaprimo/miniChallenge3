@@ -12,9 +12,9 @@ struct InfoButton: View {
     private let icon: String
     private var title: String
     private let view: AnyView
-    @State private var titleView: String
+    private var titleView: String
     
-    init(title: String, icon: String, view: AnyView, titleView: String) {
+    init(title: String, icon: String, view: AnyView, titleView: Binding<String>) {
         self.title = title
         self.icon = icon
         self.view = view
@@ -39,10 +39,8 @@ struct InfoButton: View {
             .foregroundColor(.white)
             .background(Color.red)
             .cornerRadius(15)
-            .navigationTitle(titleView)
-            
         })
-        
+        .navigationBarTitle(titleView)
         .padding(10)
     }
 }
