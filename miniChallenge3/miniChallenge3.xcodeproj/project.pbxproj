@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1F758429CA2B2300724C58 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758329CA2B2300724C58 /* InfoView.swift */; };
+		4D1F758629CA513700724C58 /* TermosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758529CA513700724C58 /* TermosView.swift */; };
+		4D1F758829CA51B500724C58 /* PoliticasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758729CA51B500724C58 /* PoliticasView.swift */; };
+		4D1F758A29CA51C200724C58 /* SuporteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758929CA51C200724C58 /* SuporteView.swift */; };
+		4D1F758C29CA51CF00724C58 /* ConfiguracoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */; };
 		4D9EE8DF29C8EDBE0046483A /* miniChallenge3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */; };
 		4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8E029C8EDBE0046483A /* ContentView.swift */; };
 		4D9EE8E329C8EDC00046483A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EE8E229C8EDC00046483A /* Assets.xcassets */; };
@@ -16,6 +21,7 @@
 		4D9EE8F629C8EDC00046483A /* miniChallenge3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8F529C8EDC00046483A /* miniChallenge3Tests.swift */; };
 		4D9EE90029C8EDC00046483A /* miniChallenge3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8FF29C8EDC00046483A /* miniChallenge3UITests.swift */; };
 		4D9EE90229C8EDC00046483A /* miniChallenge3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE90129C8EDC00046483A /* miniChallenge3UITestsLaunchTests.swift */; };
+		4D9EE91529CA1DC60046483A /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE91429CA1DC60046483A /* InfoButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D1F758329CA2B2300724C58 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		4D1F758529CA513700724C58 /* TermosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermosView.swift; sourceTree = "<group>"; };
+		4D1F758729CA51B500724C58 /* PoliticasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliticasView.swift; sourceTree = "<group>"; };
+		4D1F758929CA51C200724C58 /* SuporteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuporteView.swift; sourceTree = "<group>"; };
+		4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesView.swift; sourceTree = "<group>"; };
 		4D9EE8DB29C8EDBE0046483A /* miniChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniChallenge3App.swift; sourceTree = "<group>"; };
 		4D9EE8E029C8EDBE0046483A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +60,8 @@
 		4D9EE8FB29C8EDC00046483A /* miniChallenge3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miniChallenge3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EE8FF29C8EDC00046483A /* miniChallenge3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniChallenge3UITests.swift; sourceTree = "<group>"; };
 		4D9EE90129C8EDC00046483A /* miniChallenge3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniChallenge3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D9EE91329C90EC30046483A /* miniChallenge3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = miniChallenge3.entitlements; sourceTree = "<group>"; };
+		4D9EE91429CA1DC60046483A /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +89,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D1F758229CA265100724C58 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */,
+				4D1F758729CA51B500724C58 /* PoliticasView.swift */,
+				4D1F758929CA51C200724C58 /* SuporteView.swift */,
+				4D1F758529CA513700724C58 /* TermosView.swift */,
+				4D1F758329CA2B2300724C58 /* InfoView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		4D9EE8D229C8EDBE0046483A = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +124,8 @@
 		4D9EE8DD29C8EDBE0046483A /* miniChallenge3 */ = {
 			isa = PBXGroup;
 			children = (
+				4D1F758229CA265100724C58 /* view */,
+				4D9EE91329C90EC30046483A /* miniChallenge3.entitlements */,
 				4D9EE91229C8EEB20046483A /* components */,
 				4D9EE91129C8EE9A0046483A /* viewModel */,
 				4D9EE91029C8EE8C0046483A /* model */,
@@ -155,6 +182,7 @@
 		4D9EE91229C8EEB20046483A /* components */ = {
 			isa = PBXGroup;
 			children = (
+				4D9EE91429CA1DC60046483A /* InfoButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -289,10 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1F758629CA513700724C58 /* TermosView.swift in Sources */,
+				4D9EE91529CA1DC60046483A /* InfoButton.swift in Sources */,
+				4D1F758829CA51B500724C58 /* PoliticasView.swift in Sources */,
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
 				4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */,
+				4D1F758A29CA51C200724C58 /* SuporteView.swift in Sources */,
+				4D1F758C29CA51CF00724C58 /* ConfiguracoesView.swift in Sources */,
 				4D9EE8EB29C8EDC00046483A /* miniChallenge3.xcdatamodeld in Sources */,
 				4D9EE8DF29C8EDBE0046483A /* miniChallenge3App.swift in Sources */,
+				4D1F758429CA2B2300724C58 /* InfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,12 +482,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = miniChallenge3/miniChallenge3.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
 				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = miniChallenge3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,12 +513,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = miniChallenge3/miniChallenge3.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
 				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = miniChallenge3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
