@@ -14,7 +14,7 @@ struct InfoButton: View {
     private let view: AnyView
     private var titleView: String
     
-    init(title: String, icon: String, view: AnyView, titleView: Binding<String>) {
+    init(title: String, icon: String, view: AnyView, titleView: String) {
         self.title = title
         self.icon = icon
         self.view = view
