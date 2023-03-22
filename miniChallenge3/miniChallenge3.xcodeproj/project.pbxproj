@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1927E21829C9013900BE7BAD /* CardAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927E21729C9013900BE7BAD /* CardAppointment.swift */; };
+		192B30D329CA3A89008280E4 /* DateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B30D229CA3A89008280E4 /* DateCard.swift */; };
+		192B30D529CA4028008280E4 /* DetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B30D429CA4028008280E4 /* DetailCard.swift */; };
 		4D9EE8DF29C8EDBE0046483A /* miniChallenge3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */; };
 		4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8E029C8EDBE0046483A /* ContentView.swift */; };
 		4D9EE8E329C8EDC00046483A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EE8E229C8EDC00046483A /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1927E21729C9013900BE7BAD /* CardAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAppointment.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		192B30D229CA3A89008280E4 /* DateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCard.swift; sourceTree = "<group>"; };
+		192B30D429CA4028008280E4 /* DetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCard.swift; sourceTree = "<group>"; };
 		4D9EE8DB29C8EDBE0046483A /* miniChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniChallenge3App.swift; sourceTree = "<group>"; };
 		4D9EE8E029C8EDBE0046483A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 				4D9EE91029C8EE8C0046483A /* model */,
 				4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */,
 				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
+				192B30D229CA3A89008280E4 /* DateCard.swift */,
+				192B30D429CA4028008280E4 /* DetailCard.swift */,
+				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
 				4D9EE8E229C8EDC00046483A /* Assets.xcassets */,
 				4D9EE8E729C8EDC00046483A /* Persistence.swift */,
 				4D9EE8E929C8EDC00046483A /* miniChallenge3.xcdatamodeld */,
@@ -290,7 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
+				1927E21829C9013900BE7BAD /* CardAppointment.swift in Sources */,
 				4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */,
+				192B30D529CA4028008280E4 /* DetailCard.swift in Sources */,
+				192B30D329CA3A89008280E4 /* DateCard.swift in Sources */,
 				4D9EE8EB29C8EDC00046483A /* miniChallenge3.xcdatamodeld in Sources */,
 				4D9EE8DF29C8EDBE0046483A /* miniChallenge3App.swift in Sources */,
 			);
