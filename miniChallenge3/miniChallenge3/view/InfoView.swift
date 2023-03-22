@@ -13,14 +13,17 @@ struct InfoView: View {
     var body: some View {
         
         VStack {
-            
             NavigationView {
+                
                 VStack{
-                    InfoButton(title: "Termos de Uso", icon: "doc.text", view: AnyView(TermosView()), titleView: "Termos de Uso")
-                    InfoButton(title: "Políticas de Privacidade", icon: "lock.doc", view: AnyView(PoliticasView()), titleView: "Termos de Uso")
-                    InfoButton(title: "Suporte",  icon: "heart", view: AnyView(SuporteView()), titleView: "B")
-                    InfoButton(title: "Configurações",  icon: "heart", view: AnyView(ConfiguracoesView()), titleView: "C")
+                    RectangleButton(title: "Termos de Uso", icon: "doc.text", view: AnyView(TermosView()))
+                    RectangleButton(title: "Privacidade", icon: "lock.doc", view: AnyView(PrivacidadeView()))
+                    RectangleButton(title: "Suporte",  icon: "heart", view: AnyView(SuporteView()))
+                    RectangleButton(title: "Configurações",  icon: "heart", view: AnyView(ConfiguracoesView()))
+                    
+                    Spacer()
                 }
+                .navigationTitle("Informações")
             }
         }
     }

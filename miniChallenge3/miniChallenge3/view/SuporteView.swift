@@ -11,5 +11,6 @@ import SwiftUI
 struct SuporteView: View {
     var body: some View {
         Text("")
+            .navigationTitle("Suporte")
     }
 }

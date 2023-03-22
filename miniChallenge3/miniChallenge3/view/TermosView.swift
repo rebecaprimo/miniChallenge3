@@ -11,7 +11,6 @@ import SwiftUI
 struct TermosView: View {
     var body: some View {
         Text("")
-        .navigationTitle("TermosView")
+        .navigationTitle("Termos de Uso")
     }
-
 }

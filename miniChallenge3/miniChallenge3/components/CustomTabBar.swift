@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct CustomTabBar: View {
-    let icons = ["house", "heart", "message","bookmark"]
+    let icons = ["house", "heart", "message"]
     @State var tabPoint: [CGFloat] = []
     @Binding private var selectedTab: String
     
@@ -35,10 +35,8 @@ struct CustomTabBar: View {
                 return tabPoint[0]
             case "heart":
                 return tabPoint[1]
-            case "message":
-                return tabPoint[2]
             default:
-                return tabPoint[3]
+                return tabPoint[2]
             }
         }
     }
