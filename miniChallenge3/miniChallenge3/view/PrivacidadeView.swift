@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct PoliticasView: View {
+struct PrivacidadeView: View {
     var body: some View {
         Text("")
-
+        .navigationTitle("Privacidade")
     }
 }

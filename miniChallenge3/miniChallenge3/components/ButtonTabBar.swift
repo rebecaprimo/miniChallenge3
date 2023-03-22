@@ -20,7 +20,7 @@ struct ButtonTabBar: View {
         self._tabPoint = tabPoint
     }
     
-    var body: some View{
+    var body: some View {
         
         //Implementar a tabView
         

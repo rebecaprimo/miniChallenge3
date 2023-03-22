@@ -8,30 +8,36 @@
 import Foundation
 import SwiftUI
 
-struct InfoButton: View {
-    private let icon: String
+struct RectangleButton: View {
+    private let icon: String?
     private var title: String
     private let view: AnyView
-    private var titleView: String
     
-    init(title: String, icon: String, view: AnyView, titleView: String) {
+    init(title: String, icon: String?, view: AnyView) {
         self.title = title
         self.icon = icon
         self.view = view
-        self.titleView = titleView
     }
     
     var body: some View {
         
         NavigationLink(destination: view, label: {
             HStack {
-                Image(systemName: icon)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 20))
+                if icon != nil {
+                    Image(systemName: icon!)
+                        .fontWeight(.semibold)
+                        .font(.system(size: 20))
+                }
                 
                 Text(title)
                     .fontWeight(.semibold)
+                    .font(.system(size: 20))
                     .font(.title)
+                    
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .frame(alignment: .trailing)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical, 20)
@@ -40,7 +46,6 @@ struct InfoButton: View {
             .background(Color.red)
             .cornerRadius(15)
         })
-        .navigationBarTitle(titleView)
         .padding(10)
     }
 }
