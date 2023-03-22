@@ -13,6 +13,7 @@ struct ConsultasView: View {
         NavigationView {
             ScrollView {
                 CardAppointment(specialist: "Endocrino", doctor: "Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
+                
             }
             .navigationTitle("Consultas")
         }
