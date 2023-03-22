@@ -10,6 +10,7 @@
 		1927E21829C9013900BE7BAD /* CardAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927E21729C9013900BE7BAD /* CardAppointment.swift */; };
 		192B30D329CA3A89008280E4 /* DateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B30D229CA3A89008280E4 /* DateCard.swift */; };
 		192B30D529CA4028008280E4 /* DetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B30D429CA4028008280E4 /* DetailCard.swift */; };
+		19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C185C729CBA9A000F3A95C /* ConsultasView.swift */; };
 		4D1F758429CA2B2300724C58 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758329CA2B2300724C58 /* InfoView.swift */; };
 		4D1F758629CA513700724C58 /* TermosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758529CA513700724C58 /* TermosView.swift */; };
 		4D1F758829CA51B500724C58 /* PrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758729CA51B500724C58 /* PrivacidadeView.swift */; };
@@ -52,6 +53,7 @@
 		1927E21729C9013900BE7BAD /* CardAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAppointment.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		192B30D229CA3A89008280E4 /* DateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCard.swift; sourceTree = "<group>"; };
 		192B30D429CA4028008280E4 /* DetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCard.swift; sourceTree = "<group>"; };
+		19C185C729CBA9A000F3A95C /* ConsultasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultasView.swift; sourceTree = "<group>"; };
 		4D1F758329CA2B2300724C58 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		4D1F758529CA513700724C58 /* TermosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermosView.swift; sourceTree = "<group>"; };
 		4D1F758729CA51B500724C58 /* PrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacidadeView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,8 @@
 				4D1F758529CA513700724C58 /* TermosView.swift */,
 				4D1F758329CA2B2300724C58 /* InfoView.swift */,
 				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
+				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
+				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -145,10 +149,6 @@
 				4D9EE91129C8EE9A0046483A /* viewModel */,
 				4D9EE91029C8EE8C0046483A /* model */,
 				4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */,
-				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
-				192B30D229CA3A89008280E4 /* DateCard.swift */,
-				192B30D429CA4028008280E4 /* DetailCard.swift */,
-				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
 				4D9EE8E229C8EDC00046483A /* Assets.xcassets */,
 				4D9EE8E729C8EDC00046483A /* Persistence.swift */,
 				4D9EE8E929C8EDC00046483A /* miniChallenge3.xcdatamodeld */,
@@ -203,6 +203,9 @@
 				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
 				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
 				8832B9C929CA2838009B9FF7 /* ButtonTabBar.swift */,
+				192B30D229CA3A89008280E4 /* DateCard.swift */,
+				192B30D429CA4028008280E4 /* DetailCard.swift */,
+				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
 				4D1F758D29CB89D800724C58 /* TitleText.swift */,
 			);
 			path = components;
@@ -345,6 +348,7 @@
 				4D1F758829CA51B500724C58 /* PrivacidadeView.swift in Sources */,
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
 				8832B9CA29CA2838009B9FF7 /* ButtonTabBar.swift in Sources */,
+				19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */,
 				8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */,
 				1927E21829C9013900BE7BAD /* CardAppointment.swift in Sources */,
 				4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */,
