@@ -143,15 +143,13 @@
 		4D9EE8DD29C8EDBE0046483A /* miniChallenge3 */ = {
 			isa = PBXGroup;
 			children = (
-				4D1F758229CA265100724C58 /* view */,
 				4D9EE91329C90EC30046483A /* miniChallenge3.entitlements */,
+				4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */,
+				4D1F758229CA265100724C58 /* view */,
 				4D9EE91229C8EEB20046483A /* components */,
 				4D9EE91129C8EE9A0046483A /* viewModel */,
 				4D9EE91029C8EE8C0046483A /* model */,
-				4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */,
 				4D9EE8E229C8EDC00046483A /* Assets.xcassets */,
-				4D9EE8E729C8EDC00046483A /* Persistence.swift */,
-				4D9EE8E929C8EDC00046483A /* miniChallenge3.xcdatamodeld */,
 				4D9EE8EC29C8EDC00046483A /* Info.plist */,
 				4D9EE8E429C8EDC00046483A /* Preview Content */,
 			);
@@ -186,6 +184,8 @@
 		4D9EE91029C8EE8C0046483A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4D9EE8E929C8EDC00046483A /* miniChallenge3.xcdatamodeld */,
+				4D9EE8E729C8EDC00046483A /* Persistence.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";

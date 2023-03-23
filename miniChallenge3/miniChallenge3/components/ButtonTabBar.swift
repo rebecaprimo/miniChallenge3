@@ -36,18 +36,21 @@ struct ButtonTabBar: View {
             }
             
             return AnyView (
-                Button(action: {withAnimation{selectedTab = icon}}) {
+                Button(action: {withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.3, blendDuration: 0.5)) {
+                    withAnimation{selectedTab = icon}
+                }}) {
                     Image(systemName: icon)
-                        .frame(width: 40, height: 40)
-                        .background(Color.white.opacity(selectedTab == icon ? 1 : 0))
+                        .frame(width: 60, height: 60)
+                        .background(Color.gray.opacity(selectedTab == icon ? 1 : 0))
                         .clipShape(Circle())
+                        .offset(y: selectedTab == icon ? -50 : 0)
                         .matchedGeometryEffect(id: icon, in: animation)
                         .font(.system(size: 25))
-                        .offset(y: selectedTab == icon ? -40 : 0)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             )
         }
+
         .frame(height: 40)
         .padding()
         
