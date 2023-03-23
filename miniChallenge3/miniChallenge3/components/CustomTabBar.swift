@@ -7,36 +7,59 @@
 import SwiftUI
 
 struct CustomTabBar: View {
-    let icons = ["house", "heart", "message"]
+    
+    private let iconHome = "house"
+    private let iconHistory = "heart"
+    private let iconSetting = "message"
+    
+    let icons: [String]
     @State var tabPoint: [CGFloat] = []
     @Binding private var selectedTab: String
     
     init(selectedTab: Binding<String>) {
+        UITabBar.appearance().isHidden = true
         self._selectedTab = selectedTab
+        icons = [iconHome, iconHistory, iconSetting]
     }
 
     var body: some View {
+
+        TabView(selection: $selectedTab){
+            ConsultasView()
+                .tag(iconHome)
+            
+            HistoricoView()
+                .tag(iconHistory)
+            
+            InfoView()
+                .tag(iconSetting)
+            
+        }
+        
         HStack(spacing: 0) {
+ 
             ForEach(icons, id: \.self) { icon in
                 ButtonTabBar(icon: icon, selectedTab: $selectedTab, tabPoint: $tabPoint)
             }
-
+            
         }
-        .background(Color.white.clipShape(CustomShape(tabPoint: getCurvePoint())))
+        .background(Color.gray.clipShape(CustomShape(tabPoint: getCurvePoint())))
         
     }
     
     func getCurvePoint() -> CGFloat {
         if tabPoint.isEmpty{
-            return 3
+            return 0
         } else {
             switch selectedTab{
-            case "house":
+            case iconHome:
                 return tabPoint[0]
-            case "heart":
+            case iconHistory:
                 return tabPoint[1]
-            default:
+            case iconSetting:
                 return tabPoint[2]
+            default:
+                return tabPoint[0]
             }
         }
     }
@@ -66,18 +89,33 @@ struct CustomShape: Shape{
             
             let center = tabPoint
             
-            path.move(to: CGPoint(x: center - 50, y: 0))
+            path.move(to: CGPoint(x: center - 40, y: 0))
             
-            let to1 = CGPoint(x: center, y: 35)
-            let control1 = CGPoint(x: center - 25, y: 0)
-            let control2 = CGPoint(x: center - 25, y: 35)
+//            let to1 = CGPoint(x: center - 40, y: 15)
+//            let control1 = CGPoint(x: center - 40, y: 0)
+//            let control2 = CGPoint(x: center - 40, y: 0)
+//
+//            let to2 = CGPoint(x: center, y: 0)
+//            let control3 = CGPoint(x: center, y: 0)
+//            let control4 = CGPoint(x: center, y: 0)
+
+//            let to3 = CGPoint(x: center, y: 35)
+//            let control5 = CGPoint(x: center - 35, y: 35)
+//            let control6 = CGPoint(x: center, y: 35)
+            let to3 = CGPoint(x: center + 40, y: 0)
+            let control5 = CGPoint(x: center - 40, y: 50)
+            let control6 = CGPoint(x: center + 40, y: 50)
             
-            let to2 = CGPoint(x: center + 50, y: 0)
-            let control3 = CGPoint(x: center + 25, y: 35)
-            let control4 = CGPoint(x: center + 25, y: 0)
             
-            path.addCurve(to: to1, control1: control1, control2: control2)
-            path.addCurve(to: to2, control1: control3, control2: control4)
+//            let to3 = CGPoint(x: center + 40, y: 0)
+//            let control5 = CGPoint(x: center - 40, y: 50)
+//            let control6 = CGPoint(x: center + 40, y: 50)
+//
+//            path.addCurve(to: to1, control1: control1, control2: control2)
+//            path.addCurve(to: to2, control1: control3, control2: control4)
+            
+            
+            path.addCurve(to: to3, control1: control5, control2: control6)
             
             
         }

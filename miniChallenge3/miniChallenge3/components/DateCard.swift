@@ -25,7 +25,7 @@ struct DateCard: View {
             dateText
         }
         .padding()
-        .frame(width: .infinity, height: 60)
+//        .frame(width: .infinity, height: 60)
     }
     
     var dateText: some View {
