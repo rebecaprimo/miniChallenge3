@@ -20,8 +20,6 @@ struct DetailCard: View {
     }
     
     var body: some View {
-        
-        
         Button {
             print("Funciona")
             showingSheet = true
@@ -31,7 +29,7 @@ struct DetailCard: View {
                 ZStack {
                     Rectangle()
                         .fill(.gray)
-                        .frame(width: geometry.size.width * 0.92, height: 150)
+                        .frame(height: 150)
                         .padding()
                     detailText
                 }
@@ -39,19 +37,18 @@ struct DetailCard: View {
             .frame(height: 150)
         }
         .sheet(isPresented: $showingSheet) {
-            InfoView()
+            ConsultasSheetView()
         }
         
     }
-    
-    
     
     var detailText: some View {
         HStack(alignment: .center){
             VStack(alignment: .leading, spacing: 15){
                 Text(specialist)
-                    .font(.title2)
+                    .font(.system(size: 20))
                     .foregroundColor(.black)
+                    .fontWeight(.bold)
                 Text(doctor)
                     .font(.title3)
                     .foregroundColor(.black)
