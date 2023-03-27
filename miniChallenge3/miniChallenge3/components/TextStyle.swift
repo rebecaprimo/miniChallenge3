@@ -9,29 +9,31 @@ import SwiftUI
 
 class TextStyle{
     
-    static let textStyle = TextStyle()
+    static var shared: TextStyle {
+        let instance = TextStyle()
+        return instance
+    }
     
-    
-    static let designFont: Font.Design = .rounded
+    let designFont: Font.Design = .rounded
 
-    static let designPageTitle: Font.Design = .rounded
-    static let weightPageTitle: Font.Weight = .bold
-    static let sizePageTitle: CGFloat = 34
+    let designPageTitle: Font.Design = .rounded
+    let weightPageTitle: Font.Weight = .bold
+    let sizePageTitle: CGFloat = 34
     
-    static let designSubTitle: Font.Design = .rounded
-    static let weightSubTitle: Font.Weight = .bold
-    static let sizeSubTitle: CGFloat = 20
+    let designSubTitle: Font.Design = .rounded
+    let weightSubTitle: Font.Weight = .bold
+    let sizeSubTitle: CGFloat = 20
 
-    static let designDate: Font.Design = .rounded
-    static let weightDate: Font.Weight = .bold
-    static let sizeDate: CGFloat = 20
+    let designDate: Font.Design = .rounded
+    let weightDate: Font.Weight = .bold
+    let sizeDate: CGFloat = 20
     
-    static let designText: Font.Design = .rounded
-    static let weightText: Font.Weight = .bold
-    static let sizeText: CGFloat = 20
+    let designText: Font.Design = .rounded
+    let weightText: Font.Weight = .bold
+    let sizeText: CGFloat = 20
     
-    static let designButtonTitle: Font.Design = .rounded
-    static let weightButtonTitle: Font.Weight = .bold
-    static let sizeoButtonTitle: CGFloat = 16
+    let designButtonTitle: Font.Design = .rounded
+    let weightButtonTitle: Font.Weight = .bold
+    let sizeoButtonTitle: CGFloat = 16
     
 }
