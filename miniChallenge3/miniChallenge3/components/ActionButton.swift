@@ -11,26 +11,40 @@ struct ActionButton: View {
     private var title: String
     private let icon: String
     private let color: Color
-    private var action: () -> Void
+    private let isEdit: Bool
+    private let view: AnyView?
+    private var action: (() -> Void)?
     
-    init(title: String, icon: String, color: Color, action: @escaping () -> Void){
+    init(title: String, icon: String, color: Color, action: (() -> Void)?, view: AnyView?, isEdit: Bool){
         self.title = title
         self.icon = icon
         self.color = color
         self.action = action
+        self.view = view
+        self.isEdit = isEdit
     }
     
     var body: some View {
-        
-        Button {
-            action()
-        } label: {
-            ZStack {
-                Capsule()
-                    .fill(color)
-                    .frame(width: 100, height: 40)
-                textAction
-                
+        if isEdit {
+            NavigationLink(destination: view, label: {
+                ZStack {
+                    Capsule()
+                        .fill(color)
+                        .frame(width: 100, height: 40)
+                    textAction
+
+                }
+            })
+        } else {
+            Button { action!()
+            } label: {
+                ZStack {
+                    Capsule()
+                        .fill(color)
+                        .frame(width: 100, height: 40)
+                    textAction
+                    
+                }
             }
         }
     }
@@ -45,8 +59,3 @@ struct ActionButton: View {
     }
 }
 
-//struct ActionButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ActionButton(title: "blabla", icon: "pencil", color: .yellow)
-//    }
-//}
