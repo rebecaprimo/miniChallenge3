@@ -38,8 +38,6 @@
 		4D9EE91529CA1DC60046483A /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE91429CA1DC60046483A /* RectangleButton.swift */; };
 		8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */; };
 		8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C929CA2838009B9FF7 /* CircleButton.swift */; };
-		888D0BD229D0F74D009C122C /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D0BD129D0F74D009C122C /* DataModelManager.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +94,6 @@
 		4D9EE91429CA1DC60046483A /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8832B9C929CA2838009B9FF7 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
-		888D0BD129D0F74D009C122C /* DataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelManager.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +166,8 @@
 			children = (
 				4D9EE91329C90EC30046483A /* miniChallenge3.entitlements */,
 				4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */,
-				4D9EE91229C8EEB20046483A /* components */,
 				4D1F758229CA265100724C58 /* view */,
+				4D9EE91229C8EEB20046483A /* components */,
 				4D9EE91129C8EE9A0046483A /* viewModel */,
 				4D9EE91029C8EE8C0046483A /* model */,
 				4D9EE8E229C8EDC00046483A /* Assets.xcassets */,
@@ -218,7 +214,6 @@
 		4D9EE91129C8EE9A0046483A /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				888D0BD129D0F74D009C122C /* DataModelManager.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -226,18 +221,18 @@
 		4D9EE91229C8EEB20046483A /* components */ = {
 			isa = PBXGroup;
 			children = (
-            
-				1924499A29CCDE940025FE8F /* ActionButton.swift */,
-				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
-				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
-				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
-				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
-				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
-				192B30D429CA4028008280E4 /* DetailCard.swift */,
-				192B30D229CA3A89008280E4 /* DateCard.swift */,
-				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
-				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
 				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
+				4D1F759529CCE1DE00724C58 /* AddButton.swift */,
+				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
+				1924499A29CCDE940025FE8F /* ActionButton.swift */,
+				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
+				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
+				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
+				192B30D229CA3A89008280E4 /* DateCard.swift */,
+				192B30D429CA4028008280E4 /* DetailCard.swift */,
+				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
+				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
+				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
 				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
 			);
 			path = components;
@@ -382,9 +377,8 @@
 				1924499D29CCEFFC0025FE8F /* DadosConsultaText.swift in Sources */,
 				4D1F758829CA51B500724C58 /* PrivacidadeView.swift in Sources */,
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
-				888D0BD229D0F74D009C122C /* DataModelManager.swift in Sources */,
-				8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */,
 				4D1F759829CCEA1100724C58 /* DatePickerComponent.swift in Sources */,
+				8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */,
 				8832B9CA29CA2838009B9FF7 /* ButtonTabBar.swift in Sources */,
 				1924499929CCDE1D0025FE8F /* ConsultasSheetView.swift in Sources */,
 				19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */,

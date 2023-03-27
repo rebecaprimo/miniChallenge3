@@ -43,7 +43,7 @@ struct RectangleButton: View {
             .padding(.vertical, 20)
             .padding(.horizontal, 15)
             .foregroundColor(.white)
-            .background(DataColor.colorRetangleButton)
+            .background(Color.red)
             .cornerRadius(15)
         })
         .padding(10)

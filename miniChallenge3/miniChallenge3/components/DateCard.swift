@@ -18,9 +18,8 @@ struct DateCard: View {
     var body: some View {
         GeometryReader { geometry in
             Rectangle()
-                .fill(DataColor.colorTab)
+                .fill(.blue)
                 .frame(height: 60)
-                .border(.black)
                 .padding(.bottom, radius)
                 .cornerRadius(CGFloat(radius))
             dateText
@@ -30,8 +29,7 @@ struct DateCard: View {
     
     var dateText: some View {
         Text(dateAppointment)
-            .font(.system(size: TextStyle.shared.sizeDate, design: TextStyle.shared.designDate))
-            .foregroundColor(DataColor.colorTextWhite)
+            .font(.system(size: TextStyle.sizeDate, design: TextStyle.designDate))
             .padding(.top)
             .padding(.leading, 12)
     }
