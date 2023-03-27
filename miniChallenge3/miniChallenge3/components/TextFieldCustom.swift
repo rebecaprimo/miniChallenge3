@@ -9,11 +9,12 @@ import Foundation
 import SwiftUI
 
 struct TextFieldCustom: View {
-    @State var content: String = ""
+    @Binding var content: String
     private var title: String
     
-    init(title: String) {
+    init(title: String,_ content: Binding<String>) {
         self.title = title
+        self._content = content
     }
     
     var body: some View {
