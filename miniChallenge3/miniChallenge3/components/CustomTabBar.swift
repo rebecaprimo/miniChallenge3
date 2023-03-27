@@ -8,9 +8,9 @@ import SwiftUI
 
 struct CustomTabBar: View {
     
-    private let iconHome = "house"
-    private let iconHistory = "heart"
-    private let iconSetting = "message"
+    private let iconHome = "list.bullet.clipboard"
+    private let iconHistory = "clock.arrow.circlepath"
+    private let iconSetting = "info"
     
     let icons: [String]
     @State var tabPoint: [CGFloat] = []
@@ -40,7 +40,7 @@ struct CustomTabBar: View {
         HStack(spacing: 0) {
  
             ForEach(icons, id: \.self) { icon in
-                ButtonTabBar(icon: icon, selectedTab: $selectedTab, tabPoint: $tabPoint)
+                CircleButton(icon: icon, selectedTab: $selectedTab, tabPoint: $tabPoint)
             }
             
         }
