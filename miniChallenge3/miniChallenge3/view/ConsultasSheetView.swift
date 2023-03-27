@@ -24,7 +24,7 @@ struct ConsultasSheetView: View {
                 Group {
                     DadosConsultaText(text: "Otorrinolaringologista")
                     DadosConsultaText(text: "Dr(a) Flavio Gustavo de Melo Roberto Oliveira da Silveira ")
-                        .padding(.bottom,17)
+                        .padding(.bottom, 17)
                 }
                 .padding(.bottom,15)
                 .multilineTextAlignment(.center)

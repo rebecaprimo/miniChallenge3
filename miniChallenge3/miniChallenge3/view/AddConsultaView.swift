@@ -15,12 +15,21 @@ struct AddConsultaView: View {
     var body: some View {
         VStack {
             TextFieldCustom(title: "Especialidade")
-            TextFieldCustom(title: "Doutor (a)")
+            TextFieldCustom(title: "Dr.")
             TextFieldCustom(title: "Clínica")
             VStack {
                 DatePicker("Data", selection: $dateAppointment)
             }
             Spacer()
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("Adicionar")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Salvar") {
+                    print("salvou!")
+                }
+            }
         }
     }
 }
