@@ -28,13 +28,13 @@ struct DetailCard: View {
             GeometryReader { geometry in
                 ZStack {
                     Rectangle()
-                        .fill(.gray)
-                        .frame(height: 150)
+                        .fill(.white)
+                        .border(.black)
+                        .frame(height: 120)
                         .padding()
                     detailText
                 }
             }
-            .frame(height: 150)
             
         }
         .sheet(isPresented: $showingSheet) {
@@ -47,18 +47,20 @@ struct DetailCard: View {
         HStack(alignment: .center){
             VStack(alignment: .leading, spacing: 15){
                 Text(specialist)
-                    .font(.system(size: 20))
-                    .foregroundColor(.black)
-                    .fontWeight(.bold)
+                    .font(.system(size: TextStyle.shared.sizeSubTitle))
+                    .fontWeight(TextStyle.shared.weightSubTitle)
+                    .foregroundColor(DataColor.colorTextBlack)
                 Text(doctor)
-                    .font(.title3)
-                    .foregroundColor(.black)
+                    .font(.system(size: TextStyle.shared.sizeSubTitle))
+                    .fontWeight(TextStyle.shared.weightSubTitle)
+                    .foregroundColor(DataColor.colorTextBlack)
             }
             .padding(.top, 9)
             Spacer()
             Text(hour)
-                .font(.title2)
-                .foregroundColor(.black)
+                .font(.system(size: TextStyle.shared.sizeSubTitle))
+                .fontWeight(TextStyle.shared.weightSubTitle)
+                .foregroundColor(DataColor.colorTextBlack)
             
         }
         .padding(50)

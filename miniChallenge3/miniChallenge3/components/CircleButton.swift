@@ -59,7 +59,6 @@ struct CircleButton: View {
                     })
             }
         }
-        .border(.red)
         .frame(height: 60)
         .padding()
     }

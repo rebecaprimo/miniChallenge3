@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ConsultasView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+
     var body: some View {
         ZStack {
             NavigationView {
@@ -22,7 +24,7 @@ struct ConsultasView: View {
                     Spacer(minLength: 295)
                     CircleButton("plus", buttonTabBar: false, nil, nil, action: {
                         
-                        DataModelManager.shared.addSpecialty(name: "Endocrinologista")
+                        DataModelManager.shared.addSpecialty(name: "Endocrinologista", viewContext: viewContext)
 
                         
                     })

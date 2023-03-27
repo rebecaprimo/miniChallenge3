@@ -22,7 +22,7 @@ struct HistoricoView: View {
                 if specialties.isEmpty{
                     Text("Nenhuma consulta agendada")
                 } else {
-                    List{
+                    VStack{
                         ForEach(specialties) { especialty in
                             RectangleButton(title: especialty.name!, icon: nil, view: AnyView(InfoView()))
                         }
