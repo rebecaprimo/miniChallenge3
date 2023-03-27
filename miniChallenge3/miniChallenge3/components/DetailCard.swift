@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct DetailCard: View {
-    private var specialist: String
-    private var doctor: String
-    private var hour: String
+    private var specialist: String?
+    private var doctor: String?
+    //private var hour: String?
     @State private var showingSheet = false
     
-    init(specialist: String, doctor: String, hour: String) {
+    init(specialist: String?, doctor: String?) {
         self.specialist = specialist
         self.doctor = doctor
-        self.hour = hour
+        //self.hour = hour
     }
     
     var body: some View {
@@ -39,25 +39,24 @@ struct DetailCard: View {
         .sheet(isPresented: $showingSheet) {
             ConsultasSheetView()
         }
-        
     }
     
     var detailText: some View {
         HStack(alignment: .center){
             VStack(alignment: .leading, spacing: 15){
-                Text(specialist)
+                Text(specialist!)
                     .font(.system(size: 20))
                     .foregroundColor(.black)
                     .fontWeight(.bold)
-                Text(doctor)
+                Text(doctor ?? "-")
                     .font(.title3)
                     .foregroundColor(.black)
             }
             .padding(.top, 9)
             Spacer()
-            Text(hour)
-                .font(.title2)
-                .foregroundColor(.black)
+//            Text(hour ?? "-")
+//                .font(.title2)
+//                .foregroundColor(.black)
             
         }
         .padding(50)

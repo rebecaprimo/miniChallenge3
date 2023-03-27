@@ -22,11 +22,11 @@ struct ConsultasView: View {
                 ScrollView {
                     
                     ForEach(appointments) { appointment in
-                        Text(appointment.doctor ?? "Sem consulta")
+                        DetailCard(specialist: "Teste", doctor: appointment.doctor)
                     }
                     
                     
-                    CardAppointment(specialist: "Endocrino", doctor: "Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
+                    //CardAppointment(specialist: "Endocrino", doctor: "Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
                     
                     
                     
@@ -52,8 +52,10 @@ struct ConsultasView: View {
     }
 }
 
-//struct ConsultasView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConsultasView()
-//    }
-//}
+
+private let itemFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    formatter.timeStyle = .medium
+    return formatter
+}()

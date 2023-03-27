@@ -9,31 +9,24 @@ import SwiftUI
 
 struct CardAppointment: View {
     
-    private var specialist: String
-    private var doctor: String
-    private var hour: String
-    private var dateAppointment: String
+    private var specialist: String?
+    private var doctor: String?
+    //private var hour: String?
+    private var dateAppointment: String?
     
-    init(specialist: String, doctor: String, hour: String, dateAppointment: String) {
+    init(specialist: String?, doctor: String?, dateAppointment: String?) {
         self.specialist = specialist
         self.doctor = doctor
-        self.hour = hour
+        //self.hour = hour
         self.dateAppointment = dateAppointment
     }
     
     var body: some View {
-        VStack{
-            DateCard(dateAppointment: dateAppointment)
-            DetailCard(specialist: specialist, doctor: doctor, hour: hour)
+        VStack {
+            //DateCard(dateAppointment: dateAppointment)
+            DetailCard(specialist: specialist, doctor: doctor)
             
         }
     }
 }
 
-
-
-struct CardConsulta_Previews: PreviewProvider {
-    static var previews: some View {
-        CardAppointment(specialist: "Otorrinolaringologista", doctor: "Gabriel", hour: "9h32", dateAppointment: "24 de março de 2024")
-    }
-}
