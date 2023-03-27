@@ -29,7 +29,7 @@ struct DateCard: View {
     
     var dateText: some View {
         Text(dateAppointment)
-            .font(.system(size: TextStyle.sizeDate, design: TextStyle.designDate))
+            .font(.system(size: TextStyle.shared.sizeDate, design: TextStyle.shared.designDate))
             .padding(.top)
             .padding(.leading, 12)
     }

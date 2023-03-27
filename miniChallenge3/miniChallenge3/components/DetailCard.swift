@@ -35,6 +35,7 @@ struct DetailCard: View {
                 }
             }
             .frame(height: 150)
+            
         }
         .sheet(isPresented: $showingSheet) {
             ConsultasSheetView()
@@ -63,7 +64,6 @@ struct DetailCard: View {
         .padding(50)
     }
 }
-
 
 
 struct DetalhesCard_Previews: PreviewProvider {
