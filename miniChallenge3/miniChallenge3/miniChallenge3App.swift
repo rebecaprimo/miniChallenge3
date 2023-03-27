@@ -10,13 +10,13 @@ import SwiftUI
 @main
 struct miniChallenge3App: App {
     let persistenceController = PersistenceController.shared
-    @State var selectedTab: String = "list.bullet.clipboard"
+    @State var selectedTab: String = "house"
 
     var body: some Scene {
         WindowGroup {
             CustomTabBar(selectedTab: $selectedTab)
                 .ignoresSafeArea()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

@@ -8,28 +8,17 @@
 import SwiftUI
 
 struct ConsultasView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
     var body: some View {
-        ZStack {
-            NavigationView {
-                ScrollView {
-                    CardAppointment(specialist: "Endocrino", doctor: "Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
-                }
-                .navigationTitle("Consultas")
-            }
-            VStack{
-                Spacer()
-                HStack() {
-                    Spacer(minLength: 295)
-                    CircleButton("plus", buttonTabBar: false, nil, nil, action: {
-                        
-                        DataModelManager.shared.addSpecialty(name: "Endocrinologista", viewContext: viewContext)
-
-                        
-                    })
+        NavigationView {
+            ScrollView {
+                VStack {
+                    CardAppointment(specialist: "Endocrinologista", doctor: "Dr. Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
+                    
+                    AddButton(view: AnyView(AddConsultaView()))
+                        .frame(alignment: .bottomTrailing)
                 }
             }
+            .navigationTitle("Consultas")
         }
     }
 }
