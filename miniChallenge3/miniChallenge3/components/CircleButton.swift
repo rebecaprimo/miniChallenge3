@@ -25,7 +25,6 @@ struct CircleButton: View {
     }
     
     var body: some View {
-        
         GeometryReader { reader -> AnyView in
             if buttonTabBar{
                 let midX = reader.frame(in: .global).midX
@@ -64,54 +63,8 @@ struct CircleButton: View {
     }
 }
 
-
-
-
-
-//        GeometryReader  { _ in
-//            return AnyView(
-//            Button(action: (action)) {
-//                Image(systemName: icon)
-//                    .foregroundColor(DataColor.colorTextWhite)
-//                    .frame(width: 60, height: 60)
-//                    .background(DataColor.colorButton)
-//                    .clipShape(Circle())
-//                    .font(.system(size: 25))
-//            })
-//        }
-
-
-//            GeometryReader { reader -> AnyView in
-//                let midX = reader.frame(in: .global).midX
-//                if buttonTabBar {
-//                    DispatchQueue.main.async {
-//                        if tabPoint!.count <= 4{
-//                            tabPoint!.append(midX)
-//                        }
-//                    }
-//                }
-//                return AnyView (
-//                    Button(action:(action)) {
-//                        if buttonTabBar{
-//                            Image(systemName: icon)
-//                                .foregroundColor(DataColor.colorTextWhite)
-//                                .frame(width: 60, height: 60)
-//                                .background(DataColor.colorButton.opacity(selectedTab == icon ? 1 : 0))
-//                                .clipShape(Circle())
-//                                .offset(y: selectedTab == icon ? -50 : 0)
-//                                .matchedGeometryEffect(id: icon, in: animation)
-//                                .font(.system(size: 25))
-//
-//                        } else {
-//                            Image(systemName: icon)
-//                                .foregroundColor(DataColor.colorTextWhite)
-//                                .frame(width: 60, height: 60)
-//                                .background(DataColor.colorButton)
-//                                .clipShape(Circle())
-//                                .font(.system(size: 25))
-//
-//                        }
-//                    }
-//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-//                )
-//            }
+struct ButtonTabBar_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    }
+}

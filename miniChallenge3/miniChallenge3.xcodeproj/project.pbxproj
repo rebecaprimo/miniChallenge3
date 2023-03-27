@@ -21,8 +21,11 @@
 		4D1F758829CA51B500724C58 /* PrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758729CA51B500724C58 /* PrivacidadeView.swift */; };
 		4D1F758A29CA51C200724C58 /* SuporteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758929CA51C200724C58 /* SuporteView.swift */; };
 		4D1F758C29CA51CF00724C58 /* ConfiguracoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */; };
-		4D1F758E29CB89D800724C58 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758D29CB89D800724C58 /* TitleText.swift */; };
 		4D1F759029CB986300724C58 /* HistoricoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758F29CB986300724C58 /* HistoricoView.swift */; };
+		4D1F759229CCB97700724C58 /* AddConsultaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F759129CCB97700724C58 /* AddConsultaView.swift */; };
+		4D1F759429CCBB5500724C58 /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */; };
+		4D1F759629CCE1DE00724C58 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F759529CCE1DE00724C58 /* AddButton.swift */; };
+		4D1F759829CCEA1100724C58 /* DatePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */; };
 		4D9EE8DF29C8EDBE0046483A /* miniChallenge3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */; };
 		4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8E029C8EDBE0046483A /* ContentView.swift */; };
 		4D9EE8E329C8EDC00046483A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EE8E229C8EDC00046483A /* Assets.xcassets */; };
@@ -36,6 +39,7 @@
 		8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */; };
 		8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C929CA2838009B9FF7 /* CircleButton.swift */; };
 		888D0BD229D0F74D009C122C /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D0BD129D0F74D009C122C /* DataModelManager.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +74,11 @@
 		4D1F758729CA51B500724C58 /* PrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacidadeView.swift; sourceTree = "<group>"; };
 		4D1F758929CA51C200724C58 /* SuporteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuporteView.swift; sourceTree = "<group>"; };
 		4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesView.swift; sourceTree = "<group>"; };
-		4D1F758D29CB89D800724C58 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
 		4D1F758F29CB986300724C58 /* HistoricoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoView.swift; sourceTree = "<group>"; };
+		4D1F759129CCB97700724C58 /* AddConsultaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConsultaView.swift; sourceTree = "<group>"; };
+		4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
+		4D1F759529CCE1DE00724C58 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerComponent.swift; sourceTree = "<group>"; };
 		4D9EE8DB29C8EDBE0046483A /* miniChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniChallenge3App.swift; sourceTree = "<group>"; };
 		4D9EE8E029C8EDBE0046483A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +97,7 @@
 		8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8832B9C929CA2838009B9FF7 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		888D0BD129D0F74D009C122C /* DataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelManager.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +135,11 @@
 				4D1F758329CA2B2300724C58 /* InfoView.swift */,
 				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
 				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
+
+				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
+
 				1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */,
+
 				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
 			);
 			path = view;
@@ -214,6 +226,7 @@
 		4D9EE91229C8EEB20046483A /* components */ = {
 			isa = PBXGroup;
 			children = (
+            
 				1924499A29CCDE940025FE8F /* ActionButton.swift */,
 				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
 				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
@@ -224,7 +237,8 @@
 				192B30D229CA3A89008280E4 /* DateCard.swift */,
 				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
 				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
-				4D1F758D29CB89D800724C58 /* TitleText.swift */,
+				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
+				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -361,13 +375,17 @@
 			files = (
 				4D1F758629CA513700724C58 /* TermosView.swift in Sources */,
 				4D1F759029CB986300724C58 /* HistoricoView.swift in Sources */,
-				4D1F758E29CB89D800724C58 /* TitleText.swift in Sources */,
+				4D1F759229CCB97700724C58 /* AddConsultaView.swift in Sources */,
+				4D1F759629CCE1DE00724C58 /* AddButton.swift in Sources */,
+				4D1F759429CCBB5500724C58 /* TextFieldCustom.swift in Sources */,
 				4D9EE91529CA1DC60046483A /* RectangleButton.swift in Sources */,
 				1924499D29CCEFFC0025FE8F /* DadosConsultaText.swift in Sources */,
 				4D1F758829CA51B500724C58 /* PrivacidadeView.swift in Sources */,
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
 				888D0BD229D0F74D009C122C /* DataModelManager.swift in Sources */,
 				8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */,
+				4D1F759829CCEA1100724C58 /* DatePickerComponent.swift in Sources */,
+				8832B9CA29CA2838009B9FF7 /* ButtonTabBar.swift in Sources */,
 				1924499929CCDE1D0025FE8F /* ConsultasSheetView.swift in Sources */,
 				19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */,
 				191465FD29CE4C8400EE9A6B /* DataColor.swift in Sources */,
@@ -543,7 +561,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = Z2T622XX3F;
+				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
+
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miniChallenge3/Info.plist;
@@ -576,7 +595,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = Z2T622XX3F;
+				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miniChallenge3/Info.plist;
@@ -606,7 +625,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z2T622XX3F;
+				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
@@ -626,7 +645,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Z2T622XX3F;
+				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
@@ -645,7 +664,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5786D2SAT2;
+				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rebeca.miniChallenge3UITests;
@@ -663,7 +682,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5786D2SAT2;
+				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rebeca.miniChallenge3UITests;
