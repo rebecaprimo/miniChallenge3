@@ -13,7 +13,7 @@ struct DatePickerComponent: View {
     
     var body: some View {
         VStack {
-            DatePicker("Data", selection: $dateAppointment)
+            DatePicker("", selection: $dateAppointment)
         }
     }
 }
