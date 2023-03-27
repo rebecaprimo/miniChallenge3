@@ -66,8 +66,8 @@ struct DetailCard: View {
 
 
 
-struct DetalhesCard_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailCard(specialist: "Otorrinolaringologista", doctor: "Gabriel", hour: "9h32")
-    }
-}
+//struct DetalhesCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailCard(specialist: "Otorrinolaringologista", doctor: "Gabriel", hour: "9h32")
+//    }
+//}

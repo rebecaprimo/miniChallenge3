@@ -126,6 +126,7 @@
 		4D1F758229CA265100724C58 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
 				4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */,
 				4D1F758729CA51B500724C58 /* PrivacidadeView.swift */,
 				4D1F758929CA51C200724C58 /* SuporteView.swift */,
@@ -133,7 +134,6 @@
 				4D1F758329CA2B2300724C58 /* InfoView.swift */,
 				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
 				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
-				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
 				1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */,
 				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
 			);

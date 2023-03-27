@@ -9,14 +9,17 @@ import Foundation
 import SwiftUI
 
 struct AddConsultaView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @State var specialist: String = ""
+    @State var dr: String = ""
+    @State var local: String = ""
     @State var dateAppointment = Date()
     
     var body: some View {
         VStack {
-            TextFieldCustom(title: "Especialidade")
-            TextFieldCustom(title: "Dr.")
-            TextFieldCustom(title: "Clínica")
+            TextFieldCustom(title: "Especialidade", $specialist)
+            TextFieldCustom(title: "Dr.", $dr)
+            TextFieldCustom(title: "Clínica", $local)
             VStack {
                 DatePicker("Data", selection: $dateAppointment)
             }
@@ -27,7 +30,8 @@ struct AddConsultaView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Salvar") {
-                    print("salvou!")
+                    DataModelManager.shared.addSpecialty(name: specialist, viewContext: viewContext)
+                    DataModelManager.shared.addAppointment(dr, dateAppointment, local, viewContext: viewContext)
                 }
             }
         }
