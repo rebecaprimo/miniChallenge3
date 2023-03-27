@@ -38,6 +38,7 @@
 		4D9EE91529CA1DC60046483A /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE91429CA1DC60046483A /* RectangleButton.swift */; };
 		8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */; };
 		8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C929CA2838009B9FF7 /* CircleButton.swift */; };
+		88E0780729D2164200856256 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0780629D2164200856256 /* DataModelManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		4D9EE91429CA1DC60046483A /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8832B9C929CA2838009B9FF7 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		88E0780629D2164200856256 /* DataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,11 +133,8 @@
 				4D1F758329CA2B2300724C58 /* InfoView.swift */,
 				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
 				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
-
 				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
-
 				1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */,
-
 				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
 			);
 			path = view;
@@ -214,6 +213,7 @@
 		4D9EE91129C8EE9A0046483A /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				88E0780629D2164200856256 /* DataModelManager.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -221,8 +221,8 @@
 		4D9EE91229C8EEB20046483A /* components */ = {
 			isa = PBXGroup;
 			children = (
-				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
 				4D1F759529CCE1DE00724C58 /* AddButton.swift */,
+				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
 				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
 				1924499A29CCDE940025FE8F /* ActionButton.swift */,
 				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
@@ -371,6 +371,7 @@
 				4D1F758629CA513700724C58 /* TermosView.swift in Sources */,
 				4D1F759029CB986300724C58 /* HistoricoView.swift in Sources */,
 				4D1F759229CCB97700724C58 /* AddConsultaView.swift in Sources */,
+				88E0780729D2164200856256 /* DataModelManager.swift in Sources */,
 				4D1F759629CCE1DE00724C58 /* AddButton.swift in Sources */,
 				4D1F759429CCBB5500724C58 /* TextFieldCustom.swift in Sources */,
 				4D9EE91529CA1DC60046483A /* RectangleButton.swift in Sources */,
@@ -379,7 +380,7 @@
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
 				4D1F759829CCEA1100724C58 /* DatePickerComponent.swift in Sources */,
 				8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */,
-				8832B9CA29CA2838009B9FF7 /* ButtonTabBar.swift in Sources */,
+				8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */,
 				1924499929CCDE1D0025FE8F /* ConsultasSheetView.swift in Sources */,
 				19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */,
 				191465FD29CE4C8400EE9A6B /* DataColor.swift in Sources */,
@@ -555,8 +556,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
-
+				DEVELOPMENT_TEAM = Z2T622XX3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miniChallenge3/Info.plist;
@@ -589,7 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
+				DEVELOPMENT_TEAM = Z2T622XX3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miniChallenge3/Info.plist;
