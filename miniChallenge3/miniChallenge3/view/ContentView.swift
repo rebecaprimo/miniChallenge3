@@ -26,7 +26,9 @@ struct ContentView: View {
                 .ignoresSafeArea()
             CustomTabBar(selectedTab: $selectedTab)
 
-        }.ignoresSafeArea()
+        }
+        .ignoresSafeArea()
+        .foregroundColor(DataColor.colorBackGround)
         
         
         

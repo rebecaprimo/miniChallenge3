@@ -15,6 +15,7 @@ struct miniChallenge3App: App {
     var body: some Scene {
         WindowGroup {
             CustomTabBar(selectedTab: $selectedTab)
+                .ignoresSafeArea()
                 //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

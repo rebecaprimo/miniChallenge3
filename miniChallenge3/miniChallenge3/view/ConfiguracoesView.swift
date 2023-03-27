@@ -12,5 +12,6 @@ struct ConfiguracoesView: View {
     var body: some View {
         Text("")
         .navigationTitle("Configurações")
+        
     }
 }
