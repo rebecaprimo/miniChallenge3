@@ -19,19 +19,19 @@ struct DateCard: View {
         GeometryReader { geometry in
             Rectangle()
                 .fill(.blue)
-                .frame(width: geometry.size.width, height: 60)
+                .frame(height: 60)
                 .padding(.bottom, radius)
                 .cornerRadius(CGFloat(radius))
             dateText
         }
         .padding()
-//        .frame(width: .infinity, height: 60)
     }
     
     var dateText: some View {
         Text(dateAppointment)
-            .font(.title2)
-            .padding()
+            .font(.system(size: TextStyle.sizeDate, design: TextStyle.designDate))
+            .padding(.top)
+            .padding(.leading, 12)
     }
     
 }

@@ -25,6 +25,7 @@ struct CustomTabBar: View {
     var body: some View {
 
         TabView(selection: $selectedTab){
+            
             ConsultasView()
                 .tag(iconHome)
             
@@ -43,7 +44,7 @@ struct CustomTabBar: View {
             }
             
         }
-        .background(Color.gray.clipShape(CustomShape(tabPoint: getCurvePoint())))
+        .background(DataColor.colorTab.clipShape(CustomShape(tabPoint: getCurvePoint())))
         
     }
     

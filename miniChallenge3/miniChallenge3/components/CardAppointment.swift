@@ -22,9 +22,10 @@ struct CardAppointment: View {
     }
     
     var body: some View {
-        VStack(spacing: 0){
+        VStack{
             DateCard(dateAppointment: dateAppointment)
             DetailCard(specialist: specialist, doctor: doctor, hour: hour)
+            
         }
     }
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191465FB29CE3C7C00EE9A6B /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191465FA29CE3C7C00EE9A6B /* TextStyle.swift */; };
+		191465FD29CE4C8400EE9A6B /* DataColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191465FC29CE4C8400EE9A6B /* DataColor.swift */; };
+		1924499929CCDE1D0025FE8F /* ConsultasSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */; };
+		1924499B29CCDE940025FE8F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1924499A29CCDE940025FE8F /* ActionButton.swift */; };
+		1924499D29CCEFFC0025FE8F /* DadosConsultaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */; };
 		1927E21829C9013900BE7BAD /* CardAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927E21729C9013900BE7BAD /* CardAppointment.swift */; };
 		192B30D329CA3A89008280E4 /* DateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B30D229CA3A89008280E4 /* DateCard.swift */; };
 		192B30D529CA4028008280E4 /* DetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B30D429CA4028008280E4 /* DetailCard.swift */; };
@@ -53,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191465FA29CE3C7C00EE9A6B /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		191465FC29CE4C8400EE9A6B /* DataColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataColor.swift; sourceTree = "<group>"; };
+		1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultasSheetView.swift; sourceTree = "<group>"; };
+		1924499A29CCDE940025FE8F /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadosConsultaText.swift; sourceTree = "<group>"; };
 		1927E21729C9013900BE7BAD /* CardAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAppointment.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		192B30D229CA3A89008280E4 /* DateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCard.swift; sourceTree = "<group>"; };
 		192B30D429CA4028008280E4 /* DetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCard.swift; sourceTree = "<group>"; };
@@ -121,7 +131,11 @@
 				4D1F758329CA2B2300724C58 /* InfoView.swift */,
 				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
 				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
+
 				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
+
+				1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */,
+
 				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
 			);
 			path = view;
@@ -210,10 +224,14 @@
 				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
 				4D1F759529CCE1DE00724C58 /* AddButton.swift */,
 				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
+				1924499A29CCDE940025FE8F /* ActionButton.swift */,
+				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
 				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
 				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
 				192B30D229CA3A89008280E4 /* DateCard.swift */,
 				192B30D429CA4028008280E4 /* DetailCard.swift */,
+				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
+				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
 				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
 				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
 			);
@@ -356,13 +374,18 @@
 				4D1F759629CCE1DE00724C58 /* AddButton.swift in Sources */,
 				4D1F759429CCBB5500724C58 /* TextFieldCustom.swift in Sources */,
 				4D9EE91529CA1DC60046483A /* RectangleButton.swift in Sources */,
+				1924499D29CCEFFC0025FE8F /* DadosConsultaText.swift in Sources */,
 				4D1F758829CA51B500724C58 /* PrivacidadeView.swift in Sources */,
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
 				4D1F759829CCEA1100724C58 /* DatePickerComponent.swift in Sources */,
 				8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */,
+				8832B9CA29CA2838009B9FF7 /* ButtonTabBar.swift in Sources */,
+				1924499929CCDE1D0025FE8F /* ConsultasSheetView.swift in Sources */,
 				19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */,
+				191465FD29CE4C8400EE9A6B /* DataColor.swift in Sources */,
 				8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */,
 				1927E21829C9013900BE7BAD /* CardAppointment.swift in Sources */,
+				191465FB29CE3C7C00EE9A6B /* TextStyle.swift in Sources */,
 				4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */,
 				4D1F758A29CA51C200724C58 /* SuporteView.swift in Sources */,
 				4D1F758C29CA51CF00724C58 /* ConfiguracoesView.swift in Sources */,
@@ -371,6 +394,7 @@
 				4D9EE8EB29C8EDC00046483A /* miniChallenge3.xcdatamodeld in Sources */,
 				4D9EE8DF29C8EDBE0046483A /* miniChallenge3App.swift in Sources */,
 				4D1F758429CA2B2300724C58 /* InfoView.swift in Sources */,
+				1924499B29CCDE940025FE8F /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +556,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
 				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
+
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miniChallenge3/Info.plist;

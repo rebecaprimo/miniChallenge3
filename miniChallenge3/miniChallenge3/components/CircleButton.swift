@@ -40,8 +40,9 @@ struct CircleButton: View {
                     withAnimation{selectedTab = icon}
                 }}) {
                     Image(systemName: icon)
+                        .foregroundColor(DataColor.colorTextWhite)
                         .frame(width: 60, height: 60)
-                        .background(Color.gray.opacity(selectedTab == icon ? 1 : 0))
+                        .background(DataColor.colorButton.opacity(selectedTab == icon ? 1 : 0))
                         .clipShape(Circle())
                         .offset(y: selectedTab == icon ? -50 : 0)
                         .matchedGeometryEffect(id: icon, in: animation)
@@ -50,10 +51,8 @@ struct CircleButton: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             )
         }
-
         .frame(height: 40)
         .padding()
-        
         
     }
 }
