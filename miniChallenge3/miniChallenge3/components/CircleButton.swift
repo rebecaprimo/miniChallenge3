@@ -10,50 +10,56 @@ import SwiftUI
 struct CircleButton: View {
     
     private var icon: String
-    @Binding private var selectedTab: String 
-    @Binding private var tabPoint: [CGFloat]
+    private var action: () -> Void
+    private var buttonTabBar: Bool
+    @Binding private var selectedTab: String
+    @Binding private var tabPoint: [CGFloat]?
     @Namespace var animation
     
-    init(icon: String, selectedTab: Binding<String>, tabPoint: Binding<[CGFloat]>) {
+    init(_ icon: String,buttonTabBar: Bool,_ selectedTab: Binding<String>?,_ tabPoint: Binding<[CGFloat]?>?, action: @escaping () -> Void) {
         self.icon = icon
-        self._selectedTab = selectedTab
-        self._tabPoint = tabPoint
+        self.buttonTabBar = buttonTabBar
+        self._selectedTab = selectedTab ?? Binding.constant("")
+        self._tabPoint = tabPoint ?? Binding.constant(nil)
+        self.action = action
     }
     
     var body: some View {
-        
-        //Implementar a tabView
-        
-        
         GeometryReader { reader -> AnyView in
-            
-            let midX = reader.frame(in: .global).midX
-            
-            DispatchQueue.main.async {
-                if tabPoint.count <= 4{
-                    tabPoint.append(midX)
+            if buttonTabBar{
+                let midX = reader.frame(in: .global).midX
+                DispatchQueue.main.async {
+                    if tabPoint!.count <= 4{
+                        tabPoint!.append(midX)
+                    }
                 }
+                return AnyView(
+                    Button(action: (action), label: {
+                        Image(systemName: icon)
+                            .foregroundColor(DataColor.colorTextWhite)
+                            .frame(width: 60, height: 60)
+                            .background(DataColor.colorButton.opacity(selectedTab == icon ? 1 : 0))
+                            .clipShape(Circle())
+                            .offset(y: selectedTab == icon ? -50 : 0)
+                            .matchedGeometryEffect(id: icon, in: animation)
+                            .font(.system(size: 25))
+                    })
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                )
+            } else {
+                return AnyView(
+                    Button(action: (action)) {
+                        Image(systemName: icon)
+                            .foregroundColor(DataColor.colorTextWhite)
+                            .frame(width: 60, height: 60)
+                            .background(DataColor.colorButton)
+                            .clipShape(Circle())
+                            .font(.system(size: 25))
+                    })
             }
-            
-            return AnyView (
-                Button(action: {withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.3, blendDuration: 0.5)) {
-                    withAnimation{selectedTab = icon}
-                }}) {
-                    Image(systemName: icon)
-                        .foregroundColor(DataColor.colorTextWhite)
-                        .frame(width: 60, height: 60)
-                        .background(DataColor.colorButton.opacity(selectedTab == icon ? 1 : 0))
-                        .clipShape(Circle())
-                        .offset(y: selectedTab == icon ? -50 : 0)
-                        .matchedGeometryEffect(id: icon, in: animation)
-                        .font(.system(size: 25))
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            )
         }
-        .frame(height: 40)
+        .frame(height: 60)
         .padding()
-        
     }
 }
 
