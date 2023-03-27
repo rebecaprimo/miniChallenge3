@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonTabBar: View {
+struct CircleButton: View {
     
     private var icon: String
     @Binding private var selectedTab: String 

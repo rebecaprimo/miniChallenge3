@@ -9,11 +9,14 @@ import SwiftUI
 
 struct ConsultasView: View {
     var body: some View {
-        
         NavigationView {
             ScrollView {
-                CardAppointment(specialist: "Endocrino", doctor: "Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
-                
+                VStack {
+                    CardAppointment(specialist: "Endocrinologista", doctor: "Dr. Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
+                    
+                    AddButton(view: AnyView(AddConsultaView()))
+                        .frame(alignment: .bottomTrailing)
+                }
             }
             .navigationTitle("Consultas")
         }
