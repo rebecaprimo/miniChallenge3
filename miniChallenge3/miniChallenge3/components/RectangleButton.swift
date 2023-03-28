@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 struct RectangleButton: View {
+    
+    private let style = DataColor.shared
     private let icon: String?
     private var title: String
     private let view: AnyView
@@ -42,8 +44,8 @@ struct RectangleButton: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical, 20)
             .padding(.horizontal, 15)
-            .foregroundColor(.white)
-            .background(Color.red)
+            .foregroundColor(style.colorTextWhite)
+            .background(style.colorTab)
             .cornerRadius(15)
         })
         .padding(10)

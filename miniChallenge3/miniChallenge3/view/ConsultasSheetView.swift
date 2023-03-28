@@ -22,7 +22,7 @@ struct ConsultasSheetView: View {
             VStack{
                 HStack{
                     Spacer()
-                    ActionButton(title: "Editar", icon: "pencil", color: .yellow, action: {print("Editado")})
+                    ActionButton(title: "Editar", icon: "pencil", color: Color(uiColor: UIColor(red: 0.996, green: 0.929, blue: 0.765, alpha: 1)), action: {print("Editado")})
                     ActionButton(title: "Excluir", icon: "trash", color: .red, action: {DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)})
                 }
                 .padding()

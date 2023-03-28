@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CircleButton: View {
     
+    private var style = DataColor.shared
     private var icon: String
     private var action: () -> Void
     private var buttonTabBar: Bool
@@ -37,9 +38,9 @@ struct CircleButton: View {
                 return AnyView(
                     Button(action: (action), label: {
                         Image(systemName: icon)
-                            .foregroundColor(DataColor.colorTextWhite)
+                            .foregroundColor(style.colorTextWhite)
                             .frame(width: 60, height: 60)
-                            .background(DataColor.colorButton.opacity(selectedTab == icon ? 1 : 0))
+                            .background(style.colorButton.opacity(selectedTab == icon ? 1 : 0))
                             .clipShape(Circle())
                             .offset(y: selectedTab == icon ? -50 : 0)
                             .matchedGeometryEffect(id: icon, in: animation)
@@ -48,14 +49,16 @@ struct CircleButton: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 )
             } else {
-
+                
                 return AnyView(
+                    
                     Button(action: (action)) {
                         Image(systemName: icon)
-                            .foregroundColor(DataColor.colorTextWhite)
+                            .foregroundColor(style.colorTextWhite)
                             .frame(width: 60, height: 60)
-                            .background(DataColor.colorButton)
+                            .background(style.colorButton)
                             .clipShape(Circle())
+                            .border(.white)
                             .font(.system(size: 25))
                     })
             }

@@ -9,12 +9,14 @@ import SwiftUI
 
 class DataColor{
     
+    static let shared = DataColor()
     
-    static let colorTab: Color = .init(red: 0.122, green: 0.106, blue: 0.208)
-    static let colorButton: Color = .init(red: 0.403, green: 0.443, blue: 0.75)
-    static let colorBackGround: Color = .init(red: 0.945, green: 0.937, blue: 0.988)
+    let colorTab: Color = .init(red: 0.122, green: 0.106, blue: 0.208)
+    let colorButton: Color = .init(red: 0.403, green: 0.443, blue: 0.75)
+    let colorBackGround: Color = .init(red: 0.945, green: 0.937, blue: 0.988)
     
-    static let colorTextWhite: Color = .white
-    static let colorTextBlack: Color = .black
+    let colorCard: Color = .white
+    let colorTextWhite: Color = .white
+    let colorTextBlack: Color = .black
     
 }

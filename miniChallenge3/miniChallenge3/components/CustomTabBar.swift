@@ -42,12 +42,11 @@ struct CustomTabBar: View {
                 CircleButton(icon, buttonTabBar: true, $selectedTab, $tabPoint, action:  {
                     withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.5, blendDuration: 0.5)) {
                     withAnimation{selectedTab = icon}
-                }})
+                    }})
             }
             
         }
-        .background(DataColor.colorTab.clipShape(CustomShape(tabPoint: getCurvePoint())))
-        
+        .background(DataColor.shared.colorTab.clipShape(CustomShape(tabPoint: getCurvePoint())))
     }
     
     

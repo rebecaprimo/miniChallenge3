@@ -16,7 +16,7 @@ struct ConsultasView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Appointment.id, ascending: true)],
         animation: .default)
     private var appointments: FetchedResults<Appointment>
-
+    
     var body: some View {
         VStack {
             NavigationView {
@@ -30,11 +30,8 @@ struct ConsultasView: View {
                                 DetailCard(appointment: appointment)
                             }
                         }
-                    
-                }
-                
-                    //CardAppointment(specialist: "Endocrino", doctor: "Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
-                    
+                        
+                    }
                     VStack{
                         Spacer()
                         HStack() {
@@ -46,7 +43,6 @@ struct ConsultasView: View {
                     }
                     
                 }
-//                .background(DataColor.colorBackGround)
                 .navigationTitle("Consultas")
             }
         }

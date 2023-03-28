@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailCard: View {
 
     private var appointment: Appointment
+    private let style = TextStyle.shared
     @State private var showingSheet = false
     
     init(appointment: Appointment, showingSheet: Bool = false) {
@@ -19,15 +20,14 @@ struct DetailCard: View {
     
     var body: some View {
         Button {
-            print("Funciona")
             showingSheet = true
-            
         } label: {
             GeometryReader { geometry in
                 ZStack {
                     Rectangle()
-                        .fill(.gray)
+                        .fill(.white)
                         .frame(height: 150)
+                        .border(.white)
                         .padding()
                     detailText
                 }
@@ -43,18 +43,20 @@ struct DetailCard: View {
         HStack(alignment: .center){
             VStack(alignment: .leading, spacing: 15){
                 Text(appointment.specialty?.name ?? "-")
-                    .font(.system(size: 20))
+                    .font(.system(size: style.sizeText))
                     .foregroundColor(.black)
-                    .fontWeight(.bold)
-                Text(appointment.doctor ?? "-")
+                    .fontWeight(style.weightText)
+                Text("Dr(a) " + (appointment.doctor ?? "-"))
                     .font(.title3)
                     .foregroundColor(.black)
+                    .fontWeight(style.weightText)
             }
             .padding(.top, 9)
             Spacer()
-//            Text(hour ?? "-")
-//                .font(.title2)
-//                .foregroundColor(.black)
+            Text(dateFormatterHourStringAppointment(Date: appointment.date))
+                .font(.title2)
+                .foregroundColor(.black)
+                .fontWeight(style.weightText)
             
         }
         .padding(50)

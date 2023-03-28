@@ -12,7 +12,7 @@ struct DataModelManager{
     
     static let shared = DataModelManager()
     
-    func addSpecialty(name: String, viewContext: NSManagedObjectContext) {
+    func addSpecialty(name: String, viewContext: NSManagedObjectContext) -> Specialty {
         withAnimation {
             let newSpecialty = Specialty(context: viewContext)
             newSpecialty.name = name
@@ -20,28 +20,25 @@ struct DataModelManager{
 
             do {
                 try viewContext.save()
+                return newSpecialty
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
     }
     
-    func addAppointment(_ doctor: String,_ date: Date,_ local: String, viewContext: NSManagedObjectContext) {
+    func addAppointment(_ doctor: String,_ date: Date,_ local: String, viewContext: NSManagedObjectContext,_ specialty: Specialty) {
         withAnimation {
             let newAppointment = Appointment(context: viewContext)
             newAppointment.id = UUID()
             newAppointment.doctor = doctor
             newAppointment.date = date
             newAppointment.local = local
-
+            specialty.addToAppointment(newAppointment)
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }

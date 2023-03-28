@@ -28,7 +28,7 @@ struct ContentView: View {
 
         }
         .ignoresSafeArea()
-        .foregroundColor(DataColor.colorBackGround)
+        .foregroundColor(DataColor.shared.colorBackGround)
         
         
         
