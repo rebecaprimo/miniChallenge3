@@ -26,8 +26,8 @@ struct DetailCard: View {
                 ZStack {
                     Rectangle()
                         .fill(.white)
-                        .frame(height: 150)
-                        .border(.white)
+                        //.frame(height: 150)
+                        .border(.black)
                         .padding()
                     detailText
                 }

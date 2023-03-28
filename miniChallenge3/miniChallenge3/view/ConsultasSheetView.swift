@@ -22,8 +22,8 @@ struct ConsultasSheetView: View {
             VStack{
                 HStack{
                     Spacer()
-                    ActionButton(title: "Editar", icon: "pencil", color: Color(uiColor: UIColor(red: 0.996, green: 0.929, blue: 0.765, alpha: 1)), action: {print("Editado")})
-                    ActionButton(title: "Excluir", icon: "trash", color: .red, action: {DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)})
+                    ActionButton(title: "Editar", icon: "pencil", color: Color(uiColor: UIColor(red: 0.996, green: 0.929, blue: 0.765, alpha: 1)), action: nil, view: AnyView(EditarView()), isEdit: true)
+                    ActionButton(title: "Excluir", icon: "trash", color: .red, action: {DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)}, view: nil, isEdit: false)
                 }
                 .padding()
                 Group {
@@ -32,13 +32,6 @@ struct ConsultasSheetView: View {
                         .padding(.bottom, 17)
                 }
                 .padding(.leading, 40)
-                
-                DadosConsultaText(icon: "paperclip", text: "Anexos")
-                    .padding([.top, .bottom], 40)
-                    .padding(.leading, 25)
-                
-                Spacer()
-                
             }
             
             VStack(alignment: .leading){

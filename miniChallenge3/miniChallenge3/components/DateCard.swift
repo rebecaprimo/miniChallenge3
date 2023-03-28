@@ -21,6 +21,7 @@ struct DateCard: View {
             Rectangle()
                 .fill(DataColor.shared.colorTab)
                 .frame(height: 60)
+                .border(.black)
                 .padding(.bottom, radius)
                 .cornerRadius(CGFloat(radius))
             dateText
@@ -30,6 +31,7 @@ struct DateCard: View {
     
     var dateText: some View {
         Text(dateAppointment)
+            .foregroundColor(.white)
             .font(.system(size: style.sizeDate, design: style.designDate))
             .fontWeight(style.weightDate)
             .padding(.top)

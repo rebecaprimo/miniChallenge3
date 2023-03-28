@@ -21,17 +21,23 @@ struct ConsultasView: View {
         VStack {
             NavigationView {
                 ZStack{
-                    
-                    ScrollView {
-                        
+                    List {
                         ForEach(appointments) { appointment in
-                            if appointment.date! > .now{
-                                DateCard(dateAppointment: dateFormatter(Date: appointment.date))
-                                DetailCard(appointment: appointment)
+                            if appointment.date! > .now {
+                                VStack {
+                                    DateCard(dateAppointment: dateFormatter(Date: appointment.date))
+                                    DetailCard(appointment: appointment)
+                                }
+                                
                             }
                         }
-                        
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
                     }
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .scrollContentBackground(.hidden)
+                    .listStyle(PlainListStyle())
+                    
                     VStack{
                         Spacer()
                         HStack() {
@@ -46,6 +52,7 @@ struct ConsultasView: View {
                 .navigationTitle("Consultas")
             }
         }
+        
     }
 }
 

@@ -18,16 +18,18 @@ struct HistoricoView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                RectangleButton(title: "Geral", icon: nil, view: AnyView(InfoView()))
-                
-                ForEach(specialties) { specialty in
-                    RectangleButton(title: specialty.name ?? "-", icon: nil, view: AnyView(InfoView()))
+            ScrollView {
+                VStack {
+                    RectangleButton(title: "Geral", icon: nil, view: AnyView(InfoView()))
+                    
+                    ForEach(specialties) { specialty in
+                        RectangleButton(title: specialty.name ?? "-", icon: nil, view: AnyView(InfoView()))
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
+                .navigationTitle("Histórico")
             }
-            .navigationTitle("Histórico")
         }
     }
 }
