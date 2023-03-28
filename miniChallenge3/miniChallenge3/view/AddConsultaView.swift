@@ -37,9 +37,3 @@ struct AddConsultaView: View {
         }
     }
 }
-
-struct AddConsultaView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddConsultaView()
-    }
-}

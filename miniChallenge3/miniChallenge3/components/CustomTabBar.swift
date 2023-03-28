@@ -40,11 +40,10 @@ struct CustomTabBar: View {
         HStack(spacing: 0) {
             ForEach(icons, id: \.self) { icon in
                 CircleButton(icon, buttonTabBar: true, $selectedTab, $tabPoint, action:  {
-                    withAnimation(.interactiveSpring(response: 0.5, dampingFraction: 0.3, blendDuration: 0.5)) {
+                    withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.5, blendDuration: 0.5)) {
                     withAnimation{selectedTab = icon}
                 }})
             }
-
             
         }
         .background(DataColor.colorTab.clipShape(CustomShape(tabPoint: getCurvePoint())))

@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct DetailCard: View {
-    private var specialist: String?
-    private var doctor: String?
-    //private var hour: String?
+
+    private var appointment: Appointment
     @State private var showingSheet = false
     
-    init(specialist: String?, doctor: String?) {
-        self.specialist = specialist
-        self.doctor = doctor
-        //self.hour = hour
+    init(appointment: Appointment, showingSheet: Bool = false) {
+        self.appointment = appointment
+        self.showingSheet = showingSheet
     }
     
     var body: some View {
@@ -37,18 +35,18 @@ struct DetailCard: View {
             .frame(height: 150)
         }
         .sheet(isPresented: $showingSheet) {
-            ConsultasSheetView()
+            ConsultasSheetView(appointment: appointment)
         }
     }
     
     var detailText: some View {
         HStack(alignment: .center){
             VStack(alignment: .leading, spacing: 15){
-                Text(specialist!)
+                Text(appointment.specialty?.name ?? "-")
                     .font(.system(size: 20))
                     .foregroundColor(.black)
                     .fontWeight(.bold)
-                Text(doctor ?? "-")
+                Text(appointment.doctor ?? "-")
                     .font(.title3)
                     .foregroundColor(.black)
             }
@@ -62,11 +60,3 @@ struct DetailCard: View {
         .padding(50)
     }
 }
-
-
-
-//struct DetalhesCard_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailCard(specialist: "Otorrinolaringologista", doctor: "Gabriel", hour: "9h32")
-//    }
-//}

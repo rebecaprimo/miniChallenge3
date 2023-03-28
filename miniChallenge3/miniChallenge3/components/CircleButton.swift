@@ -48,10 +48,7 @@ struct CircleButton: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 )
             } else {
-                
-                
-                
-                
+
                 return AnyView(
                     Button(action: (action)) {
                         Image(systemName: icon)
@@ -65,11 +62,5 @@ struct CircleButton: View {
         }
         .frame(height: 60)
         .padding()
-    }
-}
-
-struct ButtonTabBar_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
