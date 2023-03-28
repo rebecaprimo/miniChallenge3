@@ -31,9 +31,16 @@ struct ConsultasSheetView: View {
                     DadosConsultaText(text: appointment.doctor ?? "-")
                         .padding(.bottom, 17)
                 }
-                .padding(.bottom,15)
-                .multilineTextAlignment(.center)
+                .padding(.leading, 40)
+                
+                DadosConsultaText(icon: "paperclip", text: "Anexos")
+                    .padding([.top, .bottom], 40)
+                    .padding(.leading, 25)
+                
+                Spacer()
+                
             }
+            
             VStack(alignment: .leading){
                 Group {
                     DadosConsultaText(icon: "calendar", text: dateFormatterStringAppointment(Date: appointment.date))
@@ -47,7 +54,6 @@ struct ConsultasSheetView: View {
                 .padding([.top, .bottom], 40)
                 .padding(.leading, 25)
             Spacer()
-            
         }
     }
 }
@@ -57,7 +63,8 @@ func dateFormatterStringAppointment(Date: Date?) -> String{
     formatter.locale = Locale(identifier: "pt-BR")
     formatter.dateFormat = "EEEE, MM/dd/yyyy"
     return formatter.string(from: Date ?? .now).capitalized
-}
+
+    }
 
 func dateFormatterHourStringAppointment(Date: Date?) -> String{
     let formatter = DateFormatter()
