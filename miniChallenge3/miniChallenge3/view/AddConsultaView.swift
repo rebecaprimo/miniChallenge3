@@ -17,14 +17,22 @@ struct AddConsultaView: View {
     private let vmManager = DataModelManager.shared
     
     var body: some View {
-        VStack {
-            TextFieldCustom(title: "Especialidade", $specialist)
-            TextFieldCustom(title: "Dr.", $dr)
+        VStack(alignment: .leading) {
+            PickerComponent()
+            TextFieldCustom(title: "Médico", $dr)
+            DatePickerComponent(title: "Data e hora")
             TextFieldCustom(title: "Clínica", $local)
-            VStack {
-                DatePicker("Data", selection: $dateAppointment)
-            }
+            Text("Adicionar")
+                .padding(17)
+                .font(.system(size: 20))
+                .font(.callout)
+                .bold()
             Spacer()
+            
+            HStack(alignment: .center) {
+                SquareButton(icon: "camera.fill")
+                SquareButton(icon: "photo.on.rectangle")
+            }
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Adicionar")
