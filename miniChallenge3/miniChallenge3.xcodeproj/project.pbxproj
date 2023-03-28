@@ -224,19 +224,19 @@
 		4D9EE91229C8EEB20046483A /* components */ = {
 			isa = PBXGroup;
 			children = (
-				4D1F759529CCE1DE00724C58 /* AddButton.swift */,
-				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
-				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
 				1924499A29CCDE940025FE8F /* ActionButton.swift */,
-				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
-				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
-				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
-				192B30D229CA3A89008280E4 /* DateCard.swift */,
-				192B30D429CA4028008280E4 /* DetailCard.swift */,
-				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
-				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
+				4D1F759529CCE1DE00724C58 /* AddButton.swift */,
 				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
+				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
+				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
+				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
+				192B30D229CA3A89008280E4 /* DateCard.swift */,
+				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
+				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
+				192B30D429CA4028008280E4 /* DetailCard.swift */,
+				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
 				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
+				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";

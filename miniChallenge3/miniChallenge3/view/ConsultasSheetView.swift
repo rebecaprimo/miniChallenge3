@@ -9,35 +9,27 @@ import SwiftUI
 
 struct ConsultasSheetView: View {
     
+    @Environment(\.managedObjectContext) private var viewContext
+    private var appointment: Appointment
+    
+    init(appointment: Appointment) {
+        self.appointment = appointment
+    }
     
     var body: some View {
         
-        NavigationView {
-            VStack(alignment: .leading) {
-                VStack {
-                    HStack {
-                        Spacer()
-                        
-                        ActionButton(title: "Editar", icon: "pencil", color: .yellow, action: nil, view: AnyView(EditarView()), isEdit: true)
-                        
-                        ActionButton(title: "Ecluir", icon: "trash", color: .red, action: {print("funciona")}, view: nil, isEdit: false)
-                    }
-                    .padding()
-                    Group {
-                        DadosConsultaText(text: "Otorrinolaringologista")
-                        DadosConsultaText(text: "Dr(a) Flavio Gustavo de Melo Roberto Oliveira da Silveira ")
-                            .padding(.bottom, 17)
-                    }
-                    .padding(.bottom,15)
-                    .multilineTextAlignment(.center)
+        VStack(alignment: .leading){
+            VStack{
+                HStack{
+                    Spacer()
+                    ActionButton(title: "Editar", icon: "pencil", color: Color(uiColor: UIColor(red: 0.996, green: 0.929, blue: 0.765, alpha: 1)), action: {print("Editado")})
+                    ActionButton(title: "Excluir", icon: "trash", color: .red, action: {DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)})
                 }
-                VStack(alignment: .leading) {
-                    Group {
-                        DadosConsultaText(icon: "calendar", text: "Sexta-feira, 17/04/2019")
-                        DadosConsultaText(icon: "clock", text: "9:38")
-                        DadosConsultaText(icon: "mappin.and.ellipse", text: "Hospital Paulistano")
-                    }
-                    .padding(.bottom, 5)
+                .padding()
+                Group {
+                    DadosConsultaText(text: appointment.specialty?.name ?? "-")
+                    DadosConsultaText(text: appointment.doctor ?? "-")
+                        .padding(.bottom, 17)
                 }
                 .padding(.leading, 40)
                 
@@ -48,15 +40,35 @@ struct ConsultasSheetView: View {
                 Spacer()
                 
             }
+            
+            VStack(alignment: .leading){
+                Group {
+                    DadosConsultaText(icon: "calendar", text: dateFormatterStringAppointment(Date: appointment.date))
+                    DadosConsultaText(icon: "clock", text: dateFormatterHourStringAppointment(Date: appointment.date))
+                    DadosConsultaText(icon: "mappin.and.ellipse", text: appointment.local ?? "-")
+                }
+                .padding(.bottom, 5)
+            }
+            .padding(.leading, 40)
+            DadosConsultaText(icon: "paperclip", text: "Anexos")
+                .padding([.top, .bottom], 40)
+                .padding(.leading, 25)
+            Spacer()
         }
     }
 }
 
+func dateFormatterStringAppointment(Date: Date?) -> String{
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "pt-BR")
+    formatter.dateFormat = "EEEE, MM/dd/yyyy"
+    return formatter.string(from: Date ?? .now).capitalized
 
-struct ConsultasSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        ConsultasSheetView()
     }
-}
 
+func dateFormatterHourStringAppointment(Date: Date?) -> String{
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "pt-BR")
+    formatter.dateFormat = "HH:mm"
+    return formatter.string(from: Date ?? .now).capitalized
+}

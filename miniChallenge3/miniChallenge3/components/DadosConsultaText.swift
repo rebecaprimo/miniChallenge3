@@ -40,8 +40,8 @@ struct DadosConsultaText: View {
     }
 }
 
-struct DadosConsultaText_Previews: PreviewProvider {
-    static var previews: some View {
-        DadosConsultaText(icon: "pencil", text: "Hospital Paulistano")
-    }
-}
+//struct DadosConsultaText_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DadosConsultaText(icon: "pencil", text: "Hospital Paulistano")
+//    }
+//}

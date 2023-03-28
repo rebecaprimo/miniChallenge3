@@ -9,13 +9,21 @@ import Foundation
 import SwiftUI
 
 struct HistoricoView: View {
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.id, ascending: true)],
+        animation: .default)
+    private var specialties: FetchedResults<Specialty>
+    
+    
     var body: some View {
         NavigationView {
             VStack {
-                RectangleButton(title: "Especialidade", icon: nil, view: AnyView(InfoView()))
-                RectangleButton(title: "Especialidade", icon: nil, view: AnyView(InfoView()))
-                RectangleButton(title: "Especialidade", icon: nil, view: AnyView(InfoView()))
-                RectangleButton(title: "Especialidade", icon: nil, view: AnyView(InfoView()))
+                RectangleButton(title: "Geral", icon: nil, view: AnyView(InfoView()))
+                
+                ForEach(specialties) { specialty in
+                    RectangleButton(title: specialty.name ?? "-", icon: nil, view: AnyView(InfoView()))
+                }
                 
                 Spacer()
             }
@@ -24,8 +32,3 @@ struct HistoricoView: View {
     }
 }
 
-struct HistoricoView_Previews: PreviewProvider {
-    static var previews: some View {
-        HistoricoView()
-    }
-}

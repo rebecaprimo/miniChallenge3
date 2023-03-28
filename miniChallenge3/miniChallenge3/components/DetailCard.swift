@@ -8,28 +8,26 @@
 import SwiftUI
 
 struct DetailCard: View {
-    private var specialist: String?
-    private var doctor: String?
-    //private var hour: String?
+
+    private var appointment: Appointment
+    private let style = TextStyle.shared
     @State private var showingSheet = false
     
-    init(specialist: String?, doctor: String?) {
-        self.specialist = specialist
-        self.doctor = doctor
-        //self.hour = hour
+    init(appointment: Appointment, showingSheet: Bool = false) {
+        self.appointment = appointment
+        self.showingSheet = showingSheet
     }
     
     var body: some View {
         Button {
-            print("Funciona")
             showingSheet = true
-            
         } label: {
             GeometryReader { geometry in
                 ZStack {
                     Rectangle()
-                        .fill(.gray)
+                        .fill(.white)
                         .frame(height: 150)
+                        .border(.white)
                         .padding()
                     detailText
                 }
@@ -37,36 +35,30 @@ struct DetailCard: View {
             .frame(height: 150)
         }
         .sheet(isPresented: $showingSheet) {
-            ConsultasSheetView()
+            ConsultasSheetView(appointment: appointment)
         }
     }
     
     var detailText: some View {
         HStack(alignment: .center){
             VStack(alignment: .leading, spacing: 15){
-                Text(specialist!)
-                    .font(.system(size: 20))
+                Text(appointment.specialty?.name ?? "-")
+                    .font(.system(size: style.sizeText))
                     .foregroundColor(.black)
-                    .fontWeight(.bold)
-                Text(doctor ?? "-")
+                    .fontWeight(style.weightText)
+                Text("Dr(a) " + (appointment.doctor ?? "-"))
                     .font(.title3)
                     .foregroundColor(.black)
+                    .fontWeight(style.weightText)
             }
             .padding(.top, 9)
             Spacer()
-//            Text(hour ?? "-")
-//                .font(.title2)
-//                .foregroundColor(.black)
+            Text(dateFormatterHourStringAppointment(Date: appointment.date))
+                .font(.title2)
+                .foregroundColor(.black)
+                .fontWeight(style.weightText)
             
         }
         .padding(50)
     }
 }
-
-
-
-//struct DetalhesCard_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailCard(specialist: "Otorrinolaringologista", doctor: "Gabriel", hour: "9h32")
-//    }
-//}

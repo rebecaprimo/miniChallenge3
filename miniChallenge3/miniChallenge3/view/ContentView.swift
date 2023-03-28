@@ -28,7 +28,7 @@ struct ContentView: View {
 
         }
         .ignoresSafeArea()
-        .foregroundColor(DataColor.colorBackGround)
+        .foregroundColor(DataColor.shared.colorBackGround)
         
         
         
@@ -89,8 +89,3 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}

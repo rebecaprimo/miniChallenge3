@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DateCard: View {
     
-    let radius = 20.0
+    private let style = TextStyle.shared
+    private let radius = 20.0
     private var dateAppointment: String
     
     init(dateAppointment: String) {
@@ -18,7 +19,7 @@ struct DateCard: View {
     var body: some View {
         GeometryReader { geometry in
             Rectangle()
-                .fill(.blue)
+                .fill(DataColor.shared.colorTab)
                 .frame(height: 60)
                 .padding(.bottom, radius)
                 .cornerRadius(CGFloat(radius))
@@ -29,15 +30,10 @@ struct DateCard: View {
     
     var dateText: some View {
         Text(dateAppointment)
-            .font(.system(size: TextStyle.sizeDate, design: TextStyle.designDate))
+            .font(.system(size: style.sizeDate, design: style.designDate))
+            .fontWeight(style.weightDate)
             .padding(.top)
             .padding(.leading, 12)
     }
     
-}
-
-struct DataCard_Previews: PreviewProvider {
-    static var previews: some View {
-        DateCard(dateAppointment: "24 de março de 2021")
-    }
 }

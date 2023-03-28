@@ -14,6 +14,7 @@ struct AddConsultaView: View {
     @State var dr: String = ""
     @State var local: String = ""
     @State var dateAppointment = Date()
+    private let vmManager = DataModelManager.shared
     
     var body: some View {
         VStack {
@@ -30,16 +31,9 @@ struct AddConsultaView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Salvar") {
-                    DataModelManager.shared.addSpecialty(name: specialist, viewContext: viewContext)
-                    DataModelManager.shared.addAppointment(dr, dateAppointment, local, viewContext: viewContext)
+                   vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: specialist, viewContext: viewContext))
                 }
             }
         }
-    }
-}
-
-struct AddConsultaView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddConsultaView()
     }
 }

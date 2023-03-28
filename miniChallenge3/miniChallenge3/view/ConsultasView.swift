@@ -9,53 +9,49 @@ import SwiftUI
 
 
 struct ConsultasView: View {
+    
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Appointment.id, ascending: true)],
         animation: .default)
     private var appointments: FetchedResults<Appointment>
-
+    
     var body: some View {
-        ZStack {
+        VStack {
             NavigationView {
-                ScrollView {
+                ZStack{
                     
-                    ForEach(appointments) { appointment in
-                        DetailCard(specialist: "Teste", doctor: appointment.doctor)
+                    ScrollView {
+                        
+                        ForEach(appointments) { appointment in
+                            if appointment.date! > .now{
+                                DateCard(dateAppointment: dateFormatter(Date: appointment.date))
+                                DetailCard(appointment: appointment)
+                            }
+                        }
+                        
                     }
-                    
-                    
-                    //CardAppointment(specialist: "Endocrino", doctor: "Paulo José", hour: "9h23", dateAppointment: "25 de março de 2022")
-                    
-                    
-                    
-                    
-                    
-
-                    AddButton(view: AnyView(AddConsultaView()))
-                    
-                    
+                    VStack{
+                        Spacer()
+                        HStack() {
+                            Spacer(minLength: 295)
+                            AddButton(view: AnyView(AddConsultaView()))
+                                .padding()
+                            
+                        }
+                    }
                     
                 }
                 .navigationTitle("Consultas")
-            }
-            VStack{
-                Spacer()
-                HStack() {
-                    Spacer(minLength: 295)
-                        .padding()
-                        
-                }
             }
         }
     }
 }
 
-
-private let itemFormatter: DateFormatter = {
+func dateFormatter(Date: Date?) -> String{
     let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+    formatter.locale = Locale(identifier: "pt-br")
+    formatter.dateFormat = "EEEE, d MMMM yyyy"
+    return formatter.string(from: Date ?? .now).capitalized
+}
