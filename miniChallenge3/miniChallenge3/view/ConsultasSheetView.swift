@@ -13,12 +13,10 @@ struct ConsultasSheetView: View {
     var body: some View {
         
         NavigationView {
-            VStack(alignment: .leading){
-                VStack{
-                    HStack{
+            VStack(alignment: .leading) {
+                VStack {
+                    HStack {
                         Spacer()
-                        //                    ActionButton(title: "Editar", icon: "pencil", color: .yellow )
-                        //                    ActionButton(title: "Excluir", icon: "trash", color: .red, action: {print("Excluido")})
                         
                         ActionButton(title: "Editar", icon: "pencil", color: .yellow, action: nil, view: AnyView(EditarView()), isEdit: true)
                         
@@ -33,7 +31,7 @@ struct ConsultasSheetView: View {
                     .padding(.bottom,15)
                     .multilineTextAlignment(.center)
                 }
-                VStack(alignment: .leading){
+                VStack(alignment: .leading) {
                     Group {
                         DadosConsultaText(icon: "calendar", text: "Sexta-feira, 17/04/2019")
                         DadosConsultaText(icon: "clock", text: "9:38")
@@ -42,9 +40,11 @@ struct ConsultasSheetView: View {
                     .padding(.bottom, 5)
                 }
                 .padding(.leading, 40)
+                
                 DadosConsultaText(icon: "paperclip", text: "Anexos")
                     .padding([.top, .bottom], 40)
                     .padding(.leading, 25)
+                
                 Spacer()
                 
             }
