@@ -17,21 +17,34 @@ struct AddConsultaView: View {
     private let vmManager = DataModelManager.shared
     
     var body: some View {
-        VStack {
-            TextFieldCustom(title: "Especialidade", $specialist)
-            TextFieldCustom(title: "Dr.", $dr)
-            TextFieldCustom(title: "Clínica", $local)
-            VStack {
-                DatePicker("Data", selection: $dateAppointment)
+        
+        ScrollView {
+            
+            VStack(alignment: .leading) {
+                PickerComponent()
+                TextFieldCustom(title: "Médico", $dr)
+                DatePickerComponent(title: "Data e hora")
+                TextFieldCustom(title: "Clínica", $local)
+                Text("Adicionar")
+                    .padding(17)
+                    .font(.system(size: 20))
+                    .font(.callout)
+                    .bold()
+                Spacer()
+                
+                HStack {
+                    SquareButton(icon: "camera.fill")
+                    SquareButton(icon: "photo.on.rectangle")
+                }
+                .padding(.leading, 40)
             }
-            Spacer()
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle("Adicionar")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Salvar") {
-                   vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: specialist, viewContext: viewContext))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Adicionar")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Salvar") {
+                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: specialist, viewContext: viewContext))
+                    }
                 }
             }
         }

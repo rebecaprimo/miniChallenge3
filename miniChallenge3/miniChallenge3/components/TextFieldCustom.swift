@@ -24,9 +24,9 @@ struct TextFieldCustom: View {
                 .font(.callout)
                 .bold()
             TextField("", text: $content)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                .overlay(RoundedRectangle(cornerRadius: 20.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
         }
         .padding()
     }
 }
-

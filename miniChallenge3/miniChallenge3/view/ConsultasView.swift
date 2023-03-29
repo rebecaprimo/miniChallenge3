@@ -36,7 +36,6 @@ struct ConsultasView: View {
                         Spacer()
                         AddButton(view: AnyView(AddConsultaView()))
                             .padding()
-                        
                     }
                 }.offset(x: 0, y: 210)
                 

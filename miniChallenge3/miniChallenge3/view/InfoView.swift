@@ -18,7 +18,7 @@ struct InfoView: View {
                 VStack{
                     RectangleButton(title: "Termos de Uso", icon: "doc.text", view: AnyView(TermosView()))
                     RectangleButton(title: "Privacidade", icon: "lock", view: AnyView(PrivacidadeView()))
-                    RectangleButton(title: "Contato",  icon: "phone", view: AnyView(SuporteView()))
+                    RectangleButton(title: "Contato",  icon: "phone", view: AnyView(ContatoView()))
                     RectangleButton(title: "Configurações",  icon: "gearshape", view: AnyView(ConfiguracoesView()))
                     
                     Spacer()

@@ -19,7 +19,7 @@
 		4D1F758429CA2B2300724C58 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758329CA2B2300724C58 /* InfoView.swift */; };
 		4D1F758629CA513700724C58 /* TermosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758529CA513700724C58 /* TermosView.swift */; };
 		4D1F758829CA51B500724C58 /* PrivacidadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758729CA51B500724C58 /* PrivacidadeView.swift */; };
-		4D1F758A29CA51C200724C58 /* SuporteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758929CA51C200724C58 /* SuporteView.swift */; };
+		4D1F758A29CA51C200724C58 /* ContatoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758929CA51C200724C58 /* ContatoView.swift */; };
 		4D1F758C29CA51CF00724C58 /* ConfiguracoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */; };
 		4D1F759029CB986300724C58 /* HistoricoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758F29CB986300724C58 /* HistoricoView.swift */; };
 		4D1F759229CCB97700724C58 /* AddConsultaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F759129CCB97700724C58 /* AddConsultaView.swift */; };
@@ -37,6 +37,9 @@
 		4D9EE90029C8EDC00046483A /* miniChallenge3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8FF29C8EDC00046483A /* miniChallenge3UITests.swift */; };
 		4D9EE90229C8EDC00046483A /* miniChallenge3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE90129C8EDC00046483A /* miniChallenge3UITestsLaunchTests.swift */; };
 		4D9EE91529CA1DC60046483A /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE91429CA1DC60046483A /* RectangleButton.swift */; };
+		4DC4937529D38A4F00653B0D /* PickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4937429D38A4F00653B0D /* PickerComponent.swift */; };
+		4DC4937729D38B2000653B0D /* SpecialtyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4937629D38B2000653B0D /* SpecialtyList.swift */; };
+		4DC4937929D38F8800653B0D /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4937829D38F8800653B0D /* SquareButton.swift */; };
 		8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */; };
 		8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C929CA2838009B9FF7 /* CircleButton.swift */; };
 		88CA687729D4777800986D90 /* AppointmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CA687629D4777800986D90 /* AppointmentRowView.swift */; };
@@ -73,7 +76,7 @@
 		4D1F758329CA2B2300724C58 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		4D1F758529CA513700724C58 /* TermosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermosView.swift; sourceTree = "<group>"; };
 		4D1F758729CA51B500724C58 /* PrivacidadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacidadeView.swift; sourceTree = "<group>"; };
-		4D1F758929CA51C200724C58 /* SuporteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuporteView.swift; sourceTree = "<group>"; };
+		4D1F758929CA51C200724C58 /* ContatoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoView.swift; sourceTree = "<group>"; };
 		4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesView.swift; sourceTree = "<group>"; };
 		4D1F758F29CB986300724C58 /* HistoricoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoView.swift; sourceTree = "<group>"; };
 		4D1F759129CCB97700724C58 /* AddConsultaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConsultaView.swift; sourceTree = "<group>"; };
@@ -96,6 +99,9 @@
 		4D9EE90129C8EDC00046483A /* miniChallenge3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniChallenge3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4D9EE91329C90EC30046483A /* miniChallenge3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = miniChallenge3.entitlements; sourceTree = "<group>"; };
 		4D9EE91429CA1DC60046483A /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
+		4DC4937429D38A4F00653B0D /* PickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerComponent.swift; sourceTree = "<group>"; };
+		4DC4937629D38B2000653B0D /* SpecialtyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialtyList.swift; sourceTree = "<group>"; };
+		4DC4937829D38F8800653B0D /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
 		8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8832B9C929CA2838009B9FF7 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		88CA687629D4777800986D90 /* AppointmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRowView.swift; sourceTree = "<group>"; };
@@ -133,7 +139,7 @@
 				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
 				4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */,
 				4D1F758729CA51B500724C58 /* PrivacidadeView.swift */,
-				4D1F758929CA51C200724C58 /* SuporteView.swift */,
+				4D1F758929CA51C200724C58 /* ContatoView.swift */,
 				4D1F758529CA513700724C58 /* TermosView.swift */,
 				4D1F758329CA2B2300724C58 /* InfoView.swift */,
 				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
@@ -219,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				88E0780629D2164200856256 /* DataModelManager.swift */,
+				4DC4937629D38B2000653B0D /* SpecialtyList.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -239,7 +246,9 @@
 				192B30D429CA4028008280E4 /* DetailCard.swift */,
 				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
 				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
+				4DC4937429D38A4F00653B0D /* PickerComponent.swift */,
 				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
+				4DC4937829D38F8800653B0D /* SquareButton.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -378,9 +387,11 @@
 				4D1F759029CB986300724C58 /* HistoricoView.swift in Sources */,
 				4D1F759229CCB97700724C58 /* AddConsultaView.swift in Sources */,
 				88E0780729D2164200856256 /* DataModelManager.swift in Sources */,
+				4DC4937729D38B2000653B0D /* SpecialtyList.swift in Sources */,
 				4D1F759629CCE1DE00724C58 /* AddButton.swift in Sources */,
 				4D1F759429CCBB5500724C58 /* TextFieldCustom.swift in Sources */,
 				4D9EE91529CA1DC60046483A /* RectangleButton.swift in Sources */,
+				4DC4937529D38A4F00653B0D /* PickerComponent.swift in Sources */,
 				1924499D29CCEFFC0025FE8F /* DadosConsultaText.swift in Sources */,
 				4D1F758829CA51B500724C58 /* PrivacidadeView.swift in Sources */,
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
@@ -395,9 +406,10 @@
 				191465FB29CE3C7C00EE9A6B /* TextStyle.swift in Sources */,
 				4D3E2EDA29D246BE00F635B8 /* EditarView.swift in Sources */,
 				4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */,
-				4D1F758A29CA51C200724C58 /* SuporteView.swift in Sources */,
+				4D1F758A29CA51C200724C58 /* ContatoView.swift in Sources */,
 				4D1F758C29CA51CF00724C58 /* ConfiguracoesView.swift in Sources */,
 				192B30D529CA4028008280E4 /* DetailCard.swift in Sources */,
+				4DC4937929D38F8800653B0D /* SquareButton.swift in Sources */,
 				192B30D329CA3A89008280E4 /* DateCard.swift in Sources */,
 				4D9EE8EB29C8EDC00046483A /* miniChallenge3.xcdatamodeld in Sources */,
 				88CA687729D4777800986D90 /* AppointmentRowView.swift in Sources */,
