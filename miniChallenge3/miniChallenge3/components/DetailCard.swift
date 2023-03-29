@@ -27,6 +27,7 @@ struct DetailCard: View {
                     .fill(.white)
                     .frame(height: 120)
                     .border(.black)
+
                 detailText
             }
         }
@@ -43,6 +44,7 @@ struct DetailCard: View {
                     .font(.system(size: style.sizeText))
                     .foregroundColor(.black)
                     .fontWeight(style.weightText)
+
                 Text("Dr(a) " + (appointment.doctor ?? "-"))
                     .font(.title3)
                     .foregroundColor(.black)

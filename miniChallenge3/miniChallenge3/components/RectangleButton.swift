@@ -29,10 +29,11 @@ struct RectangleButton: View {
                     Image(systemName: icon!)
                         .fontWeight(.bold)
                         .font(.system(size: 20))
+                        .font(.title)
                 }
                 
                 Text(title)
-                    .fontWeight(.semibold)
+                    .fontWeight(.bold)
                     .font(.system(size: 20))
                     .font(.title)
                     
@@ -44,12 +45,12 @@ struct RectangleButton: View {
             .frame(height: 50)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical, 20)
-            .padding(.horizontal, 15)
+            .padding(.horizontal, 25)
             .foregroundColor(style.colorTextWhite)
             .background(style.componentsColor)
             .cornerRadius(20)
         })
         .padding([.trailing, .leading], 10)
-        .padding(5)
+        .padding(3)
     }
 }

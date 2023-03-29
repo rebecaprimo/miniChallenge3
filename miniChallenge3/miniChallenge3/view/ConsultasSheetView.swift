@@ -18,20 +18,13 @@ struct ConsultasSheetView: View {
     
     var body: some View {
         
-        VStack(alignment: .leading){
-            VStack{
-                HStack{
-                    Spacer()
-                    ActionButton(title: "Editar", icon: "pencil", color: Color(uiColor: UIColor(red: 0.996, green: 0.929, blue: 0.765, alpha: 1)), action: nil, view: AnyView(EditarView()), isEdit: true)
-                    ActionButton(title: "Excluir", icon: "trash", color: .red, action: {DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)}, view: nil, isEdit: false)
-                }
-                .padding()
+        VStack{
+            VStack(alignment: .center){
                 Group {
                     DadosConsultaText(text: appointment.specialty?.name ?? "-")
-                    DadosConsultaText(text: appointment.doctor ?? "-")
+                    DadosConsultaText(text: "Dr(a) " + (appointment.doctor ?? "-"))
                         .padding(.bottom, 17)
                 }
-                .padding(.leading, 40)
             }
             
             VStack(alignment: .leading){
@@ -41,13 +34,16 @@ struct ConsultasSheetView: View {
                     DadosConsultaText(icon: "mappin.and.ellipse", text: appointment.local ?? "-")
                 }
                 .padding(.bottom, 5)
+                .frame(width: 300, alignment: .leading)
             }
-            .padding(.leading, 40)
             DadosConsultaText(icon: "paperclip", text: "Anexos")
-                .padding([.top, .bottom], 40)
-                .padding(.leading, 25)
+                .frame(width: 300, alignment: .leading)
+                .padding(.top, 40)
             Spacer()
         }
+        .offset(y: 40)
+        .presentationDetents([.medium, .large])
+        .presentationDragIndicator(.visible)
     }
 }
 

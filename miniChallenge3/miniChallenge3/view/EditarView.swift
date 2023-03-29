@@ -9,7 +9,15 @@ import Foundation
 import SwiftUI
 
 struct EditarView: View {
+    
+    private var appointment: Appointment
+    
+    init(appointment: Appointment) {
+        self.appointment = appointment
+    }
+    
     var body: some View {
-        Text("")
+        Text(appointment.doctor ?? "-")
+        Text(appointment.specialty?.name ?? "-")
     }
 }

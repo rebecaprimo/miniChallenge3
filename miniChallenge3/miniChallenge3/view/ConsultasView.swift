@@ -23,29 +23,12 @@ struct ConsultasView: View {
                 List {
                     ForEach(appointments) { appointment in
                         if appointment.date ?? .now > .now{
-                            DateCard(dateAppointment: dateFormatter(Date: appointment.date))
-                                .listRowInsets(EdgeInsets())
-                                .frame(height: 60)
-                            DetailCard(appointment: appointment)
-                                .listRowInsets(EdgeInsets())
-                                .border(.black)
-                                .swipeActions {
-                                    NavigationLink(destination: EditarView()) {
-                                        Image(systemName: "pencil")
-                                    }
-                                    Button {
-                                        DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)
-                                    } label: {
-                                        Image(systemName: "trash")
-                                    }
-                                }
-                            
-                            Spacer()
-                            
+                            AppointmentRowView(appointment: appointment)
                         }
+
                     }
                     .listRowBackground(Color.clear)
-                    .listRowSeparator(.visible)
+                    .listRowSeparator(.hidden)
                 }
                 
                 VStack{
@@ -72,3 +55,4 @@ func dateFormatter(Date: Date?) -> String{
     formatter.dateFormat = "EEEE, d MMMM yyyy"
     return formatter.string(from: Date ?? .now).capitalized
 }
+
