@@ -44,7 +44,6 @@ struct ConsultasView: View {
                             Spacer(minLength: 295)
                             AddButton(view: AnyView(AddConsultaView()))
                                 .padding()
-                            
                         }
                     }
                     

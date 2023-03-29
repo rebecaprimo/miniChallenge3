@@ -19,10 +19,11 @@ struct SquareButton: View {
         if icon != nil {
             Button(action: {}) {
                 Image(systemName: icon ?? "")
+                    .frame(width: 120, height: 120)
                     .padding()
                     .foregroundColor(.white)
                     .background(Color.blue)
-                    .cornerRadius(8)
+                    .cornerRadius(20)
             }
         }
     }

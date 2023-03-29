@@ -17,29 +17,34 @@ struct AddConsultaView: View {
     private let vmManager = DataModelManager.shared
     
     var body: some View {
-        VStack(alignment: .leading) {
-            PickerComponent()
-            TextFieldCustom(title: "Médico", $dr)
-            DatePickerComponent(title: "Data e hora")
-            TextFieldCustom(title: "Clínica", $local)
-            Text("Adicionar")
-                .padding(17)
-                .font(.system(size: 20))
-                .font(.callout)
-                .bold()
-            Spacer()
+        
+        ScrollView {
             
-            HStack(alignment: .center) {
-                SquareButton(icon: "camera.fill")
-                SquareButton(icon: "photo.on.rectangle")
+            VStack(alignment: .leading) {
+                PickerComponent()
+                TextFieldCustom(title: "Médico", $dr)
+                DatePickerComponent(title: "Data e hora")
+                TextFieldCustom(title: "Clínica", $local)
+                Text("Adicionar")
+                    .padding(17)
+                    .font(.system(size: 20))
+                    .font(.callout)
+                    .bold()
+                Spacer()
+                
+                HStack {
+                    SquareButton(icon: "camera.fill")
+                    SquareButton(icon: "photo.on.rectangle")
+                }
+                .padding(.leading, 40)
             }
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle("Adicionar")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("Salvar") {
-                   vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: specialist, viewContext: viewContext))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Adicionar")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Salvar") {
+                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: specialist, viewContext: viewContext))
+                    }
                 }
             }
         }

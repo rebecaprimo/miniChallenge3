@@ -13,8 +13,6 @@ struct PickerComponent: View {
     let specialty = specialtyList
     
     var body: some View {
-        NavigationStack {
-            Form {
                 Section {
                     Picker("", selection: $selectedSpecialty) {
                         ForEach(specialty, id: \.self) {
@@ -24,5 +22,5 @@ struct PickerComponent: View {
                 }
             }
         }
-    }
-}
+
+
