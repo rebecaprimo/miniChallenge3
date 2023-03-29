@@ -13,17 +13,18 @@ struct HistoricoView: View {
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.id, ascending: true)],
         animation: .default)
-    private var specialties: FetchedResults<Specialty>
     
+    private var specialties: FetchedResults<Specialty>
+    @State private var query: String = ""
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
-                    RectangleButton(title: "Geral", icon: nil, view: AnyView(InfoView()))
+                    //RectangleButton(title: "Geral", icon: nil, view: AnyView(DetalheHistoricoView(specialty: specialties)))
                     
                     ForEach(specialties) { specialty in
-                        RectangleButton(title: specialty.name ?? "-", icon: nil, view: AnyView(InfoView()))
+                        RectangleButton(title: specialty.name ?? "-", icon: nil, view: AnyView(DetalheHistoricoView(specialty: specialty)))
                     }
                     
                     Spacer()
@@ -31,6 +32,7 @@ struct HistoricoView: View {
                 .navigationTitle("Histórico")
             }
         }
+        .searchable(text: $query, prompt: Text("Search"))
     }
 }
 

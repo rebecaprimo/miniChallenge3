@@ -15,13 +15,14 @@ struct AddConsultaView: View {
     @State var local: String = ""
     @State var dateAppointment = Date()
     private let vmManager = DataModelManager.shared
+    @State var selectedSpecialty: String = ""
     
     var body: some View {
         
         ScrollView {
             
             VStack(alignment: .leading) {
-                PickerComponent()
+                PickerComponent(selectedSpecialty: $selectedSpecialty)
                 TextFieldCustom(title: "Médico", $dr)
                 DatePickerComponent(title: "Data e hora")
                 TextFieldCustom(title: "Clínica", $local)
@@ -43,7 +44,7 @@ struct AddConsultaView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
-                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: specialist, viewContext: viewContext))
+                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: selectedSpecialty, viewContext: viewContext))
                     }
                 }
             }

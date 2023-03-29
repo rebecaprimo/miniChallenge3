@@ -14,6 +14,7 @@ struct AppointmentRowView: View {
         case view
         case edit
     }
+    
     @State private var isActive = false
     @State private var action: Action?
     let appointment: Appointment
@@ -43,7 +44,6 @@ struct AppointmentRowView: View {
                     action = nil
                 }
             }
-        
     }
     
     @ViewBuilder

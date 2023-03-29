@@ -9,8 +9,12 @@ import Foundation
 import SwiftUI
 
 struct PickerComponent: View {
-    @State private var selectedSpecialty = "Acupuntura"
+    @Binding private var selectedSpecialty: String
     let specialty = specialtyList
+    
+    init(selectedSpecialty: Binding<String>) {
+        self._selectedSpecialty = selectedSpecialty
+    }
     
     var body: some View {
                 Section {
