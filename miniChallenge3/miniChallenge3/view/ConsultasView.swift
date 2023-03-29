@@ -18,42 +18,52 @@ struct ConsultasView: View {
     private var appointments: FetchedResults<Appointment>
     
     var body: some View {
-        VStack {
-            NavigationView {
-                ZStack{
-                    List {
-                        ForEach(appointments) { appointment in
-                            if appointment.date! > .now {
-                                VStack {
-                                    DateCard(dateAppointment: dateFormatter(Date: appointment.date))
-                                    DetailCard(appointment: appointment)
+        NavigationView {
+            ZStack{
+                List {
+                    ForEach(appointments) { appointment in
+                        if appointment.date ?? .now > .now{
+                            DateCard(dateAppointment: dateFormatter(Date: appointment.date))
+                                .listRowInsets(EdgeInsets())
+                                .frame(height: 60)
+                            DetailCard(appointment: appointment)
+                                .listRowInsets(EdgeInsets())
+                                .border(.black)
+                                .swipeActions {
+                                    NavigationLink(destination: EditarView()) {
+                                        Image(systemName: "pencil")
+                                    }
+                                    Button {
+                                        DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
                                 }
-                                
-                            }
-                        }
-                        .listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
-                    }
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    .scrollContentBackground(.hidden)
-                    .listStyle(PlainListStyle())
-                    
-                    VStack{
-                        Spacer()
-                        HStack() {
-                            Spacer(minLength: 295)
-                            AddButton(view: AnyView(AddConsultaView()))
-                                .padding()
+                            
+                            Spacer()
                             
                         }
                     }
-                    
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.visible)
                 }
-                .navigationTitle("Consultas")
+                
+                VStack{
+                    HStack() {
+                        Spacer()
+                        AddButton(view: AnyView(AddConsultaView()))
+                            .padding()
+                        
+                    }
+                }.offset(x: 0, y: 210)
+                
             }
+            .background(DataColor.shared.colorBackGround)
+            .navigationTitle("Consultas")
         }
-        
     }
+    
+    
 }
 
 func dateFormatter(Date: Date?) -> String{

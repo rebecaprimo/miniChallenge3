@@ -27,7 +27,7 @@ struct RectangleButton: View {
             HStack {
                 if icon != nil {
                     Image(systemName: icon!)
-                        .fontWeight(.semibold)
+                        .fontWeight(.bold)
                         .font(.system(size: 20))
                 }
                 
@@ -41,13 +41,15 @@ struct RectangleButton: View {
                 Image(systemName: "chevron.right")
                     .frame(alignment: .trailing)
             }
+            .frame(height: 50)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical, 20)
             .padding(.horizontal, 15)
             .foregroundColor(style.colorTextWhite)
-            .background(style.colorTab)
-            .cornerRadius(15)
+            .background(style.componentsColor)
+            .cornerRadius(20)
         })
-        .padding(10)
+        .padding([.trailing, .leading], 10)
+        .padding(5)
     }
 }

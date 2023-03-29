@@ -19,14 +19,13 @@ struct DateCard: View {
     var body: some View {
         GeometryReader { geometry in
             Rectangle()
-                .fill(DataColor.shared.colorTab)
+                .fill(DataColor.shared.componentsColor)
                 .frame(height: 60)
                 .border(.black)
                 .padding(.bottom, radius)
                 .cornerRadius(CGFloat(radius))
             dateText
         }
-        .padding()
     }
     
     var dateText: some View {
