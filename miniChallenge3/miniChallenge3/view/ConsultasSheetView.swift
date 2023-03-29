@@ -22,7 +22,7 @@ struct ConsultasSheetView: View {
             VStack(alignment: .center){
                 Group {
                     DadosConsultaText(text: appointment.specialty?.name ?? "-")
-                    DadosConsultaText(text: "Dr(a) " + (appointment.doctor ?? "-"))
+                    DadosConsultaText(text: "Dr. " + (appointment.doctor ?? "-"))
                         .padding(.bottom, 17)
                 }
             }
@@ -44,6 +44,8 @@ struct ConsultasSheetView: View {
         .offset(y: 40)
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
+        .background(DataColor.shared.colorBackGround)
+        .ignoresSafeArea()
     }
 }
 

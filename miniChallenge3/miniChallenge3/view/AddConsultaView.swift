@@ -41,6 +41,8 @@ struct AddConsultaView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Adicionar")
+            .background(DataColor.shared.colorBackGround)
+            .ignoresSafeArea()
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {

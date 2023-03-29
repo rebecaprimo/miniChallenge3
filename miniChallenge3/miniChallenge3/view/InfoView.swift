@@ -26,6 +26,7 @@ struct InfoView: View {
                 .navigationTitle("Informações")
             }
         }
+        .background(DataColor.shared.colorBackGround)
     }
 }
 
