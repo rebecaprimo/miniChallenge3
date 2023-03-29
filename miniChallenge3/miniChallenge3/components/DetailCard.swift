@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailCard: View {
-
+    
     private var appointment: Appointment
     private let style = TextStyle.shared
     @State private var showingSheet = false
@@ -23,17 +23,15 @@ struct DetailCard: View {
             showingSheet = true
         } label: {
             GeometryReader { geometry in
-                ZStack {
-                    Rectangle()
-                        .fill(.white)
-                        //.frame(height: 150)
-                        .border(.black)
-                        .padding()
-                    detailText
-                }
+                Rectangle()
+                    .fill(.white)
+                    .frame(height: 120)
+                    .border(.black)
+
+                detailText
             }
-            .frame(height: 150)
         }
+        .frame(height: 110)
         .sheet(isPresented: $showingSheet) {
             ConsultasSheetView(appointment: appointment)
         }
@@ -46,12 +44,12 @@ struct DetailCard: View {
                     .font(.system(size: style.sizeText))
                     .foregroundColor(.black)
                     .fontWeight(style.weightText)
+
                 Text("Dr(a) " + (appointment.doctor ?? "-"))
                     .font(.title3)
                     .foregroundColor(.black)
                     .fontWeight(style.weightText)
             }
-            .padding(.top, 9)
             Spacer()
             Text(dateFormatterHourStringAppointment(Date: appointment.date))
                 .font(.title2)
@@ -59,6 +57,6 @@ struct DetailCard: View {
                 .fontWeight(style.weightText)
             
         }
-        .padding(50)
+        .padding(20)
     }
 }

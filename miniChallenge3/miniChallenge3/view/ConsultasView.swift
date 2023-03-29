@@ -18,41 +18,34 @@ struct ConsultasView: View {
     private var appointments: FetchedResults<Appointment>
     
     var body: some View {
-        VStack {
-            NavigationView {
-                ZStack{
-                    List {
-                        ForEach(appointments) { appointment in
-                            if appointment.date! > .now {
-                                VStack {
-                                    DateCard(dateAppointment: dateFormatter(Date: appointment.date))
-                                    DetailCard(appointment: appointment)
-                                }
-                                
-                            }
+        NavigationView {
+            ZStack{
+                List {
+                    ForEach(appointments) { appointment in
+                        if appointment.date ?? .now > .now{
+                            AppointmentRowView(appointment: appointment)
                         }
-                        .listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
+
                     }
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    .scrollContentBackground(.hidden)
-                    .listStyle(PlainListStyle())
-                    
-                    VStack{
-                        Spacer()
-                        HStack() {
-                            Spacer(minLength: 295)
-                            AddButton(view: AnyView(AddConsultaView()))
-                                .padding()
-                        }
-                    }
-                    
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
                 }
-                .navigationTitle("Consultas")
+                
+                VStack{
+                    HStack() {
+                        Spacer()
+                        AddButton(view: AnyView(AddConsultaView()))
+                            .padding()
+                    }
+                }.offset(x: 0, y: 210)
+                
             }
+            .background(DataColor.shared.colorBackGround)
+            .navigationTitle("Consultas")
         }
-        
     }
+    
+    
 }
 
 func dateFormatter(Date: Date?) -> String{
@@ -61,3 +54,4 @@ func dateFormatter(Date: Date?) -> String{
     formatter.dateFormat = "EEEE, d MMMM yyyy"
     return formatter.string(from: Date ?? .now).capitalized
 }
+

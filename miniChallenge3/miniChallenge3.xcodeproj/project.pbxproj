@@ -42,6 +42,7 @@
 		4DC4937929D38F8800653B0D /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4937829D38F8800653B0D /* SquareButton.swift */; };
 		8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */; };
 		8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C929CA2838009B9FF7 /* CircleButton.swift */; };
+		88CA687729D4777800986D90 /* AppointmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CA687629D4777800986D90 /* AppointmentRowView.swift */; };
 		88E0780729D2164200856256 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0780629D2164200856256 /* DataModelManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		4DC4937829D38F8800653B0D /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
 		8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8832B9C929CA2838009B9FF7 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		88CA687629D4777800986D90 /* AppointmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRowView.swift; sourceTree = "<group>"; };
 		88E0780629D2164200856256 /* DataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +236,7 @@
 				1924499A29CCDE940025FE8F /* ActionButton.swift */,
 				4D1F759529CCE1DE00724C58 /* AddButton.swift */,
 				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
+				88CA687629D4777800986D90 /* AppointmentRowView.swift */,
 				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
 				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
 				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
@@ -409,6 +412,7 @@
 				4DC4937929D38F8800653B0D /* SquareButton.swift in Sources */,
 				192B30D329CA3A89008280E4 /* DateCard.swift in Sources */,
 				4D9EE8EB29C8EDC00046483A /* miniChallenge3.xcdatamodeld in Sources */,
+				88CA687729D4777800986D90 /* AppointmentRowView.swift in Sources */,
 				4D9EE8DF29C8EDBE0046483A /* miniChallenge3App.swift in Sources */,
 				4D1F758429CA2B2300724C58 /* InfoView.swift in Sources */,
 				1924499B29CCDE940025FE8F /* ActionButton.swift in Sources */,
@@ -572,7 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
+				DEVELOPMENT_TEAM = Z2T622XX3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miniChallenge3/Info.plist;
@@ -605,7 +609,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"miniChallenge3/Preview Content\"";
-				DEVELOPMENT_TEAM = PHVL4RZ8Z5;
+				DEVELOPMENT_TEAM = Z2T622XX3F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miniChallenge3/Info.plist;

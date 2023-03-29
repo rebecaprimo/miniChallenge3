@@ -21,7 +21,7 @@ struct AddButton: View {
                 Image(systemName: "plus")
                     .foregroundColor(DataColor.shared.colorTextWhite)
                     .frame(width: 60, height: 60)
-                    .background(DataColor.shared.colorButton)
+                    .background(DataColor.shared.componentsColor)
                     .clipShape(Circle())
                     .font(.system(size: 25))
             }

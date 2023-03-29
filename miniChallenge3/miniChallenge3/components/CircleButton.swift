@@ -38,9 +38,9 @@ struct CircleButton: View {
                 return AnyView(
                     Button(action: (action), label: {
                         Image(systemName: icon)
-                            .foregroundColor(style.colorTextWhite)
+                            .foregroundColor((selectedTab == icon ? .white : style.textComponentsColor))
                             .frame(width: 60, height: 60)
-                            .background(style.colorButton.opacity(selectedTab == icon ? 1 : 0))
+                            .background(style.textComponentsColor.opacity(selectedTab == icon ? 1 : 0))
                             .clipShape(Circle())
                             .offset(y: selectedTab == icon ? -50 : 0)
                             .matchedGeometryEffect(id: icon, in: animation)
@@ -56,7 +56,7 @@ struct CircleButton: View {
                         Image(systemName: icon)
                             .foregroundColor(style.colorTextWhite)
                             .frame(width: 60, height: 60)
-                            .background(style.colorButton)
+                            .background(style.componentsColor)
                             .clipShape(Circle())
                             .border(.white)
                             .font(.system(size: 25))
