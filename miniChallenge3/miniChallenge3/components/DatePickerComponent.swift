@@ -9,11 +9,12 @@ import Foundation
 import SwiftUI
 
 struct DatePickerComponent: View {
-    @State var dateAppointment = Date()
+    @Binding var dateAppointment: Date
     private var title: String = ""
     
-    init(title: String) {
+    init(title: String, dateAppointment: Binding<Date>) {
         self.title = title
+        self._dateAppointment = dateAppointment
     }
     
     var body: some View {

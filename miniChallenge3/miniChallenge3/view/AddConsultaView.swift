@@ -24,7 +24,7 @@ struct AddConsultaView: View {
             VStack(alignment: .leading) {
                 PickerComponent(selectedSpecialty: $selectedSpecialty)
                 TextFieldCustom(title: "Médico", $dr)
-                DatePickerComponent(title: "Data e hora")
+                DatePickerComponent(title: "Data e hora", dateAppointment: $dateAppointment)
                 TextFieldCustom(title: "Clínica", $local)
                 Text("Adicionar")
                     .padding(17)
