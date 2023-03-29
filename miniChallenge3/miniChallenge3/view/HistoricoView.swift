@@ -31,6 +31,7 @@ struct HistoricoView: View {
                 }
                 .navigationTitle("Histórico")
             }
+            .background(DataColor.shared.colorBackGround)
         }
         .searchable(text: $query, prompt: Text("Search"))
     }

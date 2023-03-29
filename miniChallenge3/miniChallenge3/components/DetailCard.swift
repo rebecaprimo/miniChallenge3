@@ -45,7 +45,7 @@ struct DetailCard: View {
                     .foregroundColor(.black)
                     .fontWeight(style.weightText)
 
-                Text("Dr(a) " + (appointment.doctor ?? "-"))
+                Text("Dr. " + (appointment.doctor ?? "-"))
                     .font(.title3)
                     .foregroundColor(.black)
                     .fontWeight(style.weightText)
