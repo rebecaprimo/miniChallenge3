@@ -17,14 +17,12 @@ struct PickerComponent: View {
     }
     
     var body: some View {
-                Section {
-                    Picker("", selection: $selectedSpecialty) {
-                        ForEach(specialty, id: \.self) {
-                            Text($0)
-                        }
-                    }
+        Section {
+            Picker("", selection: $selectedSpecialty) {
+                ForEach(specialty, id: \.self) {
+                    Text($0)
                 }
             }
         }
-
-
+    }
+}
