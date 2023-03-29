@@ -8,9 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct SuporteView: View {
+struct ContatoView: View {
     var body: some View {
         Text("")
-            .navigationTitle("Suporte")
+            .navigationTitle("Contato")
+            .navigationBarTitleDisplayMode(.inline)
     }
 }

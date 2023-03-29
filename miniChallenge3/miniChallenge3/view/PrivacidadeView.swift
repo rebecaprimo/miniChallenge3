@@ -12,5 +12,6 @@ struct PrivacidadeView: View {
     var body: some View {
         Text("")
         .navigationTitle("Privacidade")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }

@@ -10,16 +10,20 @@ import SwiftUI
 
 struct DatePickerComponent: View {
     @State var dateAppointment = Date()
+    private var title: String = ""
+    
+    init(title: String) {
+        self.title = title
+    }
     
     var body: some View {
         VStack {
-            DatePicker("", selection: $dateAppointment)
+            DatePicker(title, selection: $dateAppointment)
+                .padding(16)
         }
+        .font(.system(size: 20))
+        .font(.callout)
+        .bold()
     }
 }
 
-struct DatePickerView_Previews: PreviewProvider {
-    static var previews: some View {
-        DatePickerComponent()
-    }
-}

@@ -12,5 +12,6 @@ struct TermosView: View {
     var body: some View {
         Text("")
         .navigationTitle("Termos de Uso")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
