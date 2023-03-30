@@ -11,6 +11,7 @@ struct DetailCard: View {
     
     private var appointment: Appointment
     private let style = TextStyle.shared
+    private let styleColor = DataColor.shared
     @State private var showingSheet = false
     
     init(appointment: Appointment, showingSheet: Bool = false) {

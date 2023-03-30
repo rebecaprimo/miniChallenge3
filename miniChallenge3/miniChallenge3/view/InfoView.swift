@@ -23,10 +23,10 @@ struct InfoView: View {
                     
                     Spacer()
                 }
+                .background(DataColor.shared.colorBackGround)
                 .navigationTitle("Informações")
             }
         }
-        .background(DataColor.shared.colorBackGround)
     }
 }
 

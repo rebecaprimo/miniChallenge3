@@ -46,7 +46,7 @@ struct RectangleButton: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical, 20)
             .padding(.horizontal, 25)
-            .foregroundColor(style.colorTextWhite)
+            .foregroundColor(style.textComponentsColor)
             .background(style.componentsColor)
             .cornerRadius(20)
         })

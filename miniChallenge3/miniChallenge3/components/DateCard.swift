@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DateCard: View {
     
+    private let styleColor = DataColor.shared
     private let style = TextStyle.shared
     private let radius = 20.0
     private var dateAppointment: String
@@ -30,7 +31,7 @@ struct DateCard: View {
     
     var dateText: some View {
         Text(dateAppointment)
-            .foregroundColor(.white)
+            .foregroundColor(styleColor.textComponentsColor)
             .font(.system(size: style.sizeDate, design: style.designDate))
             .fontWeight(style.weightDate)
             .padding(.top)

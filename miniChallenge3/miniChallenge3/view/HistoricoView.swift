@@ -11,8 +11,8 @@ import SwiftUI
 struct HistoricoView: View {
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.id, ascending: true)],
-        animation: .default)
+        sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.name, ascending: true)],
+        animation: .linear(duration: 20))
     
     private var specialties: FetchedResults<Specialty>
     @State private var query: String = ""

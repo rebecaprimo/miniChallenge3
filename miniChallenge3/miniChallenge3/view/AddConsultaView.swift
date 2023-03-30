@@ -11,12 +11,18 @@ import PhotosUI
 import QuickLook
 
 struct AddConsultaView: View {
+
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.id, ascending: true)],
+        animation: .default)
+    private var specialties: FetchedResults<Specialty>
+    private let vmManager = DataModelManager.shared
     @State var specialist: String = ""
     @State var dr: String = ""
     @State var local: String = ""
     @State var dateAppointment = Date()
-    private let vmManager = DataModelManager.shared
     @State var selectedSpecialty: String = ""
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImage: Data? = nil
@@ -26,6 +32,7 @@ struct AddConsultaView: View {
         ScrollView {
             
             VStack(alignment: .leading) {
+
                 PickerComponent(selectedSpecialty: $selectedSpecialty)
                 TextFieldCustom(title: "Médico", $dr)
                 DatePickerComponent(title: "Data e hora", dateAppointment: $dateAppointment)
@@ -74,7 +81,8 @@ struct AddConsultaView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
-                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: selectedSpecialty, viewContext: viewContext))
+                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: selectedSpecialty, viewContext: viewContext, specialty: specialties) ?? nil)
+                        dismiss()
                     }
                 }
             }
