@@ -19,7 +19,7 @@ struct AddButton: View {
         NavigationLink(destination: view, label: {
             VStack {
                 Image(systemName: "plus")
-                    .foregroundColor(DataColor.shared.colorTextWhite)
+                    .foregroundColor(DataColor.shared.colorIconActive)
                     .frame(width: 60, height: 60)
                     .background(DataColor.shared.componentsColor)
                     .clipShape(Circle())

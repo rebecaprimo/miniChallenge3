@@ -13,8 +13,9 @@ struct ConsultasView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Appointment.id, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Appointment.date, ascending: true)],
         animation: .default)
+    
     private var appointments: FetchedResults<Appointment>
     
     var body: some View {
@@ -29,7 +30,7 @@ struct ConsultasView: View {
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
-                }
+                }.scrollContentBackground(.hidden)
                 
                 VStack{
                     HStack() {

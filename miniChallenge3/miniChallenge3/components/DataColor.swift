@@ -15,10 +15,9 @@ class DataColor{
     let colorButton: Color = .init(red: 0.403, green: 0.443, blue: 0.75)
     let colorBackGround: Color = Color(UIColor(named: "backGroundColor")!)
     let componentsColor: Color = Color(UIColor(named: "componentsColor")!)
-    let textComponentsColor: Color = Color(UIColor(named: "componentsColor")!)
-    
+    let textComponentsColor: Color = Color(UIColor(named: "textComponentsColor")!)
+    let colorIconActive: Color = Color(UIColor(named: "colorIcons")!)
+    let colorIconInative: Color = Color(UIColor(named: "colorIconInative")!)
     let colorCard: Color = .white
-    let colorTextWhite: Color = .white
-    let colorTextBlack: Color = .black
-    
+
 }

@@ -12,12 +12,17 @@ struct DataModelManager{
     
     static let shared = DataModelManager()
     
-    func addSpecialty(name: String, viewContext: NSManagedObjectContext) -> Specialty {
+    
+    func addSpecialty(name: String, viewContext: NSManagedObjectContext, specialty: FetchedResults<Specialty>) -> Specialty? {
         withAnimation {
             let newSpecialty = Specialty(context: viewContext)
+            for specialtyName in specialty {
+                if specialtyName.name == name {
+                    return specialtyName
+                }
+            }
             newSpecialty.name = name
             newSpecialty.id = UUID()
-
             do {
                 try viewContext.save()
                 return newSpecialty
@@ -28,14 +33,14 @@ struct DataModelManager{
         }
     }
     
-    func addAppointment(_ doctor: String,_ date: Date,_ local: String, viewContext: NSManagedObjectContext,_ specialty: Specialty) {
+    func addAppointment(_ doctor: String,_ date: Date,_ local: String, viewContext: NSManagedObjectContext,_ specialty: Specialty?) {
         withAnimation {
             let newAppointment = Appointment(context: viewContext)
             newAppointment.id = UUID()
             newAppointment.doctor = doctor
             newAppointment.date = date
             newAppointment.local = local
-            specialty.addToAppointment(newAppointment)
+            specialty?.addToAppointment(newAppointment)
             do {
                 try viewContext.save()
             } catch {
@@ -45,16 +50,33 @@ struct DataModelManager{
         }
     }
     
+    func editAppointment(viewContext: NSManagedObjectContext,_ appointments: FetchedResults<Appointment>,_ id: UUID?, nameDoctor: String, dateAppointment: Date, local: String){
+        
+        guard let idAppointment = id else {return}
+        
+        for appointment in appointments {
+            if appointment.id == idAppointment {
+                appointment.doctor = nameDoctor
+                appointment.date = dateAppointment
+                appointment.local = local
+                do {
+                    try viewContext.save()
+                } catch {
+                    let nsError = error as NSError
+                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                }
+            }
+        }
+        
+        
+    }
+    
     func deleteAppointment(viewContext: NSManagedObjectContext, appointment: Appointment) {
         withAnimation {
-            
             viewContext.delete(appointment)
-
             do {
                 try viewContext.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }

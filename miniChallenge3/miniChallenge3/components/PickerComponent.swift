@@ -17,14 +17,21 @@ struct PickerComponent: View {
     }
     
     var body: some View {
-                Section {
-                    Picker("", selection: $selectedSpecialty) {
-                        ForEach(specialty, id: \.self) {
-                            Text($0)
-                        }
-                    }
+        Text("Especialidade")
+            .font(.system(size: 20))
+            .font(.callout)
+            .bold()
+        ZStack{
+            RoundedRectangle(cornerRadius: 20.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0))
+                .frame(height: 55)
+            Picker("", selection: $selectedSpecialty) {
+                ForEach(specialty, id: \.self) { specialty in
+                    Text(specialty)
                 }
             }
-        }
+        }.padding()
+    }
+}
+
 
 

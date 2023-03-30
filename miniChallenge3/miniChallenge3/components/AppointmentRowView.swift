@@ -49,7 +49,7 @@ struct AppointmentRowView: View {
     @ViewBuilder
     private var destination: some View {
         if case .edit = action {
-            EditarView(appointment: appointment)
+            EditarView(id: appointment.id, dr: appointment.doctor ?? "-", local: appointment.local ?? "", dateAppointment: appointment.date ?? .now, selectedSpecialty: appointment.specialty?.name ?? "")
         }
     }
 }

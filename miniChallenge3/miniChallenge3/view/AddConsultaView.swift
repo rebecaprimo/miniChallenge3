@@ -10,18 +10,25 @@ import SwiftUI
 
 struct AddConsultaView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.id, ascending: true)],
+        animation: .default)
+    private var specialties: FetchedResults<Specialty>
     @State var specialist: String = ""
     @State var dr: String = ""
     @State var local: String = ""
     @State var dateAppointment = Date()
     private let vmManager = DataModelManager.shared
     @State var selectedSpecialty: String = ""
+    @Environment(\.dismiss) private var dismiss
     
+  
     var body: some View {
         
         ScrollView {
             
             VStack(alignment: .leading) {
+
                 PickerComponent(selectedSpecialty: $selectedSpecialty)
                 TextFieldCustom(title: "Médico", $dr)
                 DatePickerComponent(title: "Data e hora", dateAppointment: $dateAppointment)
@@ -46,7 +53,8 @@ struct AddConsultaView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
-                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: selectedSpecialty, viewContext: viewContext))
+                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: selectedSpecialty, viewContext: viewContext, specialty: specialties) ?? nil)
+                        dismiss()
                     }
                 }
             }
