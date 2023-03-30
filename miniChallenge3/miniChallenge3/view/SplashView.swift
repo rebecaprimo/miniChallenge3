@@ -17,9 +17,9 @@ struct SplashView: View {
     
     var body: some View {
         if isActive {
-            CustomTabBar(selectedTab: $selectedTab)
-                .ignoresSafeArea()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//            CustomTabBar(selectedTab: $selectedTab)
+//                .ignoresSafeArea()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         } else {
             VStack {
                 VStack {
