@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class TextStyle{
+class TextStyle {
     
     static let shared = TextStyle()
     

@@ -25,7 +25,6 @@ struct CardAppointment: View {
         VStack {
             //DateCard(dateAppointment: dateAppointment)
 //            DetailCard(specialist: specialist, doctor: doctor, appointment: <#Appointment#>)
-            
         }
     }
 }
