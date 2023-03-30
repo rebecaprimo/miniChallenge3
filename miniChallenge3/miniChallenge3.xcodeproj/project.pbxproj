@@ -15,6 +15,7 @@
 		1927E21829C9013900BE7BAD /* CardAppointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1927E21729C9013900BE7BAD /* CardAppointment.swift */; };
 		192B30D329CA3A89008280E4 /* DateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B30D229CA3A89008280E4 /* DateCard.swift */; };
 		192B30D529CA4028008280E4 /* DetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192B30D429CA4028008280E4 /* DetailCard.swift */; };
+		19C09F4B29D5349100CB2021 /* PhotoImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C09F4A29D5349100CB2021 /* PhotoImporter.swift */; };
 		19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C185C729CBA9A000F3A95C /* ConsultasView.swift */; };
 		4D1F758429CA2B2300724C58 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758329CA2B2300724C58 /* InfoView.swift */; };
 		4D1F758629CA513700724C58 /* TermosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F758529CA513700724C58 /* TermosView.swift */; };
@@ -73,6 +74,7 @@
 		1927E21729C9013900BE7BAD /* CardAppointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAppointment.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		192B30D229CA3A89008280E4 /* DateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCard.swift; sourceTree = "<group>"; };
 		192B30D429CA4028008280E4 /* DetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCard.swift; sourceTree = "<group>"; };
+		19C09F4A29D5349100CB2021 /* PhotoImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImporter.swift; sourceTree = "<group>"; };
 		19C185C729CBA9A000F3A95C /* ConsultasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultasView.swift; sourceTree = "<group>"; };
 		4D1F758329CA2B2300724C58 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		4D1F758529CA513700724C58 /* TermosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermosView.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				88E0780629D2164200856256 /* DataModelManager.swift */,
+				19C09F4A29D5349100CB2021 /* PhotoImporter.swift */,
 				4DC4937629D38B2000653B0D /* SpecialtyList.swift */,
 			);
 			path = viewModel;
@@ -390,6 +393,7 @@
 				4D1F759029CB986300724C58 /* HistoricoView.swift in Sources */,
 				4D1F759229CCB97700724C58 /* AddConsultaView.swift in Sources */,
 				4DC4937B29D4B50B00653B0D /* DetalheHistoricoView.swift in Sources */,
+				19C09F4B29D5349100CB2021 /* PhotoImporter.swift in Sources */,
 				88E0780729D2164200856256 /* DataModelManager.swift in Sources */,
 				4DC4937729D38B2000653B0D /* SpecialtyList.swift in Sources */,
 				4D1F759629CCE1DE00724C58 /* AddButton.swift in Sources */,
