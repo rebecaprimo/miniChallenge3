@@ -18,6 +18,7 @@ struct PickerComponent: View {
     
     var body: some View {
         Text("Especialidade")
+            .padding([.top, .leading], 20)
             .font(.system(size: 20))
             .font(.callout)
             .bold()

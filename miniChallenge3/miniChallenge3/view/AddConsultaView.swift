@@ -9,20 +9,20 @@ import Foundation
 import SwiftUI
 
 struct AddConsultaView: View {
+
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.id, ascending: true)],
         animation: .default)
     private var specialties: FetchedResults<Specialty>
+    private let vmManager = DataModelManager.shared
     @State var specialist: String = ""
     @State var dr: String = ""
     @State var local: String = ""
     @State var dateAppointment = Date()
-    private let vmManager = DataModelManager.shared
     @State var selectedSpecialty: String = ""
-    @Environment(\.dismiss) private var dismiss
     
-  
     var body: some View {
         
         ScrollView {
