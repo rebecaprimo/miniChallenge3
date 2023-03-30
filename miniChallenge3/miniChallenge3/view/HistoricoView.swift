@@ -33,11 +33,7 @@ struct HistoricoView: View {
             }
             .background(DataColor.shared.colorBackGround)
         }
-        .onAppear(
-        
-        
-        )
-        .searchable(text: $query, prompt: Text("Search"))
+        .searchable(text: $query, prompt: Text("Pesquise a especialidade"))
     }
 }
 

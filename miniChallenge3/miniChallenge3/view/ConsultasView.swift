@@ -17,22 +17,22 @@ struct ConsultasView: View {
         animation: .default)
     
     private var appointments: FetchedResults<Appointment>
+    private var isEmpty: Bool = true
     
     var body: some View {
         NavigationView {
-            ZStack{
+            ZStack {
                 List {
                     ForEach(appointments) { appointment in
-                        if appointment.date ?? .now > .now{
+                        if appointment.date ?? .now > .now {
                             AppointmentRowView(appointment: appointment)
                         }
-
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                 }.scrollContentBackground(.hidden)
                 
-                VStack{
+                VStack {
                     HStack() {
                         Spacer()
                         AddButton(view: AnyView(AddConsultaView()))
@@ -45,8 +45,6 @@ struct ConsultasView: View {
             .navigationTitle("Consultas")
         }
     }
-    
-    
 }
 
 func dateFormatter(Date: Date?) -> String{

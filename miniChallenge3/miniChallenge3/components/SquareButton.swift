@@ -10,21 +10,19 @@ import SwiftUI
 
 struct SquareButton: View {
     private let icon: String?
-    
+
     init(icon: String) {
         self.icon = icon
     }
     
     var body: some View {
         if icon != nil {
-            Button(action: {}) {
-                Image(systemName: icon ?? "")
-                    .frame(width: 120, height: 120)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(20)
-            }
+            Image(systemName: icon ?? "")
+                .frame(width: 120, height: 120)
+                .padding()
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .cornerRadius(20)
         }
     }
 }

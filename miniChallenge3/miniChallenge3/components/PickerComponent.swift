@@ -33,6 +33,3 @@ struct PickerComponent: View {
         }.padding()
     }
 }
-
-
-
