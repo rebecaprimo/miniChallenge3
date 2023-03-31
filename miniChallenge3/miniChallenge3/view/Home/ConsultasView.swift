@@ -31,7 +31,6 @@ struct ConsultasView: View {
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                 }.scrollContentBackground(.hidden)
-                
                 VStack {
                     HStack() {
                         Spacer()
@@ -44,6 +43,7 @@ struct ConsultasView: View {
             .background(DataColor.shared.colorBackGround)
             .navigationTitle("Consultas")
         }
+        
     }
 }
 

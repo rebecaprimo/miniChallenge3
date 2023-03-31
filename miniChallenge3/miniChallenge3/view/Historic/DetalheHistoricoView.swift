@@ -18,22 +18,31 @@ struct DetalheHistoricoView: View {
         self.title = title
     }
     
-    
     var body: some View {
-        
-        NavigationView{
-            
-            List {
-                VStack{
-                    Text(title)
-                }
-                ForEach(appointments) { appointment in
-                    VStack(spacing: 0){
-                        AppointmentRowView(appointment: appointment)
-                    }}
+        NavigationView {
+            ZStack {
+                List {
+                    ForEach(appointments) { appointment in
+                        if appointment.date ?? .now > .now {
+                            AppointmentRowView(appointment: appointment)
+                        }
+                    }
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                }.scrollContentBackground(.hidden)
+                
+                VStack {
+                    HStack() {
+                        Spacer()
+                        AddButton(view: AnyView(AddConsultaView()))
+                            .padding()
+                    }
+                }.offset(x: 0, y: 210)
             }
+            .background(DataColor.shared.colorBackGround)
+            .navigationTitle("Consultas")
         }
     }
-    
-    
 }
+
+
