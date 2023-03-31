@@ -26,7 +26,7 @@ struct AppointmentRowView: View {
         DateCard(dateAppointment: dateFormatter(Date: appointment.date))
             .listRowInsets(EdgeInsets())
             .frame(height: 60)
-        DetailCard(appointment: appointment)
+        DetailCard(showSpecialty: true, appointment: appointment)
             .listRowInsets(EdgeInsets())
             .border(.black)
             .swipeActions() {
@@ -37,7 +37,7 @@ struct AppointmentRowView: View {
                 Button("Editar") {
                     action = .edit
                     isActive = true
-                }.tint(.yellow).foregroundColor(.black)
+                    }.tint(.yellow).foregroundColor(.black)
             }
             .onChange(of: isActive) {
                 if !$0 {
@@ -48,7 +48,7 @@ struct AppointmentRowView: View {
                 Button("Cancelar", role: .cancel, action: {return})
                 Button("Deletar", role: .destructive, action: {DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)})
             }
-        
+            .foregroundColor(.none)
     }
     
     @ViewBuilder

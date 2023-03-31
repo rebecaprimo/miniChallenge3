@@ -11,18 +11,23 @@ import SwiftUI
 struct DataModelManager{
     
     static let shared = DataModelManager()
+
     
-    
-    func addSpecialty(name: String, viewContext: NSManagedObjectContext, specialty: FetchedResults<Specialty>) -> Specialty? {
+    func addSpecialty(name: String, viewContext: NSManagedObjectContext) -> Specialty? {
         withAnimation {
-            let newSpecialty = Specialty(context: viewContext)
-            for specialtyName in specialty {
-                if specialtyName.name == name {
-                    return specialtyName
-                }
-            }
-            newSpecialty.name = name
-            newSpecialty.id = UUID()
+//            @FetchRequest(fetchRequest: NSFetchRequest.sortedById(), animation: .default)
+//            var specialties: FetchedResults<Specialty>
+//            let newSpecialty = Specialty(context: viewContext)
+//            for specialtyName in specialties {
+//                if specialtyName.name == name {
+//                    return specialtyName
+//                }
+//            }
+            let fetchRequest: NSFetchRequest<Specialty> = Specialty.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "name == %@", name)
+            let newSpecialty = try? viewContext.fetch(fetchRequest).first ?? Specialty(context: viewContext)
+            newSpecialty?.name = name
+            newSpecialty?.id = UUID()
             do {
                 try viewContext.save()
                 return newSpecialty
@@ -33,14 +38,17 @@ struct DataModelManager{
         }
     }
     
-    func addAppointment(_ doctor: String,_ date: Date,_ local: String, viewContext: NSManagedObjectContext,_ specialty: Specialty?) {
+    func addAppointment(_ doctor: String,_ date: Date,_ local: String, viewContext: NSManagedObjectContext,_ specialty: Specialty) {
         withAnimation {
+            
+            
+            
             let newAppointment = Appointment(context: viewContext)
             newAppointment.id = UUID()
             newAppointment.doctor = doctor
             newAppointment.date = date
             newAppointment.local = local
-            specialty?.addToAppointment(newAppointment)
+            specialty.addToAppointment(newAppointment)
             do {
                 try viewContext.save()
             } catch {

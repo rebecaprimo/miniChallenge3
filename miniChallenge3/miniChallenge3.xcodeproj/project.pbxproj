@@ -142,19 +142,11 @@
 		4D1F758229CA265100724C58 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
-				4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */,
-				4D1F758729CA51B500724C58 /* PrivacidadeView.swift */,
-				4D1F758929CA51C200724C58 /* ContatoView.swift */,
-				4D1F758529CA513700724C58 /* TermosView.swift */,
-				4D1F758329CA2B2300724C58 /* InfoView.swift */,
-				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
-				4DC4937A29D4B50B00653B0D /* DetalheHistoricoView.swift */,
-				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
-				1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */,
-				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
-				4D3E2ED929D246BE00F635B8 /* EditarView.swift */,
 				4DC4937C29D5F0C300653B0D /* SplashView.swift */,
+				88CA687B29D62DCE00986D90 /* Home */,
+				88CA687D29D62DE000986D90 /* Historic */,
+				88CA687C29D62DD500986D90 /* Info */,
+				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -260,6 +252,38 @@
 				4DC4937829D38F8800653B0D /* SquareButton.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		88CA687B29D62DCE00986D90 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
+				1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */,
+				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
+				4D3E2ED929D246BE00F635B8 /* EditarView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		88CA687C29D62DD500986D90 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F758329CA2B2300724C58 /* InfoView.swift */,
+				4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */,
+				4D1F758929CA51C200724C58 /* ContatoView.swift */,
+				4D1F758729CA51B500724C58 /* PrivacidadeView.swift */,
+				4D1F758529CA513700724C58 /* TermosView.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		88CA687D29D62DE000986D90 /* Historic */ = {
+			isa = PBXGroup;
+			children = (
+				4DC4937A29D4B50B00653B0D /* DetalheHistoricoView.swift */,
+				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
+			);
+			path = Historic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

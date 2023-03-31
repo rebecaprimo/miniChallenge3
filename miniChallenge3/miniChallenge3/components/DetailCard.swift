@@ -12,11 +12,13 @@ struct DetailCard: View {
     private var appointment: Appointment
     private let style = TextStyle.shared
     private let styleColor = DataColor.shared
+    private var showSpecialty = false
     @State private var showingSheet = false
     
-    init(appointment: Appointment, showingSheet: Bool = false) {
+    init(showSpecialty: Bool, appointment: Appointment, showingSheet: Bool = false) {
         self.appointment = appointment
         self.showingSheet = showingSheet
+        self.showSpecialty = showSpecialty
     }
     
     var body: some View {
@@ -41,10 +43,13 @@ struct DetailCard: View {
     var detailText: some View {
         HStack(alignment: .center){
             VStack(alignment: .leading, spacing: 15){
-                Text(appointment.specialty?.name ?? "-")
-                    .font(.system(size: style.sizeText))
-                    .foregroundColor(.black)
-                    .fontWeight(style.weightText)
+                
+                if showSpecialty {
+                    Text(appointment.specialty?.name ?? "-")
+                        .font(.system(size: style.sizeText))
+                        .foregroundColor(.black)
+                        .fontWeight(style.weightText)
+                }
 
                 Text("Dr. " + (appointment.doctor ?? "-"))
                     .font(.title3)
