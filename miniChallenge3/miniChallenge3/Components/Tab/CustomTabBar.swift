@@ -58,11 +58,11 @@ struct CustomTabBar: View {
         } else {
             switch selectedTab{
             case iconHome:
-                return tabPoint![0]
+                return tabPoint![2]
             case iconHistory:
                 return tabPoint![1]
             case iconSetting:
-                return tabPoint![2]
+                return tabPoint![0]
             default:
                 return tabPoint![0]
             }

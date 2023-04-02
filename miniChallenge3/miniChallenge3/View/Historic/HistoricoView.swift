@@ -23,11 +23,10 @@ struct HistoricoView: View {
                 ScrollView {
                     
                     NavigationLink {
-                        
+                        destination
                     } label: {
                         RectangleButton(title: "Geral", icon: nil, view: nil)
                     }
-
                     ForEach(specialties) { specialty in
                         NavigationLink {
                             List{
@@ -52,16 +51,58 @@ struct HistoricoView: View {
                             }
                         }
                     }
+                    .padding(.bottom, 2)
                     .navigationTitle("Histórico")
                     .searchable(text: $query, prompt: Text("Pesquise a especialidade"))
                 }
                 
+                .background(DataColor.shared.colorBackGround)
             }
-            .background(DataColor.shared.colorBackGround)
             .onAppear {
                 oldDates = historicVM.listSpecialtiesWithOldMedicalAppointments(specialties: specialties)
                 
             }
         }
+        
+    }
+    @ViewBuilder
+    private var destination: some View {
+        if oldDates.isEmpty{
+            GeometryReader{ geometry in
+                VStack{
+                    Text("adicione consultas para visualizá-las aqui")
+                        .foregroundColor(DataColor.shared.colorIconInative)
+                        .padding(.bottom, 40)
+                    Image("geralillustration")
+                }.frame(width: geometry.size.width, height: geometry.size.height)
+                    .background(DataColor.shared.colorBackGround)
+            }
+        }else {
+            VStack{
+                List{
+                    
+                    ForEach(specialties) { specialty in
+                        if let appointments = specialty.appointment {
+                            let appointmentsArray = appointments.allObjects as! [Appointment]
+                            
+                            ForEach(appointmentsArray){ appointment in
+                                if appointment.date ?? .now < .now {
+                                    AppointmentRowView(appointment: appointment)
+                                    
+                                    
+                                }
+                            }
+                            .navigationTitle("Histórico Geral")
+                            .listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
+                            .scrollContentBackground(.hidden)
+                        } else {
+                            EmptyView()
+                        }
+                    }
+                }
+            }
+        }
     }
 }
+

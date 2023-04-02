@@ -15,10 +15,10 @@ struct miniChallenge3App: App {
 
     var body: some Scene {
         WindowGroup {
-            //SplashView()
-            CustomTabBar(selectedTab: $selectedTab)
+            SplashView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .ignoresSafeArea()
+//            CustomTabBar(selectedTab: $selectedTab)
+//                .ignoresSafeArea()
         }
     }
 }

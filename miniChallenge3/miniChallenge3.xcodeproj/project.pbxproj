@@ -237,13 +237,13 @@
 		4D9EE91229C8EEB20046483A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
+				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
 				88BF00F129D931ED0027AA06 /* Button */,
 				88BF00F029D931EA0027AA06 /* Cards */,
 				88BF00F229D932420027AA06 /* Picker */,
 				88BF00F329D932980027AA06 /* Tab */,
 				88BF00EF29D931E70027AA06 /* Texts */,
-				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
-				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
