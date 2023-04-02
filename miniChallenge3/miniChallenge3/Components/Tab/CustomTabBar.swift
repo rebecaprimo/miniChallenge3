@@ -12,7 +12,7 @@ struct CustomTabBar: View {
     private let iconHistory = "clock.arrow.circlepath"
     private let iconSetting = "info"
     
-    private let icons: [String]
+    private var icons: [String]
     @State var tabPoint: [CGFloat]? = []
     @Binding private var selectedTab: String
     
@@ -23,8 +23,6 @@ struct CustomTabBar: View {
     }
 
     var body: some View {
-        
-        
 
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
             TabView(selection: $selectedTab){
@@ -55,7 +53,6 @@ struct CustomTabBar: View {
     
     
     func getCurvePoint() -> CGFloat {
-        
         if tabPoint!.isEmpty{
             return 0
         } else {

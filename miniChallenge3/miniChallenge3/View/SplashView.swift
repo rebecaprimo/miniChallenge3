@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct SplashView: View {
-    let persistenceController = PersistenceController.shared
+    
+//    let persistenceController = PersistenceController.shared
     @State var selectedTab: String = "list.bullet.clipboard"
     @State private var isActive = false
     @State private var size = 0.8
@@ -17,8 +18,8 @@ struct SplashView: View {
     
     var body: some View {
         if isActive {
-//            CustomTabBar(selectedTab: $selectedTab)
-//                .ignoresSafeArea()
+            CustomTabBar(selectedTab: $selectedTab)
+                .ignoresSafeArea()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         } else {
             VStack {

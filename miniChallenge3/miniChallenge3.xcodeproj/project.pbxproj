@@ -141,7 +141,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D1F758229CA265100724C58 /* view */ = {
+		4D1F758229CA265100724C58 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4DC4937C29D5F0C300653B0D /* SplashView.swift */,
@@ -150,7 +150,7 @@
 				88CA687C29D62DD500986D90 /* Info */,
 				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		4D9EE8D229C8EDBE0046483A = {
@@ -178,10 +178,10 @@
 			children = (
 				4D9EE91329C90EC30046483A /* miniChallenge3.entitlements */,
 				4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */,
-				4D1F758229CA265100724C58 /* view */,
-				4D9EE91229C8EEB20046483A /* components */,
-				4D9EE91129C8EE9A0046483A /* viewModel */,
-				4D9EE91029C8EE8C0046483A /* model */,
+				4D9EE91229C8EEB20046483A /* Components */,
+				4D1F758229CA265100724C58 /* View */,
+				4D9EE91129C8EE9A0046483A /* ViewModel */,
+				4D9EE91029C8EE8C0046483A /* Model */,
 				4D9EE8E229C8EDC00046483A /* Assets.xcassets */,
 				4D9EE8EC29C8EDC00046483A /* Info.plist */,
 				4D9EE8E429C8EDC00046483A /* Preview Content */,
@@ -214,16 +214,16 @@
 			path = miniChallenge3UITests;
 			sourceTree = "<group>";
 		};
-		4D9EE91029C8EE8C0046483A /* model */ = {
+		4D9EE91029C8EE8C0046483A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				4D9EE8E929C8EDC00046483A /* miniChallenge3.xcdatamodeld */,
 				4D9EE8E729C8EDC00046483A /* Persistence.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		4D9EE91129C8EE9A0046483A /* viewModel */ = {
+		4D9EE91129C8EE9A0046483A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				88E0780629D2164200856256 /* DataModelManager.swift */,
@@ -231,30 +231,70 @@
 				4DC4937629D38B2000653B0D /* SpecialtyList.swift */,
 				88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */,
 			);
-			path = viewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4D9EE91229C8EEB20046483A /* components */ = {
+		4D9EE91229C8EEB20046483A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				88BF00F129D931ED0027AA06 /* Button */,
+				88BF00F029D931EA0027AA06 /* Cards */,
+				88BF00F229D932420027AA06 /* Picker */,
+				88BF00F329D932980027AA06 /* Tab */,
+				88BF00EF29D931E70027AA06 /* Texts */,
+				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
+				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		88BF00EF29D931E70027AA06 /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
+				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		88BF00F029D931EA0027AA06 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				192B30D429CA4028008280E4 /* DetailCard.swift */,
+				88CA687629D4777800986D90 /* AppointmentRowView.swift */,
+				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
+				192B30D229CA3A89008280E4 /* DateCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		88BF00F129D931ED0027AA06 /* Button */ = {
 			isa = PBXGroup;
 			children = (
 				1924499A29CCDE940025FE8F /* ActionButton.swift */,
 				4D1F759529CCE1DE00724C58 /* AddButton.swift */,
-				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
-				88CA687629D4777800986D90 /* AppointmentRowView.swift */,
 				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
-				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
-				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
-				192B30D229CA3A89008280E4 /* DateCard.swift */,
-				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
-				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
-				192B30D429CA4028008280E4 /* DetailCard.swift */,
 				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
-				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
-				4DC4937429D38A4F00653B0D /* PickerComponent.swift */,
-				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
 				4DC4937829D38F8800653B0D /* SquareButton.swift */,
 			);
-			path = components;
+			path = Button;
+			sourceTree = "<group>";
+		};
+		88BF00F229D932420027AA06 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
+				4DC4937429D38A4F00653B0D /* PickerComponent.swift */,
+			);
+			name = Picker;
+			sourceTree = "<group>";
+		};
+		88BF00F329D932980027AA06 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		88CA687B29D62DCE00986D90 /* Home */ = {

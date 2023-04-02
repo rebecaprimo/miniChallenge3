@@ -18,20 +18,20 @@ struct DataModelManager{
             let fetchRequest: NSFetchRequest<Specialty> = Specialty.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "name == %@", name)
             let newSpecialty = try? viewContext.fetch(fetchRequest).first ?? Specialty(context: viewContext)
-            if let alreadyExist = newSpecialty {
-                return alreadyExist
-            }
-            newSpecialty?.name = name
-            newSpecialty?.id = UUID()
-            do {
-                try viewContext.save()
+            if nullIDValidator(id: newSpecialty?.id){
+                newSpecialty?.name = name
+                newSpecialty?.id = UUID()
+                save(viewContext)
                 return newSpecialty
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            } else {return newSpecialty}
         }
     }
+    
+    private func nullIDValidator(id: UUID?) -> Bool{
+        let validatedID = (id == nil) ? true : false
+        return validatedID
+    }
+    
     
     func addAppointment(_ doctor: String,_ date: Date,_ local: String, viewContext: NSManagedObjectContext,_ specialty: Specialty) {
         withAnimation {
@@ -41,12 +41,7 @@ struct DataModelManager{
             newAppointment.date = date
             newAppointment.local = local
             specialty.addToAppointment(newAppointment)
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            save(viewContext)
         }
     }
     
@@ -58,27 +53,24 @@ struct DataModelManager{
                 appointment.date = dateAppointment
                 appointment.local = local
                 specialty.addToAppointment(appointment)
-                do {
-                    try viewContext.save()
-                } catch {
-                    let nsError = error as NSError
-                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-                }
+                save(viewContext)
             }
         }
-        
-        
     }
     
     func deleteAppointment(viewContext: NSManagedObjectContext, appointment: Appointment) {
         withAnimation {
             viewContext.delete(appointment)
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            save(viewContext)
+        }
+    }
+    
+    private func save(_ viewContext: NSManagedObjectContext){
+        do {
+            try viewContext.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
     

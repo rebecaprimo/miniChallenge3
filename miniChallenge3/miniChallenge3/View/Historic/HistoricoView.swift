@@ -36,7 +36,6 @@ struct HistoricoView: View {
                                     
                                     ForEach(appointmentsArray){ appointment in
                                         if appointment.date ?? .now < .now {
-                                            
                                             AppointmentRowView(appointment: appointment)
                                         }
                                     }
