@@ -17,7 +17,11 @@ struct AppointmentRowView: View {
     @State var showingAlert = false
     @State private var isActive = false
     @State private var action: Action?
-    let appointment: Appointment
+    var appointment: Appointment
+    
+    init(appointment: Appointment) {
+        self.appointment = appointment
+    }
     
     var body: some View {
         ZStack{
@@ -54,10 +58,7 @@ struct AppointmentRowView: View {
     @ViewBuilder
     private var destination: some View {
         if case .edit = action {
-            EditarView(id: appointment.id, dr: appointment.doctor ?? "-", local: appointment.local ?? "", dateAppointment: appointment.date ?? .now, selectedSpecialty: appointment.specialty?.name ?? "")
+            EditarView(appointment: appointment)
         }
-        
     }
-    
-    
 }

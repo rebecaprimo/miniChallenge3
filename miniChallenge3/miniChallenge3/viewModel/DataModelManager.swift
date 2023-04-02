@@ -11,21 +11,16 @@ import SwiftUI
 struct DataModelManager{
     
     static let shared = DataModelManager()
-
+    
     
     func addSpecialty(name: String, viewContext: NSManagedObjectContext) -> Specialty? {
         withAnimation {
-//            @FetchRequest(fetchRequest: NSFetchRequest.sortedById(), animation: .default)
-//            var specialties: FetchedResults<Specialty>
-//            let newSpecialty = Specialty(context: viewContext)
-//            for specialtyName in specialties {
-//                if specialtyName.name == name {
-//                    return specialtyName
-//                }
-//            }
             let fetchRequest: NSFetchRequest<Specialty> = Specialty.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "name == %@", name)
             let newSpecialty = try? viewContext.fetch(fetchRequest).first ?? Specialty(context: viewContext)
+            if let alreadyExist = newSpecialty {
+                return alreadyExist
+            }
             newSpecialty?.name = name
             newSpecialty?.id = UUID()
             do {
@@ -40,9 +35,6 @@ struct DataModelManager{
     
     func addAppointment(_ doctor: String,_ date: Date,_ local: String, viewContext: NSManagedObjectContext,_ specialty: Specialty) {
         withAnimation {
-            
-            
-            
             let newAppointment = Appointment(context: viewContext)
             newAppointment.id = UUID()
             newAppointment.doctor = doctor
@@ -58,15 +50,14 @@ struct DataModelManager{
         }
     }
     
-    func editAppointment(viewContext: NSManagedObjectContext,_ appointments: FetchedResults<Appointment>,_ id: UUID?, nameDoctor: String, dateAppointment: Date, local: String){
-        
-        guard let idAppointment = id else {return}
-        
+    func editAppointment(viewContext: NSManagedObjectContext,_ appointments: FetchedResults<Appointment>,_ id: UUID,_ nameDoctor: String,_ dateAppointment: Date,_ local: String,_ specialtyName: String){
+        guard let specialty = addSpecialty(name: specialtyName, viewContext: viewContext) else {return}
         for appointment in appointments {
-            if appointment.id == idAppointment {
+            if appointment.id == id {
                 appointment.doctor = nameDoctor
                 appointment.date = dateAppointment
                 appointment.local = local
+                specialty.addToAppointment(appointment)
                 do {
                     try viewContext.save()
                 } catch {

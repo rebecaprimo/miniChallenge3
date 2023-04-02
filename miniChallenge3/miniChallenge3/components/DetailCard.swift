@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailCard: View {
     
-    private var appointment: Appointment
+    @ObservedObject private var appointment: Appointment
     private let style = TextStyle.shared
     private let styleColor = DataColor.shared
     private var showSpecialty = false
