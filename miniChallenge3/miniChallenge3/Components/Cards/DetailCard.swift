@@ -14,6 +14,7 @@ struct DetailCard: View {
     private let styleColor = DataColor.shared
     private var showSpecialty = false
     @State private var showingSheet = false
+    private let radius = 20.0
     
     init(showSpecialty: Bool, appointment: Appointment, showingSheet: Bool = false) {
         self.appointment = appointment
@@ -27,14 +28,25 @@ struct DetailCard: View {
         } label: {
             GeometryReader { geometry in
                 Rectangle()
-                    .fill(.white)
+                    //.padding(.top, radius)
+                    .strokeBorder(lineWidth: 2)
+                    .background(Rectangle().fill(.black))
+                    .roundedCorner(20, corners: [.bottomRight, .bottomLeft])
                     .frame(height: 120)
-                    .border(.black)
-
+                    .padding(.bottom)
+                
+                Rectangle()
+                    //.padding(.top, radius)
+                    .strokeBorder(lineWidth: 2)
+                    .background(Rectangle().fill(.white))
+                    .roundedCorner(20, corners: [.bottomRight, .bottomLeft])
+                    .frame(height: 115)
+                    .padding(.bottom)
+                
                 detailText
             }
         }
-        .frame(height: 110)
+        .frame(height: 120)
         .sheet(isPresented: $showingSheet) {
             ConsultasSheetView(appointment: appointment)
         }
@@ -64,5 +76,11 @@ struct DetailCard: View {
             
         }
         .padding(20)
+    }
+}
+
+extension View {
+    func roundedCorner(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape(RoundedCorner(radius: radius, corners: corners))
     }
 }

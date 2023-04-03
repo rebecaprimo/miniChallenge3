@@ -31,13 +31,12 @@ struct ConsultasView: View {
                     .listRowSeparator(.hidden)
                 }.scrollContentBackground(.hidden)
                 VStack {
-                    HStack() {
+                    HStack {
                         Spacer()
                         AddButton(view: AnyView(AddConsultaView()))
                             .padding()
                     }
-                }.offset(x: 0, y: 210)
-                
+                }.offset(x: 0, y: -343)
             }
             .background(DataColor.shared.colorBackGround)
             .navigationTitle("Consultas")
@@ -45,6 +44,9 @@ struct ConsultasView: View {
         
     }
 }
+
+
+
 
 func dateFormatter(Date: Date?) -> String{
     let formatter = DateFormatter()

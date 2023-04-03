@@ -22,7 +22,6 @@ struct DateCard: View {
             Rectangle()
                 .fill(DataColor.shared.componentsColor)
                 .frame(height: 60)
-                .border(.black)
                 .padding(.bottom, radius)
                 .cornerRadius(CGFloat(radius))
             dateText
