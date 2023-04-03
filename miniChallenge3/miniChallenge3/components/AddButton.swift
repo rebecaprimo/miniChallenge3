@@ -23,7 +23,7 @@ struct AddButton: View {
                     .frame(width: 60, height: 60)
                     .background(DataColor.shared.componentsColor)
                     .clipShape(Circle())
-                    .font(.system(size: 25))
+                   .font(.system(size: 25))
             }
  
         })

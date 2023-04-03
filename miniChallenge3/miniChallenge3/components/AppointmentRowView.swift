@@ -28,7 +28,7 @@ struct AppointmentRowView: View {
             .frame(height: 60)
         DetailCard(appointment: appointment)
             .listRowInsets(EdgeInsets())
-            .border(.black)
+            //.border(.black)
             .swipeActions() {
                 Button("Deletar") {
                     withAnimation(.spring(), {showingAlert.toggle()})
