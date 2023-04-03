@@ -49,6 +49,7 @@ struct HistoricoView: View {
 //                                        }
                                     }
                                     .navigationTitle(specialty.name ?? "Geral")
+                                    .navigationBarTitleDisplayMode(.inline)
                                     .listRowBackground(Color.clear)
                                     .listRowSeparator(.hidden)
                                 } else {
