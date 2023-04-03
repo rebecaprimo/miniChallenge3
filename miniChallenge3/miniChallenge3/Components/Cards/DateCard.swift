@@ -27,7 +27,6 @@ struct DateCard: View {
             dateText
         }
     }
-    
     var dateText: some View {
         Text(dateAppointment)
             .foregroundColor(styleColor.textComponentsColor)

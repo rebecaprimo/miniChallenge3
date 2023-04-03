@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct PickerComponent: View {
+    
     @Binding private var selectedSpecialty: String
     let specialty = specialtyList
     

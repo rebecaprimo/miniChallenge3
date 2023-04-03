@@ -16,18 +16,18 @@ struct EditarView: View {
         animation: .default)
     private var appointments: FetchedResults<Appointment>
     private let vmManager = DataModelManager.shared
-    private let id: UUID?
+    private let id: UUID
     @State var dr: String
     @State var local: String
     @State var dateAppointment: Date
     @State var selectedSpecialty: String
     
-    init(id: UUID?, dr: String, local: String, dateAppointment: Date, selectedSpecialty: String) {
-        self.id = id
-        _dr = State(initialValue: dr)
-        _local = State(initialValue: local)
-        _dateAppointment = State(initialValue: dateAppointment)
-        _selectedSpecialty = State(initialValue: selectedSpecialty)
+    init(appointment: Appointment) {
+        self.id = appointment.id!
+        _dr = State(initialValue: appointment.doctor ?? "")
+        _local = State(initialValue: appointment.local ?? "")
+        _dateAppointment = State(initialValue: appointment.date ?? Date())
+        _selectedSpecialty = State(initialValue: appointment.specialty?.name ?? "Clinico Geral")
     }
     
     var body: some View {
@@ -58,7 +58,7 @@ struct EditarView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
                         
-                        vmManager.editAppointment(viewContext: viewContext, appointments, id, nameDoctor: dr, dateAppointment: dateAppointment, local: local)
+                        vmManager.editAppointment(viewContext: viewContext, appointments, id, dr, dateAppointment, local, selectedSpecialty)
                         dismiss()
                     }
                 }

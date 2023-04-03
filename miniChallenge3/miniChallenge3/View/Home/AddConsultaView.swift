@@ -5,7 +5,7 @@
 //  Created by rebeca primo on 23/03/23.
 //
 
-import Foundation
+import CoreData
 import SwiftUI
 import PhotosUI
 import QuickLook
@@ -14,12 +14,10 @@ struct AddConsultaView: View {
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.id, ascending: true)],
-        animation: .default)
+    @FetchRequest(fetchRequest: NSFetchRequest.sortedById(), animation: .default)
     private var specialties: FetchedResults<Specialty>
     private let vmManager = DataModelManager.shared
-    @State var specialist: String = ""
+    @State var specialist: String = "Nenhuma Selecionada"
     @State var dr: String = ""
     @State var local: String = ""
     @State var dateAppointment = Date()
@@ -41,11 +39,8 @@ struct AddConsultaView: View {
                 if let selectedImage, let uiImage = UIImage(data: selectedImage) {
                     Image(uiImage: uiImage)
                         .resizable()
-                        .scaledToFill()
                         .frame(width: 120, height: 120)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue)
+                        .scaledToFill()
                         .cornerRadius(20)
                 }
                 
@@ -81,7 +76,8 @@ struct AddConsultaView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
-                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, vmManager.addSpecialty(name: selectedSpecialty, viewContext: viewContext, specialty: specialties) ?? nil)
+                        guard let specialty = vmManager.addSpecialty(name: selectedSpecialty, viewContext: viewContext) else {return}
+                        vmManager.addAppointment(dr, dateAppointment, local, viewContext: viewContext, specialty)
                         dismiss()
                     }
                 }

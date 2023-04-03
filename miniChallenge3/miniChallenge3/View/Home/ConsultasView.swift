@@ -15,7 +15,6 @@ struct ConsultasView: View {
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Appointment.date, ascending: true)],
         animation: .default)
-    
     private var appointments: FetchedResults<Appointment>
     private var isEmpty: Bool = true
     
@@ -31,7 +30,6 @@ struct ConsultasView: View {
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                 }.scrollContentBackground(.hidden)
-                
                 VStack {
                     HStack {
                         Spacer()
@@ -43,6 +41,7 @@ struct ConsultasView: View {
             .background(DataColor.shared.colorBackGround)
             .navigationTitle("Consultas")
         }
+        
     }
 }
 

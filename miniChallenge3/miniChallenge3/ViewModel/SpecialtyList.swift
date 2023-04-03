@@ -8,6 +8,7 @@
 import Foundation
 
     let specialtyList = [
+        "Nenhuma Selecionada",
         "Acupuntura",
         "Alergia e imunologia",
         "Anestesiologia",

@@ -17,7 +17,11 @@ struct AppointmentRowView: View {
     @State var showingAlert = false
     @State private var isActive = false
     @State private var action: Action?
-    let appointment: Appointment
+    var appointment: Appointment
+    
+    init(appointment: Appointment) {
+        self.appointment = appointment
+    }
     
     var body: some View {
         ZStack{
@@ -26,7 +30,7 @@ struct AppointmentRowView: View {
         DateCard(dateAppointment: dateFormatter(Date: appointment.date))
             .listRowInsets(EdgeInsets())
             .frame(height: 60)
-        DetailCard(appointment: appointment)
+        DetailCard(showSpecialty: true, appointment: appointment)
             .listRowInsets(EdgeInsets())
             //.border(.black)
             .swipeActions() {
@@ -37,7 +41,7 @@ struct AppointmentRowView: View {
                 Button("Editar") {
                     action = .edit
                     isActive = true
-                }.tint(.yellow).foregroundColor(.black)
+                    }.tint(.yellow).foregroundColor(.black)
             }
             .onChange(of: isActive) {
                 if !$0 {
@@ -48,16 +52,13 @@ struct AppointmentRowView: View {
                 Button("Cancelar", role: .cancel, action: {return})
                 Button("Deletar", role: .destructive, action: {DataModelManager.shared.deleteAppointment(viewContext: viewContext, appointment: appointment)})
             }
-        
+            .foregroundColor(.none)
     }
     
     @ViewBuilder
     private var destination: some View {
         if case .edit = action {
-            EditarView(id: appointment.id, dr: appointment.doctor ?? "-", local: appointment.local ?? "", dateAppointment: appointment.date ?? .now, selectedSpecialty: appointment.specialty?.name ?? "")
+            EditarView(appointment: appointment)
         }
-        
     }
-    
-    
 }

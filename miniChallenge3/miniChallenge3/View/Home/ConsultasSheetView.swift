@@ -46,6 +46,7 @@ struct ConsultasSheetView: View {
         .presentationDragIndicator(.visible)
         .background(DataColor.shared.colorBackGround)
         .ignoresSafeArea()
+        .border(.red)
     }
 }
 

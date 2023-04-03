@@ -47,6 +47,7 @@
 		8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */; };
 		8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C929CA2838009B9FF7 /* CircleButton.swift */; };
 		88CA687729D4777800986D90 /* AppointmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CA687629D4777800986D90 /* AppointmentRowView.swift */; };
+		88CD5DB029D77CAA00400CF8 /* HistoricVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */; };
 		88E0780729D2164200856256 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0780629D2164200856256 /* DataModelManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8832B9C929CA2838009B9FF7 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		88CA687629D4777800986D90 /* AppointmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRowView.swift; sourceTree = "<group>"; };
+		88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricVM.swift; sourceTree = "<group>"; };
 		88E0780629D2164200856256 /* DataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,24 +143,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D1F758229CA265100724C58 /* view */ = {
+		4D1F758229CA265100724C58 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
-				4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */,
-				4D1F758729CA51B500724C58 /* PrivacidadeView.swift */,
-				4D1F758929CA51C200724C58 /* ContatoView.swift */,
-				4D1F758529CA513700724C58 /* TermosView.swift */,
-				4D1F758329CA2B2300724C58 /* InfoView.swift */,
-				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
-				4DC4937A29D4B50B00653B0D /* DetalheHistoricoView.swift */,
-				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
-				1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */,
-				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
-				4D3E2ED929D246BE00F635B8 /* EditarView.swift */,
 				4DC4937C29D5F0C300653B0D /* SplashView.swift */,
+				88CA687B29D62DCE00986D90 /* Home */,
+				88CA687D29D62DE000986D90 /* Historic */,
+				88CA687C29D62DD500986D90 /* Info */,
+				4D9EE8E029C8EDBE0046483A /* ContentView.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		4D9EE8D229C8EDBE0046483A = {
@@ -186,10 +180,10 @@
 			children = (
 				4D9EE91329C90EC30046483A /* miniChallenge3.entitlements */,
 				4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */,
-				4D1F758229CA265100724C58 /* view */,
-				4D9EE91229C8EEB20046483A /* components */,
-				4D9EE91129C8EE9A0046483A /* viewModel */,
-				4D9EE91029C8EE8C0046483A /* model */,
+				4D9EE91229C8EEB20046483A /* Components */,
+				4D1F758229CA265100724C58 /* View */,
+				4D9EE91129C8EE9A0046483A /* ViewModel */,
+				4D9EE91029C8EE8C0046483A /* Model */,
 				4D9EE8E229C8EDC00046483A /* Assets.xcassets */,
 				4D9EE8EC29C8EDC00046483A /* Info.plist */,
 				4D9EE8E429C8EDC00046483A /* Preview Content */,
@@ -222,47 +216,120 @@
 			path = miniChallenge3UITests;
 			sourceTree = "<group>";
 		};
-		4D9EE91029C8EE8C0046483A /* model */ = {
+		4D9EE91029C8EE8C0046483A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				4D9EE8E929C8EDC00046483A /* miniChallenge3.xcdatamodeld */,
 				4D9EE8E729C8EDC00046483A /* Persistence.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		4D9EE91129C8EE9A0046483A /* viewModel */ = {
+		4D9EE91129C8EE9A0046483A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				88E0780629D2164200856256 /* DataModelManager.swift */,
 				19C09F4A29D5349100CB2021 /* PhotoImporter.swift */,
 				4DC4937629D38B2000653B0D /* SpecialtyList.swift */,
+				88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */,
 			);
-			path = viewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4D9EE91229C8EEB20046483A /* components */ = {
+		4D9EE91229C8EEB20046483A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
+				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
+				88BF00F129D931ED0027AA06 /* Button */,
+				88BF00F029D931EA0027AA06 /* Cards */,
+				88BF00F229D932420027AA06 /* Picker */,
+				88BF00F329D932980027AA06 /* Tab */,
+				88BF00EF29D931E70027AA06 /* Texts */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		88BF00EF29D931E70027AA06 /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
+				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		88BF00F029D931EA0027AA06 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				192B30D429CA4028008280E4 /* DetailCard.swift */,
+				88CA687629D4777800986D90 /* AppointmentRowView.swift */,
+				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
+				192B30D229CA3A89008280E4 /* DateCard.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		88BF00F129D931ED0027AA06 /* Button */ = {
 			isa = PBXGroup;
 			children = (
 				1924499A29CCDE940025FE8F /* ActionButton.swift */,
 				4D1F759529CCE1DE00724C58 /* AddButton.swift */,
-				1927E21729C9013900BE7BAD /* CardAppointment.swift */,
-				88CA687629D4777800986D90 /* AppointmentRowView.swift */,
 				8832B9C929CA2838009B9FF7 /* CircleButton.swift */,
-				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
-				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
-				192B30D229CA3A89008280E4 /* DateCard.swift */,
-				191465FC29CE4C8400EE9A6B /* DataColor.swift */,
-				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
-				192B30D429CA4028008280E4 /* DetailCard.swift */,
 				4D9EE91429CA1DC60046483A /* RectangleButton.swift */,
-				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
-				4DC4937429D38A4F00653B0D /* PickerComponent.swift */,
-				191465FA29CE3C7C00EE9A6B /* TextStyle.swift */,
 				4DC4937829D38F8800653B0D /* SquareButton.swift */,
 				4DC4937E29D6184000653B0D /* RoundedCorner.swift */,
 			);
-			path = components;
+			path = Button;
+			sourceTree = "<group>";
+		};
+		88BF00F229D932420027AA06 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
+				4DC4937429D38A4F00653B0D /* PickerComponent.swift */,
+			);
+			name = Picker;
+			sourceTree = "<group>";
+		};
+		88BF00F329D932980027AA06 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		88CA687B29D62DCE00986D90 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F759129CCB97700724C58 /* AddConsultaView.swift */,
+				1924499829CCDE1D0025FE8F /* ConsultasSheetView.swift */,
+				19C185C729CBA9A000F3A95C /* ConsultasView.swift */,
+				4D3E2ED929D246BE00F635B8 /* EditarView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		88CA687C29D62DD500986D90 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				4D1F758329CA2B2300724C58 /* InfoView.swift */,
+				4D1F758B29CA51CF00724C58 /* ConfiguracoesView.swift */,
+				4D1F758929CA51C200724C58 /* ContatoView.swift */,
+				4D1F758729CA51B500724C58 /* PrivacidadeView.swift */,
+				4D1F758529CA513700724C58 /* TermosView.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		88CA687D29D62DE000986D90 /* Historic */ = {
+			isa = PBXGroup;
+			children = (
+				4DC4937A29D4B50B00653B0D /* DetalheHistoricoView.swift */,
+				4D1F758F29CB986300724C58 /* HistoricoView.swift */,
+			);
+			path = Historic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +469,7 @@
 				19C09F4B29D5349100CB2021 /* PhotoImporter.swift in Sources */,
 				88E0780729D2164200856256 /* DataModelManager.swift in Sources */,
 				4DC4937729D38B2000653B0D /* SpecialtyList.swift in Sources */,
+				88CD5DB029D77CAA00400CF8 /* HistoricVM.swift in Sources */,
 				4D1F759629CCE1DE00724C58 /* AddButton.swift in Sources */,
 				4D1F759429CCBB5500724C58 /* TextFieldCustom.swift in Sources */,
 				4D9EE91529CA1DC60046483A /* RectangleButton.swift in Sources */,
@@ -599,8 +667,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,8 +699,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
