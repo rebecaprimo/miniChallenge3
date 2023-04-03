@@ -90,7 +90,7 @@
 		4D1F759529CCE1DE00724C58 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerComponent.swift; sourceTree = "<group>"; };
 		4D3E2ED929D246BE00F635B8 /* EditarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarView.swift; sourceTree = "<group>"; };
-		4D9EE8DB29C8EDBE0046483A /* miniChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9EE8DB29C8EDBE0046483A /* Consulte..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Consulte..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniChallenge3App.swift; sourceTree = "<group>"; };
 		4D9EE8E029C8EDBE0046483A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D9EE8E229C8EDC00046483A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		4D9EE8DC29C8EDBE0046483A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D9EE8DB29C8EDBE0046483A /* miniChallenge3.app */,
+				4D9EE8DB29C8EDBE0046483A /* Consulte..app */,
 				4D9EE8F129C8EDC00046483A /* miniChallenge3Tests.xctest */,
 				4D9EE8FB29C8EDC00046483A /* miniChallenge3UITests.xctest */,
 			);
@@ -349,7 +349,7 @@
 			);
 			name = miniChallenge3;
 			productName = miniChallenge3;
-			productReference = 4D9EE8DB29C8EDBE0046483A /* miniChallenge3.app */;
+			productReference = 4D9EE8DB29C8EDBE0046483A /* Consulte..app */;
 			productType = "com.apple.product-type.application";
 		};
 		4D9EE8F029C8EDC00046483A /* miniChallenge3Tests */ = {
@@ -674,7 +674,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rebeca.miniChallenge3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Consulte.;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -706,7 +706,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rebeca.miniChallenge3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Consulte.;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
