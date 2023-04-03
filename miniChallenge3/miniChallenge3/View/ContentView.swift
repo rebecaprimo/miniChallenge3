@@ -7,7 +7,6 @@
 
 import CoreData
 
-
 extension NSFetchRequest where ResultType == Specialty {
     static func sortedById() -> NSFetchRequest<Specialty> {
         let request: NSFetchRequest<Specialty> = Specialty.fetchRequest()

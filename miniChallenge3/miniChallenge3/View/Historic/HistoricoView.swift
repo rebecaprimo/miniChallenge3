@@ -16,27 +16,37 @@ struct HistoricoView: View {
     @State private var query: String = ""
     @State private var oldDates = [Specialty]()
     private let historicVM = HistoricVM()
+    
+    private var searchResults: [Specialty]{
+        if query.isEmpty {
+            return oldDates
+        } else {
+            return oldDates.filter {$0.name!.lowercased().contains(query.lowercased())}
+        }
+    }
+
     var body: some View {
-        
         NavigationView {
             VStack{
                 ScrollView {
                     
                     NavigationLink {
-                        destination
+                            destination
                     } label: {
-                        RectangleButton(title: "Geral", icon: nil, view: nil)
+                        if query.isEmpty || oldDates.isEmpty{
+                            RectangleButton(title: "Geral", icon: nil, view: nil)
+                        }
                     }
-                    ForEach(specialties) { specialty in
+                    ForEach(searchResults) { specialty in
                         NavigationLink {
                             List{
                                 if let appointments = specialty.appointment {
                                     let appointmentsArray = appointments.allObjects as! [Appointment]
                                     
                                     ForEach(appointmentsArray){ appointment in
-                                        if appointment.date ?? .now < .now {
+//                                        if appointment.date ?? .now < .now {
                                             AppointmentRowView(appointment: appointment)
-                                        }
+//                                        }
                                     }
                                     .navigationTitle(specialty.name ?? "Geral")
                                     .listRowBackground(Color.clear)
@@ -46,7 +56,7 @@ struct HistoricoView: View {
                                 }
                             }.scrollContentBackground(.hidden)
                         } label: {
-                            if oldDates.contains(specialty) {
+                            if searchResults.contains(specialty) {
                                 RectangleButton(title: specialty.name ?? "-", icon: nil, view: nil)
                             }
                         }
@@ -65,6 +75,12 @@ struct HistoricoView: View {
         }
         
     }
+}
+
+
+
+
+extension HistoricoView {
     @ViewBuilder
     private var destination: some View {
         if oldDates.isEmpty{
@@ -105,4 +121,3 @@ struct HistoricoView: View {
         }
     }
 }
-

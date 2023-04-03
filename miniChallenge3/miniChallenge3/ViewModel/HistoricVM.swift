@@ -22,6 +22,5 @@ struct HistoricVM{
             }
         }
         return oldDates
-        
     }
 }
