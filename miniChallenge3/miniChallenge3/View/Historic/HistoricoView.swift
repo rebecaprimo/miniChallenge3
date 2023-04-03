@@ -12,7 +12,7 @@ struct HistoricoView: View {
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.name, ascending: true)],
-        animation: .linear) private var specialties: FetchedResults<Specialty>
+        animation: .spring()) private var specialties: FetchedResults<Specialty>
     @State private var query: String = ""
     @State private var oldDates = [Specialty]()
     private let historicVM = HistoricVM()
@@ -33,7 +33,7 @@ struct HistoricoView: View {
                     NavigationLink {
                             destination
                     } label: {
-                        if query.isEmpty || oldDates.isEmpty{
+                        if query.isEmpty && oldDates.isEmpty{
                             RectangleButton(title: "Geral", icon: nil, view: nil)
                         }
                     }
@@ -48,14 +48,16 @@ struct HistoricoView: View {
                                             AppointmentRowView(appointment: appointment)
 //                                        }
                                     }
-                                    .navigationTitle(specialty.name ?? "Geral")
                                     .navigationBarTitleDisplayMode(.inline)
+                                    .navigationTitle(specialty.name ?? "Geral")
                                     .listRowBackground(Color.clear)
                                     .listRowSeparator(.hidden)
                                 } else {
                                     EmptyView()
                                 }
-                            }.scrollContentBackground(.hidden)
+                            }
+                            .scrollContentBackground(.hidden)
+                            .background(DataColor.shared.colorBackGround)
                         } label: {
                             if searchResults.contains(specialty) {
                                 RectangleButton(title: specialty.name ?? "-", icon: nil, view: nil)
@@ -63,11 +65,10 @@ struct HistoricoView: View {
                         }
                     }
                     .padding(.bottom, 2)
-                    .navigationTitle("Histórico")
                     .searchable(text: $query, prompt: Text("Pesquise a especialidade"))
                 }
-                
                 .background(DataColor.shared.colorBackGround)
+                .navigationTitle("Histórico")
             }
             .onAppear {
                 oldDates = historicVM.listSpecialtiesWithOldMedicalAppointments(specialties: specialties)
@@ -90,35 +91,42 @@ extension HistoricoView {
                     Text("adicione consultas para visualizá-las aqui")
                         .foregroundColor(DataColor.shared.colorIconInative)
                         .padding(.bottom, 40)
+                    
                     Image("geralillustration")
-                }.frame(width: geometry.size.width, height: geometry.size.height)
-                    .background(DataColor.shared.colorBackGround)
+                }
+                .frame(width: geometry.size.width, height: geometry.size.height)
+                .background(DataColor.shared.colorBackGround)
             }
         }else {
-            VStack{
-                List{
-                    
-                    ForEach(specialties) { specialty in
-                        if let appointments = specialty.appointment {
-                            let appointmentsArray = appointments.allObjects as! [Appointment]
-                            
-                            ForEach(appointmentsArray){ appointment in
-                                if appointment.date ?? .now < .now {
-                                    AppointmentRowView(appointment: appointment)
-                                    
-                                    
+            
+            ZStack{
+                DataColor.shared.colorBackGround
+                    .ignoresSafeArea()
+                VStack{
+                    List{
+                        
+                        ForEach(specialties) { specialty in
+                            if let appointments = specialty.appointment {
+                                let appointmentsArray = appointments.allObjects as! [Appointment]
+                                
+                                ForEach(appointmentsArray){ appointment in
+                                    if appointment.date ?? .now < .now {
+                                        AppointmentRowView(appointment: appointment)
+                                    }
                                 }
+                                .navigationTitle("Histórico geral")
+                                .navigationBarTitleDisplayMode(.inline)
+                                .listRowBackground(Color.clear)
+                                .listRowSeparator(.hidden)
+                                .scrollContentBackground(.hidden)
+                            } else {
+                                EmptyView()
                             }
-                            .navigationTitle("Histórico Geral")
-                            .listRowBackground(Color.clear)
-                            .listRowSeparator(.hidden)
-                            .scrollContentBackground(.hidden)
-                        } else {
-                            EmptyView()
                         }
                     }
                 }
             }
+            
         }
     }
 }

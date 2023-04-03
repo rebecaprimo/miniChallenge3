@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4D9EE8DA29C8EDBE0046483A"
-               BuildableName = "miniChallenge3.app"
+               BuildableName = "Consulte..app"
                BlueprintName = "miniChallenge3"
                ReferencedContainer = "container:miniChallenge3.xcodeproj">
             </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D9EE8DA29C8EDBE0046483A"
-            BuildableName = "miniChallenge3.app"
+            BuildableName = "Consulte..app"
             BlueprintName = "miniChallenge3"
             ReferencedContainer = "container:miniChallenge3.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D9EE8DA29C8EDBE0046483A"
-            BuildableName = "miniChallenge3.app"
+            BuildableName = "Consulte..app"
             BlueprintName = "miniChallenge3"
             ReferencedContainer = "container:miniChallenge3.xcodeproj">
          </BuildableReference>
