@@ -17,36 +17,39 @@ struct ConsultasSheetView: View {
     }
     
     var body: some View {
-        
-        VStack{
-            VStack(alignment: .center){
-                Group {
-                    DadosConsultaText(text: appointment.specialty?.name ?? "-")
-                    DadosConsultaText(text: "Dr. " + (appointment.doctor ?? "-"))
-                        .padding(.bottom, 17)
+        ZStack {
+            DataColor.shared.colorBackGround
+                .ignoresSafeArea()
+            VStack {
+                VStack(alignment: .center){
+                    Group {
+                        DadosConsultaText(text: appointment.specialty?.name ?? "-")
+                        DadosConsultaText(text: "Dr. " + (appointment.doctor ?? "-"))
+                            .padding(.bottom, 17)
+                            .padding(.top, 10)
+                    }
                 }
-            }
-            
-            VStack(alignment: .leading){
-                Group {
-                    DadosConsultaText(icon: "calendar", text: dateFormatterStringAppointment(Date: appointment.date))
-                    DadosConsultaText(icon: "clock", text: dateFormatterHourStringAppointment(Date: appointment.date))
-                    DadosConsultaText(icon: "mappin.and.ellipse", text: appointment.local ?? "-")
+                
+                VStack(alignment: .leading){
+                    Group {
+                        DadosConsultaText(icon: "calendar", text: dateFormatterStringAppointment(Date: appointment.date))
+                        DadosConsultaText(icon: "clock", text: dateFormatterHourStringAppointment(Date: appointment.date))
+                        DadosConsultaText(icon: "mappin.and.ellipse", text: appointment.local ?? "-")
+                    }
+                    .padding(.bottom, 5)
+                    .frame(width: 300, alignment: .leading)
                 }
-                .padding(.bottom, 5)
-                .frame(width: 300, alignment: .leading)
+//                DadosConsultaText(icon: "paperclip", text: "Anexos")
+//                    .frame(width: 300, alignment: .leading)
+//                    .padding(.top, 40)
+                Spacer()
             }
-            DadosConsultaText(icon: "paperclip", text: "Anexos")
-                .frame(width: 300, alignment: .leading)
-                .padding(.top, 40)
-            Spacer()
+            .offset(y: 40)
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
+            .background(DataColor.shared.colorBackGround)
+            .ignoresSafeArea()
         }
-        .offset(y: 40)
-        .presentationDetents([.medium, .large])
-        .presentationDragIndicator(.visible)
-        .background(DataColor.shared.colorBackGround)
-        .ignoresSafeArea()
-        .border(.red)
     }
 }
 

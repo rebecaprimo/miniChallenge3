@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class DataColor{
+class DataColor {
     
     static let shared = DataColor()
     
@@ -19,5 +19,6 @@ class DataColor{
     let colorIconActive: Color = Color(UIColor(named: "colorIcons")!)
     let colorIconInative: Color = Color(UIColor(named: "colorIconInative")!)
     let colorCard: Color = .white
+    let backgroundSplashView: Color = Color(UIColor(named: "backGraundSplash")!)
 
 }

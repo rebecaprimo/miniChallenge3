@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SplashView: View {
     
-//    let persistenceController = PersistenceController.shared
+    //    let persistenceController = PersistenceController.shared
     @State var selectedTab: String = "list.bullet.clipboard"
     @State private var isActive = false
     @State private var size = 0.8
@@ -20,15 +20,21 @@ struct SplashView: View {
         if isActive {
             CustomTabBar(selectedTab: $selectedTab)
                 .ignoresSafeArea()
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         } else {
-            VStack {
+            ZStack {
+                DataColor.shared.backgroundSplashView
+                    .ignoresSafeArea()
                 VStack {
-                    Image("firstuseillustration")
-                        .font(.system(size: 40))
-                    Text("Aplicativo Saúde")
+                    Image("appstore")
+                        .resizable()
+                        .cornerRadius(20)
+                        .frame(width: 240, height: 240)
+                        .scaledToFit()
+                    Text("Consulte.")
                         .bold()
-                        .foregroundColor(.black)
+                        .font(.system(size: 40, design: .rounded))
+                        .foregroundColor(.white)
                 }
                 .scaleEffect(size)
                 .opacity(opacity)
@@ -38,6 +44,7 @@ struct SplashView: View {
                         self.opacity = 1.0
                     }
                 }
+                
             }
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
