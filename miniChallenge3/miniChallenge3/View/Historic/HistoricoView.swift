@@ -33,7 +33,7 @@ struct HistoricoView: View {
                     NavigationLink {
                             destination
                     } label: {
-                        if query.isEmpty && oldDates.isEmpty{
+                        if query.isEmpty || oldDates.isEmpty{
                             RectangleButton(title: "Geral", icon: nil, view: nil)
                         }
                     }
@@ -69,6 +69,7 @@ struct HistoricoView: View {
                 }
                 .background(DataColor.shared.colorBackGround)
                 .navigationTitle("Histórico")
+                
             }
             .onAppear {
                 oldDates = historicVM.listSpecialtiesWithOldMedicalAppointments(specialties: specialties)

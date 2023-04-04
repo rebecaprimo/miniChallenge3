@@ -46,6 +46,7 @@
 		4DC4938129DB492300653B0D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4938029DB492300653B0D /* RoundedCorner.swift */; };
 		8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */; };
 		8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C929CA2838009B9FF7 /* CircleButton.swift */; };
+		8853510A29DBEEF700508FA0 /* ConsultaVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853510929DBEEF700508FA0 /* ConsultaVM.swift */; };
 		88CA687729D4777800986D90 /* AppointmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CA687629D4777800986D90 /* AppointmentRowView.swift */; };
 		88CD5DB029D77CAA00400CF8 /* HistoricVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */; };
 		88E0780729D2164200856256 /* DataModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0780629D2164200856256 /* DataModelManager.swift */; };
@@ -113,6 +114,7 @@
 		4DC4938029DB492300653B0D /* RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedCorner.swift; path = miniChallenge3/Components/RoundedCorner.swift; sourceTree = SOURCE_ROOT; };
 		8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8832B9C929CA2838009B9FF7 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		8853510929DBEEF700508FA0 /* ConsultaVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaVM.swift; sourceTree = "<group>"; };
 		88CA687629D4777800986D90 /* AppointmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRowView.swift; sourceTree = "<group>"; };
 		88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricVM.swift; sourceTree = "<group>"; };
 		88E0780629D2164200856256 /* DataModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelManager.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				19C09F4A29D5349100CB2021 /* PhotoImporter.swift */,
 				4DC4937629D38B2000653B0D /* SpecialtyList.swift */,
 				88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */,
+				8853510929DBEEF700508FA0 /* ConsultaVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */,
 				4D1F758A29CA51C200724C58 /* ContatoView.swift in Sources */,
 				4D1F758C29CA51CF00724C58 /* ConfiguracoesView.swift in Sources */,
+				8853510A29DBEEF700508FA0 /* ConsultaVM.swift in Sources */,
 				192B30D529CA4028008280E4 /* DetailCard.swift in Sources */,
 				4DC4937929D38F8800653B0D /* SquareButton.swift in Sources */,
 				192B30D329CA3A89008280E4 /* DateCard.swift in Sources */,
@@ -676,9 +680,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rebeca.miniChallenge3;
 				PRODUCT_NAME = Consulte.;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -708,9 +715,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = rebeca.miniChallenge3;
 				PRODUCT_NAME = Consulte.;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

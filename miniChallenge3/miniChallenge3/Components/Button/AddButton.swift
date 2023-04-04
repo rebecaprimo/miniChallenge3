@@ -24,7 +24,7 @@ struct AddButton: View {
                     .background(DataColor.shared.componentsColor)
                     .clipShape(Circle())
                    .font(.system(size: 25))
-            }
+            }.navigationBarHidden(true)
  
         })
     }

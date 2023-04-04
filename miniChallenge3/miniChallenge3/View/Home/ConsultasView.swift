@@ -11,37 +11,46 @@ import SwiftUI
 struct ConsultasView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Appointment.date, ascending: true)],
-        animation: .default)
-    private var appointments: FetchedResults<Appointment>
-    private var isEmpty: Bool = true
+        predicate: NSPredicate(format: "date > %@", Date() as NSDate),
+        animation: .default) private var appointments: FetchedResults<Appointment>
     
     var body: some View {
         NavigationView {
             ZStack {
-                List {
-                    ForEach(appointments) { appointment in
-                        if appointment.date ?? .now > .now {
-                            AppointmentRowView(appointment: appointment)
+                DataColor.shared.colorBackGround
+                    .ignoresSafeArea()
+                if appointments.isEmpty{
+                    Image("firstuseillustration")
+                } else {
+                    List {
+                        ForEach(appointments) { appointment in
+                                AppointmentRowView(appointment: appointment)
                         }
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
                     }
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
-                }.scrollContentBackground(.hidden)
+                    .padding(.top, 90)
+                    .scrollContentBackground(.hidden)
+                    
+                }
                 VStack {
                     HStack {
+                        Text("Consultas")
+                            .font(.system(.largeTitle, design: .rounded, weight: .bold))
+                        //                    .font(.system(size: 34, weight: .bold, design: .rounded))
                         Spacer()
                         AddButton(view: AnyView(AddConsultaView()))
                             .padding()
                     }
-                }.offset(x: 0, y: -343)
+                }
+                .offset(x: 0, y: -343)
+                .padding(EdgeInsets(top: 50, leading: 20, bottom: 0, trailing: 20))
             }
-            .background(DataColor.shared.colorBackGround)
+            .navigationBarHidden(true)
             .navigationTitle("Consultas")
         }
-        
     }
 }
 
