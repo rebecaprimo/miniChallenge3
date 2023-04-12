@@ -13,6 +13,7 @@ struct PickerComponent: View {
     @Binding private var selectedSpecialty: String
     let specialty = specialtyList
     
+    
     init(selectedSpecialty: Binding<String>) {
         self._selectedSpecialty = selectedSpecialty
     }

@@ -28,6 +28,7 @@
 		4D1F759629CCE1DE00724C58 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F759529CCE1DE00724C58 /* AddButton.swift */; };
 		4D1F759829CCEA1100724C58 /* DatePickerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */; };
 		4D3E2EDA29D246BE00F635B8 /* EditarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3E2ED929D246BE00F635B8 /* EditarView.swift */; };
+		4D7E324329E72AF5001F528A /* FilterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E324229E72AF5001F528A /* FilterComponent.swift */; };
 		4D9EE8DF29C8EDBE0046483A /* miniChallenge3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */; };
 		4D9EE8E129C8EDBE0046483A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9EE8E029C8EDBE0046483A /* ContentView.swift */; };
 		4D9EE8E329C8EDC00046483A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9EE8E229C8EDC00046483A /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		4D1F759529CCE1DE00724C58 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerComponent.swift; sourceTree = "<group>"; };
 		4D3E2ED929D246BE00F635B8 /* EditarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarView.swift; sourceTree = "<group>"; };
+		4D7E324229E72AF5001F528A /* FilterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterComponent.swift; sourceTree = "<group>"; };
 		4D9EE8DB29C8EDBE0046483A /* Consulte..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Consulte..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9EE8DE29C8EDBE0046483A /* miniChallenge3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniChallenge3App.swift; sourceTree = "<group>"; };
 		4D9EE8E029C8EDBE0046483A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 		88BF00F229D932420027AA06 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				4D7E324229E72AF5001F528A /* FilterComponent.swift */,
 				4D1F759729CCEA1100724C58 /* DatePickerComponent.swift */,
 				4DC4937429D38A4F00653B0D /* PickerComponent.swift */,
 			);
@@ -482,6 +485,7 @@
 				4D9EE8E829C8EDC00046483A /* Persistence.swift in Sources */,
 				4D1F759829CCEA1100724C58 /* DatePickerComponent.swift in Sources */,
 				8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */,
+				4D7E324329E72AF5001F528A /* FilterComponent.swift in Sources */,
 				8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */,
 				1924499929CCDE1D0025FE8F /* ConsultasSheetView.swift in Sources */,
 				19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */,
