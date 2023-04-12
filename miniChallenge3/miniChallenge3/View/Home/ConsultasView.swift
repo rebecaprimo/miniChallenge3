@@ -22,7 +22,12 @@ struct ConsultasView: View {
                 DataColor.shared.colorBackGround
                     .ignoresSafeArea()
                 if appointments.isEmpty{
-                    Image("firstuseillustration")
+                    VStack{
+                        
+                        Text("Você não tem consultas futuras")
+                            .padding(.bottom, 30)
+                        Image("firstuseillustration")
+                    }
                 } else {
                     List {
                         ForEach(appointments) { appointment in
@@ -39,7 +44,6 @@ struct ConsultasView: View {
                     HStack {
                         Text("Consultas")
                             .font(.system(.largeTitle, design: .rounded, weight: .bold))
-                        //                    .font(.system(size: 34, weight: .bold, design: .rounded))
                         Spacer()
                         AddButton(view: AnyView(AddConsultaView()))
                             .padding()

@@ -32,12 +32,10 @@ struct AddConsultaView: View {
             ScrollView {
                 
                 VStack(alignment: .leading) {
-
                     PickerComponent(selectedSpecialty: $selectedSpecialty)
                     TextFieldCustom(title: "Médico", $dr)
                     DatePickerComponent(title: "Data e hora", dateAppointment: $dateAppointment)
                     TextFieldCustom(title: "Clínica", $local)
-                    
                     if let selectedImage, let uiImage = UIImage(data: selectedImage) {
                         Image(uiImage: uiImage)
                             .resizable()
