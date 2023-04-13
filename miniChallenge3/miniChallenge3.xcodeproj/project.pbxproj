@@ -46,6 +46,9 @@
 		4DC4938129DB492300653B0D /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC4938029DB492300653B0D /* RoundedCorner.swift */; };
 		8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */; };
 		8832B9CA29CA2838009B9FF7 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832B9C929CA2838009B9FF7 /* CircleButton.swift */; };
+		884DB26E29E7B03A00296B7D /* SuggestionTextFieldMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884DB26D29E7B03A00296B7D /* SuggestionTextFieldMenu.swift */; };
+		884DB27029E7C63100296B7D /* consulte_abertura.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 884DB26F29E7C63000296B7D /* consulte_abertura.m4v */; };
+		884DB27229E7C66800296B7D /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884DB27129E7C66800296B7D /* VideoPlayer.swift */; };
 		8853510A29DBEEF700508FA0 /* ConsultaVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8853510929DBEEF700508FA0 /* ConsultaVM.swift */; };
 		88CA687729D4777800986D90 /* AppointmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CA687629D4777800986D90 /* AppointmentRowView.swift */; };
 		88CD5DB029D77CAA00400CF8 /* HistoricVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */; };
@@ -114,6 +117,9 @@
 		4DC4938029DB492300653B0D /* RoundedCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundedCorner.swift; path = miniChallenge3/Components/RoundedCorner.swift; sourceTree = SOURCE_ROOT; };
 		8832B9C729CA2787009B9FF7 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		8832B9C929CA2838009B9FF7 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		884DB26D29E7B03A00296B7D /* SuggestionTextFieldMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionTextFieldMenu.swift; sourceTree = "<group>"; };
+		884DB26F29E7C63000296B7D /* consulte_abertura.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = consulte_abertura.m4v; sourceTree = "<group>"; };
+		884DB27129E7C66800296B7D /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		8853510929DBEEF700508FA0 /* ConsultaVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultaVM.swift; sourceTree = "<group>"; };
 		88CA687629D4777800986D90 /* AppointmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentRowView.swift; sourceTree = "<group>"; };
 		88CD5DAF29D77CAA00400CF8 /* HistoricVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricVM.swift; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC4937C29D5F0C300653B0D /* SplashView.swift */,
+				884DB27129E7C66800296B7D /* VideoPlayer.swift */,
 				88CA687B29D62DCE00986D90 /* Home */,
 				88CA687D29D62DE000986D90 /* Historic */,
 				88CA687C29D62DD500986D90 /* Info */,
@@ -187,6 +194,7 @@
 				4D9EE91129C8EE9A0046483A /* ViewModel */,
 				4D9EE91029C8EE8C0046483A /* Model */,
 				4D9EE8E229C8EDC00046483A /* Assets.xcassets */,
+				884DB26F29E7C63000296B7D /* consulte_abertura.m4v */,
 				4D9EE8EC29C8EDC00046483A /* Info.plist */,
 				4D9EE8E429C8EDC00046483A /* Preview Content */,
 			);
@@ -257,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				1924499C29CCEFFC0025FE8F /* DadosConsultaText.swift */,
+				884DB26D29E7B03A00296B7D /* SuggestionTextFieldMenu.swift */,
 				4D1F759329CCBB5500724C58 /* TextFieldCustom.swift */,
 			);
 			path = Texts;
@@ -439,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884DB27029E7C63100296B7D /* consulte_abertura.m4v in Resources */,
 				4D9EE8E629C8EDC00046483A /* Preview Assets.xcassets in Resources */,
 				4D9EE8E329C8EDC00046483A /* Assets.xcassets in Resources */,
 			);
@@ -467,6 +477,7 @@
 			files = (
 				4D1F758629CA513700724C58 /* TermosView.swift in Sources */,
 				4D1F759029CB986300724C58 /* HistoricoView.swift in Sources */,
+				884DB27229E7C66800296B7D /* VideoPlayer.swift in Sources */,
 				4D1F759229CCB97700724C58 /* AddConsultaView.swift in Sources */,
 				4DC4937B29D4B50B00653B0D /* DetalheHistoricoView.swift in Sources */,
 				19C09F4B29D5349100CB2021 /* PhotoImporter.swift in Sources */,
@@ -487,6 +498,7 @@
 				19C185C829CBA9A000F3A95C /* ConsultasView.swift in Sources */,
 				191465FD29CE4C8400EE9A6B /* DataColor.swift in Sources */,
 				8832B9C829CA2787009B9FF7 /* CustomTabBar.swift in Sources */,
+				884DB26E29E7B03A00296B7D /* SuggestionTextFieldMenu.swift in Sources */,
 				1927E21829C9013900BE7BAD /* CardAppointment.swift in Sources */,
 				191465FB29CE3C7C00EE9A6B /* TextStyle.swift in Sources */,
 				4D3E2EDA29D246BE00F635B8 /* EditarView.swift in Sources */,

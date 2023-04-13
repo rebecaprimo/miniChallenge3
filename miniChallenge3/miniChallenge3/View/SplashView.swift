@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SplashView: View {
     
-    //    let persistenceController = PersistenceController.shared
+    //    let persistenceController = PersistenceController.shareds
     @State var selectedTab: String = "list.bullet.clipboard"
     @State private var isActive = false
     @State private var size = 0.8

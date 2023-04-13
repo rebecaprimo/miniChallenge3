@@ -11,7 +11,7 @@ import PhotosUI
 import QuickLook
 
 struct AddConsultaView: View {
-
+    
     @Environment(\.dismiss) private var dismiss
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(fetchRequest: NSFetchRequest.sortedById(), animation: .default)
@@ -24,6 +24,9 @@ struct AddConsultaView: View {
     @State var selectedSpecialty: String = ""
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImage: Data? = nil
+    @State var editing: Bool = false
+    
+    
     
     var body: some View {
         ZStack {
@@ -32,7 +35,9 @@ struct AddConsultaView: View {
             ScrollView {
                 
                 VStack(alignment: .leading) {
-                    PickerComponent(selectedSpecialty: $selectedSpecialty)
+ 
+                    TextFieldCustom(content: $selectedSpecialty, editing: $editing, title: "Especialidade", activityOnChangeEditing: true)
+                    SuggestionTextFieldMenu(editing: $editing, text: $selectedSpecialty)
                     TextFieldCustom(title: "Médico", $dr)
                     DatePickerComponent(title: "Data e hora", dateAppointment: $dateAppointment)
                     TextFieldCustom(title: "Clínica", $local)
@@ -44,29 +49,29 @@ struct AddConsultaView: View {
                             .cornerRadius(20)
                     }
                     
-    //                Text("Adicionar")
-    //                    .padding(17)
-    //                    .font(.system(size: 20))
-    //                    .font(.callout)
-    //                    .bold()
-    //                Spacer()
-    //
-    //                HStack {
-    //                    PhotosPicker(selection: $selectedItem, matching: .images, photoLibrary: .shared()){
-    //                        SquareButton(icon: "camera.fill")
-    //                        //Text("Clique")
-    //                    }
-    //                    .onChange(of: selectedItem) { novo in
-    //                        Task {
-    //                            if let data = try? await novo?.loadTransferable(type: Data.self) {
-    //                                selectedImage = data
-    //                            }
-    //                        }
-    //                    }
-    //
-    //                    SquareButton(icon: "photo.on.rectangle")
-    //                }
-    //                .padding(.leading, 40)
+                    //                Text("Adicionar")
+                    //                    .padding(17)
+                    //                    .font(.system(size: 20))
+                    //                    .font(.callout)
+                    //                    .bold()
+                    //                Spacer()
+                    //
+                    //                HStack {
+                    //                    PhotosPicker(selection: $selectedItem, matching: .images, photoLibrary: .shared()){
+                    //                        SquareButton(icon: "camera.fill")
+                    //                        //Text("Clique")
+                    //                    }
+                    //                    .onChange(of: selectedItem) { novo in
+                    //                        Task {
+                    //                            if let data = try? await novo?.loadTransferable(type: Data.self) {
+                    //                                selectedImage = data
+                    //                            }
+                    //                        }
+                    //                    }
+                    //
+                    //                    SquareButton(icon: "photo.on.rectangle")
+                    //                }
+                    //                .padding(.leading, 40)
                     
                 }
                 .navigationBarTitleDisplayMode(.inline)

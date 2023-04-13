@@ -34,4 +34,9 @@ class TextStyle {
     let weightButtonTitle: Font.Weight = .bold
     let sizeoButtonTitle: CGFloat = 16
     
+    
+    let designTextBodyBold: Font = .system(.body, design: .rounded, weight: .bold)
+    let designTextBody: Font = .system(.body, design: .rounded, weight: .regular)
+
+    
 }
