@@ -31,6 +31,9 @@ struct ConsultasView: View {
                             .font(TextStyle.shared.designTextBody)
                             .padding(.bottom,70)
                         Image("firstuseillustration")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300, height: 300)
                     }
                 } else {
                     List {
@@ -54,10 +57,10 @@ struct ConsultasView: View {
                             .font(.system(.largeTitle, design: .rounded, weight: .bold))
                         Spacer()
                         AddButton(view: AnyView(AddConsultaView()))
-                            .padding()
+//                            .padding()
                     }
                 }
-                .offset(x: 0, y: -343)
+                .offset(x: 0, y: -315)
                 .padding(EdgeInsets(top: 50, leading: 20, bottom: 0, trailing: 20))
             }
             .navigationBarHidden(true)

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "historyillustration.png",
+      "filename" : "ilustracao_historico@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "ilustracao_historico@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "ilustracao_historico@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

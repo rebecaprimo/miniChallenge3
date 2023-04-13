@@ -40,7 +40,11 @@ struct InfoView: View {
                         RectangleButton(title: "Contato",  icon: "phone", view: nil)
                     }
                     
-                    RectangleButton(title: "Configurações",  icon: "gearshape", view: AnyView(ConfiguracoesView()))
+                    Button {
+                        openURL(URL(string: UIApplication.openSettingsURLString)!)
+                    } label: {
+                        RectangleButton(title: "Configurações",  icon: "gearshape", view: nil)
+                    }
                     
                     Spacer()
                 }
