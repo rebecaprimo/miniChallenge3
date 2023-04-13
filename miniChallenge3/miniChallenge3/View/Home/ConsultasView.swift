@@ -24,8 +24,12 @@ struct ConsultasView: View {
                 if appointments.isEmpty{
                     VStack{
                         
-                        Text("Você não tem consultas futuras")
-                            .padding(.bottom, 30)
+                        Text("Seus agendamentos em um só lugar!")
+                            .font(TextStyle.shared.designTextBodyBold)
+                            .padding(.bottom,10)
+                        Text("Você não possui nenhum agendamento")
+                            .font(TextStyle.shared.designTextBody)
+                            .padding(.bottom,70)
                         Image("firstuseillustration")
                     }
                 } else {
@@ -35,6 +39,10 @@ struct ConsultasView: View {
                         }
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
+                        Rectangle()
+                            .fill(Color.clear)
+                            .frame(height: 60)
+                            .listRowBackground(Color.clear)
                     }
                     .padding(.top, 90)
                     .scrollContentBackground(.hidden)
@@ -42,7 +50,7 @@ struct ConsultasView: View {
                 }
                 VStack {
                     HStack {
-                        Text("Consultas")
+                        Text("Agendamentos")
                             .font(.system(.largeTitle, design: .rounded, weight: .bold))
                         Spacer()
                         AddButton(view: AnyView(AddConsultaView()))
@@ -53,7 +61,7 @@ struct ConsultasView: View {
                 .padding(EdgeInsets(top: 50, leading: 20, bottom: 0, trailing: 20))
             }
             .navigationBarHidden(true)
-            .navigationTitle("Consultas")
+            .navigationTitle("Agendamentos")
         }
     }
 }
@@ -61,10 +69,4 @@ struct ConsultasView: View {
 
 
 
-func dateFormatter(Date: Date?) -> String{
-    let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "pt-br")
-    formatter.dateFormat = "EEEE, d MMMM yyyy"
-    return formatter.string(from: Date ?? .now).capitalized
-}
 

@@ -21,6 +21,8 @@ struct EditarView: View {
     @State var local: String
     @State var dateAppointment: Date
     @State var selectedSpecialty: String
+    @State var editing: Bool = false
+
     
     init(appointment: Appointment) {
         self.id = appointment.id!
@@ -32,37 +34,39 @@ struct EditarView: View {
     
     var body: some View {
         ScrollView {
+            DataColor.shared.colorBackGround
             VStack(alignment: .leading) {
-                PickerComponent(selectedSpecialty: $selectedSpecialty)
+                
+                TextFieldCustom(content: $selectedSpecialty, editing: $editing, title: "Especialidade", activityOnChangeEditing: true)
+                SuggestionTextFieldMenu(editing: $editing, text: $selectedSpecialty)
                 TextFieldCustom(title: "Médico", $dr)
                 DatePickerComponent(title: "Data e hora", dateAppointment: $dateAppointment)
                 TextFieldCustom(title: "Clínica", $local)
-                Text("Adicionar")
-                    .padding(17)
-                    .font(.system(size: 20))
-                    .font(.callout)
-                    .bold()
-                Spacer()
+//                Text("Adicionar")
+//                    .padding(17)
+//                    .font(.system(size: 20))
+//                    .font(.callout)
+//                    .bold()
+//                Spacer()
                 
-                HStack {
-                    SquareButton(icon: "camera.fill")
-                    SquareButton(icon: "photo.on.rectangle")
-                }
-                .padding(.leading, 40)
+//                HStack {
+//                    SquareButton(icon: "camera.fill")
+//                    SquareButton(icon: "photo.on.rectangle")
+//                }
+//                .padding(.leading, 40)
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Adicionar")
-            .background(DataColor.shared.colorBackGround)
             .ignoresSafeArea()
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
-                        
                         vmManager.editAppointment(viewContext: viewContext, appointments, id, dr, dateAppointment, local, selectedSpecialty)
                         dismiss()
                     }
                 }
             }
         }
+        .background(DataColor.shared.colorBackGround)
     }
 }

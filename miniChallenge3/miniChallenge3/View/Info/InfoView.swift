@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct InfoView: View {
-
+    @Environment(\.openURL) var openURL
     var body: some View {
         
         VStack {
@@ -29,8 +29,17 @@ struct InfoView: View {
                     } label: {
                         RectangleButton(title: "Privacidade", icon: "lock", view: nil)
                     }
-
-                    RectangleButton(title: "Contato",  icon: "phone", view: AnyView(ContatoView()))
+                    
+                    Button {
+                        let mailto = "mailto:consulteapp@gmail.com".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                        print(mailto ?? "")
+                        if let url = URL(string: mailto!) {
+                            openURL(url)
+                        }
+                    } label: {
+                        RectangleButton(title: "Contato",  icon: "phone", view: nil)
+                    }
+                    
                     RectangleButton(title: "Configurações",  icon: "gearshape", view: AnyView(ConfiguracoesView()))
                     
                     Spacer()

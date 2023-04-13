@@ -53,17 +53,4 @@ struct ConsultasSheetView: View {
     }
 }
 
-func dateFormatterStringAppointment(Date: Date?) -> String{
-    let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "pt-BR")
-    formatter.dateFormat = "EEEE, MM/dd/yyyy"
-    return formatter.string(from: Date ?? .now).capitalized
 
-    }
-
-func dateFormatterHourStringAppointment(Date: Date?) -> String{
-    let formatter = DateFormatter()
-    formatter.locale = Locale(identifier: "pt-BR")
-    formatter.dateFormat = "HH:mm"
-    return formatter.string(from: Date ?? .now).capitalized
-}

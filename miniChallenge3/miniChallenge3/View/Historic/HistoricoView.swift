@@ -11,123 +11,54 @@ import SwiftUI
 struct HistoricoView: View {
     
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Specialty.name, ascending: true)],
-        animation: .spring()) private var specialties: FetchedResults<Specialty>
+        sortDescriptors: [NSSortDescriptor(keyPath: \Appointment.date, ascending: true)],
+        animation: .spring()) private var appointments: FetchedResults<Appointment>
     @State private var query: String = ""
-    @State private var oldDates = [Specialty]()
+    @State private var oldDates = [Appointment]()
     private let historicVM = HistoricVM()
     
-    private var searchResults: [Specialty]{
+    private var searchResults: [Appointment]{
         if query.isEmpty {
             return oldDates
         } else {
-            return oldDates.filter {$0.name!.lowercased().contains(query.lowercased())}
+            return oldDates.filter { appointment in
+                let doctorName = appointment.doctor?.lowercased() ?? ""
+                let specialty = appointment.specialty?.name?.lowercased() ?? ""
+                let date = dateFormatter(Date: appointment.date).lowercased()
+                let searchQuery = query.lowercased()
+                return doctorName.contains(searchQuery) || specialty.contains(searchQuery) || date.contains(searchQuery)
+            }
         }
     }
-
+    
     var body: some View {
         NavigationView {
             VStack{
-                ScrollView {
-                    
-                    NavigationLink {
-                            destination
-                    } label: {
-                        if query.isEmpty || oldDates.isEmpty{
-                            RectangleButton(title: "Geral", icon: nil, view: nil)
-                        }
+                List {
+                    ForEach(searchResults) { appointment in
+                        AppointmentRowView(appointment: appointment)
                     }
-                    ForEach(searchResults) { specialty in
-                        NavigationLink {
-                            List{
-                                if let appointments = specialty.appointment {
-                                    let appointmentsArray = appointments.allObjects as! [Appointment]
-                                    
-                                    ForEach(appointmentsArray){ appointment in
-//                                        if appointment.date ?? .now < .now {
-                                            AppointmentRowView(appointment: appointment)
-//                                        }
-                                    }
-                                    .navigationBarTitleDisplayMode(.inline)
-                                    .navigationTitle(specialty.name ?? "Geral")
-                                    .listRowBackground(Color.clear)
-                                    .listRowSeparator(.hidden)
-                                } else {
-                                    EmptyView()
-                                }
-                            }
-                            .scrollContentBackground(.hidden)
-                            .background(DataColor.shared.colorBackGround)
-                        } label: {
-                            if searchResults.contains(specialty) {
-                                RectangleButton(title: specialty.name ?? "-", icon: nil, view: nil)
-                            }
-                        }
-                    }
-                    .padding(.bottom, 2)
-                    .searchable(text: $query, prompt: Text("Pesquise a especialidade"))
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    Rectangle()
+                        .fill(Color.clear)
+                        .frame(height: 60)
+                        .listRowBackground(Color.clear)
                 }
+                .scrollContentBackground(.hidden)
                 .background(DataColor.shared.colorBackGround)
                 .navigationTitle("Histórico")
+                .onAppear {
+                    oldDates = HistoricVM.shared.listAppointments(appointments)
+                }
                 
             }
-            .onAppear {
-                oldDates = historicVM.listSpecialtiesWithOldMedicalAppointments(specialties: specialties)
-                
-            }
+            .searchable(text: $query, prompt: Text("Pesquise a especialidade"))
         }
-        
     }
+    
 }
 
 
 
 
-extension HistoricoView {
-    @ViewBuilder
-    private var destination: some View {
-        if oldDates.isEmpty{
-            GeometryReader{ geometry in
-                VStack{
-                    Text("adicione consultas para visualizá-las aqui")
-                        .foregroundColor(DataColor.shared.colorIconInative)
-                        .padding(.bottom, 40)
-                    
-                    Image("geralillustration")
-                }
-                .frame(width: geometry.size.width, height: geometry.size.height)
-                .background(DataColor.shared.colorBackGround)
-            }
-        }else {
-            
-            ZStack{
-                DataColor.shared.colorBackGround
-                    .ignoresSafeArea()
-                VStack{
-                    List{
-                        
-                        ForEach(specialties) { specialty in
-                            if let appointments = specialty.appointment {
-                                let appointmentsArray = appointments.allObjects as! [Appointment]
-                                
-                                ForEach(appointmentsArray){ appointment in
-                                    if appointment.date ?? .now < .now {
-                                        AppointmentRowView(appointment: appointment)
-                                    }
-                                }
-                                .navigationTitle("Histórico geral")
-                                .navigationBarTitleDisplayMode(.inline)
-                                .listRowBackground(Color.clear)
-                                .listRowSeparator(.hidden)
-                                .scrollContentBackground(.hidden)
-                            } else {
-                                EmptyView()
-                            }
-                        }
-                    }
-                }
-            }
-            
-        }
-    }
-}
